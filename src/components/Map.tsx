@@ -115,7 +115,7 @@ const COLOR_SCHEMES = {
 export default function Map({ cities }: MapProps) {
     const [countries, setCountries] = useState<Record<string, Country>>({});
     const [selectedCity, setSelectedCity] = useState<City | null>(null);
-    const [selectedMapStyle, setSelectedMapStyle] = useState<keyof typeof MAP_STYLES>('standard');
+    const [selectedMapStyle, setSelectedMapStyle] = useState<keyof typeof MAP_STYLES>('light');
     const [selectedColorScheme, setSelectedColorScheme] = useState<keyof typeof COLOR_SCHEMES>('green');
 
     useEffect(() => {
