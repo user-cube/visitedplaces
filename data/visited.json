@@ -1,0 +1,224 @@
+{
+    "visited": [
+        {
+            "city": "Lisboa",
+            "country": "Portugal",
+            "coordinates": [38.7223, -9.1393]
+        },
+        {
+            "city": "Porto",
+            "country": "Portugal", 
+            "coordinates": [41.1579, -8.6291]
+        },
+        {
+            "city": "Aveiro",
+            "country": "Portugal",
+            "coordinates": [40.6443, -8.6455]
+        },
+        {
+            "city": "Funchal",
+            "country": "Portugal",
+            "coordinates": [32.6669, -16.9241]
+        },
+        {
+            "city": "Angra do Heroísmo",
+            "country": "Portugal",
+            "coordinates": [38.6595, -27.2196]
+        },
+        {
+            "city": "Faro",
+            "country": "Portugal",
+            "coordinates": [37.0194, -7.9304]
+        },
+        {
+            "city": "Albufeira",
+            "country": "Portugal",
+            "coordinates": [37.0894, -8.2503]
+        },
+        {
+            "city": "Lagos",
+            "country": "Portugal",
+            "coordinates": [37.1028, -8.6738]
+        },
+        {
+            "city": "Portimão",
+            "country": "Portugal",
+            "coordinates": [37.1364, -8.5377]
+        },
+        {
+            "city": "Tavira",
+            "country": "Portugal",
+            "coordinates": [37.1273, -7.6470]
+        },
+        {
+            "city": "Évora",
+            "country": "Portugal",
+            "coordinates": [38.5725, -7.9072]
+        },
+        {
+            "city": "Beja",
+            "country": "Portugal",
+            "coordinates": [38.0151, -7.8631]
+        },
+        {
+            "city": "Portalegre",
+            "country": "Portugal",
+            "coordinates": [39.2965, -7.4285]
+        },
+        {
+            "city": "Elvas",
+            "country": "Portugal",
+            "coordinates": [38.8815, -7.1628]
+        },
+        {
+            "city": "Monsaraz",
+            "country": "Portugal",
+            "coordinates": [38.4424, -7.3828]
+        },
+        {
+            "city": "Pinhão",
+            "country": "Portugal",
+            "coordinates": [41.1914, -7.5458]
+        },
+        {
+            "city": "Peso da Régua",
+            "country": "Portugal",
+            "coordinates": [41.1647, -7.7874]
+        },
+        {
+            "city": "Lamego",
+            "country": "Portugal",
+            "coordinates": [41.0975, -7.8097]
+        },
+        {
+            "city": "Vila Real",
+            "country": "Portugal",
+            "coordinates": [41.3003, -7.7398]
+        },
+        {
+            "city": "Amarante",
+            "country": "Portugal",
+            "coordinates": [41.2728, -8.0820]
+        },
+        {
+            "city": "Braga",
+            "country": "Portugal",
+            "coordinates": [41.5454, -8.4265]
+        },
+        {
+            "city": "Bragança",
+            "country": "Portugal",
+            "coordinates": [41.8066, -6.7567]
+        },
+        {
+            "city": "Castelo Branco",
+            "country": "Portugal",
+            "coordinates": [39.8222, -7.4909]
+        },
+        {
+            "city": "Madrid",
+            "country": "Spain",
+            "coordinates": [40.4168, -3.7038]
+        },
+        {
+            "city": "Barcelona",
+            "country": "Spain",
+            "coordinates": [41.3851, 2.1734]
+        },
+        {
+            "city": "Vigo",
+            "country": "Spain",
+            "coordinates": [42.2406, -8.7207]
+        },
+        {
+            "city": "Ilhas Cíes",
+            "country": "Spain",
+            "coordinates": [42.2228, -8.9067]
+        },
+        {
+            "city": "Paris",
+            "country": "France",
+            "coordinates": [48.8566, 2.3522]
+        },
+        {
+            "city": "Colmar",
+            "country": "France",
+            "coordinates": [48.0794, 7.3585]
+        },
+        {
+            "city": "Estrasburgo",
+            "country": "France",
+            "coordinates": [48.5734, 7.7521]
+        },
+        {
+            "city": "Roma",
+            "country": "Italy",
+            "coordinates": [41.9028, 12.4964]
+        },
+        {
+            "city": "Amsterdão",
+            "country": "Netherlands",
+            "coordinates": [52.3676, 4.9041]
+        },
+        {
+            "city": "Viena",
+            "country": "Austria",
+            "coordinates": [48.2082, 16.3738]
+        },
+        {
+            "city": "Budapeste",
+            "country": "Hungary",
+            "coordinates": [47.4979, 19.0402]
+        },
+        {
+            "city": "Praga",
+            "country": "Czech Republic",
+            "coordinates": [50.0755, 14.4378]
+        },
+        {
+            "city": "Malmö",
+            "country": "Sweden",
+            "coordinates": [55.6050, 13.0038]
+        },
+        {
+            "city": "Estocolmo",
+            "country": "Sweden",
+            "coordinates": [59.3293, 18.0686]
+        },
+        {
+            "city": "Atenas",
+            "country": "Greece",
+            "coordinates": [37.9838, 23.7275]
+        },
+        {
+            "city": "Meteora",
+            "country": "Greece",
+            "coordinates": [39.7211, 21.6306]
+        },
+        {
+            "city": "Bruxelas",
+            "country": "Belgium",
+            "coordinates": [50.8503, 4.3517]
+        },
+        {
+            "city": "Copenhaga",
+            "country": "Denmark",
+            "coordinates": [55.6761, 12.5683]
+        },
+        {
+            "city": "Londres",
+            "country": "United Kingdom",
+            "coordinates": [51.5074, -0.1278]
+        },
+        {
+            "city": "Cliffs of Moher",
+            "country": "Ireland",
+            "coordinates": [52.9719, -9.4265]
+        },
+        {
+            "city": "Dublin",
+            "country": "Ireland",
+            "coordinates": [53.3498, -6.2603]
+        }
+    ]
+}
