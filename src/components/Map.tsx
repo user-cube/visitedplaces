@@ -1,6 +1,6 @@
-import { MapContainer, TileLayer, GeoJSON, CircleMarker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, CircleMarker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { SimpleGallery } from './SimpleGallery';
 
 interface City {
@@ -18,6 +18,65 @@ interface Country {
 
 interface MapProps {
     cities: City[];
+}
+
+// Global variable to store the recenter function
+let globalRecenterFunction: (() => void) | null = null;
+
+// Component to handle map recentering (inside MapContainer)
+function RecenterButton() {
+    const map = useMap();
+    
+    const handleRecenter = () => {
+        map.setView([48.8566, 2.3522], 5, {
+            animate: true,
+            duration: 1
+        });
+    };
+    
+    useEffect(() => {
+        globalRecenterFunction = handleRecenter;
+    }, []);
+    
+    return null; // This component doesn't render anything, it just provides the function
+}
+
+// UI Button component for the control panel
+function RecenterButtonUI() {
+    return (
+        <button
+            onClick={() => globalRecenterFunction?.()}
+            style={{
+                width: '100%',
+                padding: '8px 12px',
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                border: '1px solid rgba(59, 130, 246, 0.2)',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                fontSize: '11px',
+                fontWeight: '600',
+                color: '#3B82F6',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px'
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.2)';
+                e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.2)';
+            }}
+            title="Recenter map to Europe"
+        >
+            🎯 Recenter
+        </button>
+    );
 }
 
 // Map styles configuration
@@ -117,6 +176,7 @@ export default function Map({ cities }: MapProps) {
     const [selectedCity, setSelectedCity] = useState<City | null>(null);
     const [selectedMapStyle, setSelectedMapStyle] = useState<keyof typeof MAP_STYLES>('light');
     const [selectedColorScheme, setSelectedColorScheme] = useState<keyof typeof COLOR_SCHEMES>('green');
+    const mapRef = useRef<any>(null);
 
     useEffect(() => {
         const loadCountries = async () => {
@@ -226,7 +286,14 @@ export default function Map({ cities }: MapProps) {
     }, [cities]);
 
     return (
-        <div style={{ height: '100%', width: '100%', position: 'relative' }}>
+        <div style={{ 
+            height: '100vh', 
+            width: '100vw', 
+            position: 'relative',
+            overflow: 'hidden',
+            margin: 0,
+            padding: 0
+        }}>
             {/* Map Controls Panel */}
             <div style={{
                 position: 'absolute',
@@ -376,13 +443,49 @@ export default function Map({ cities }: MapProps) {
                         ))}
                     </div>
                 </div>
+                
+                {/* Recenter Button */}
+                <div style={{ marginTop: '12px' }}>
+                    <RecenterButtonUI />
+                </div>
+
             </div>
             
-            <MapContainer center={[48.8566, 2.3522]} zoom={5} style={{ height: '100%', width: '100%' }}>
+            <MapContainer 
+                center={[48.8566, 2.3522]} 
+                zoom={5} 
+                style={{ 
+                    height: '100vh', 
+                    width: '100vw',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    margin: 0,
+                    padding: 0,
+                    backgroundColor: '#f8f9fa'
+                }}
+                worldCopyJump={false}
+                minZoom={2}
+                maxZoom={18}
+                maxBounds={[[-90, -180], [90, 180]]}
+                maxBoundsViscosity={1.0}
+                zoomControl={true}
+                attributionControl={false}
+                bounceAtZoomLimits={false}
+                zoomAnimation={true}
+                zoomAnimationThreshold={10}
+            >
                 <TileLayer
                     url={MAP_STYLES[selectedMapStyle].url}
                     attribution={MAP_STYLES[selectedMapStyle].attribution}
+                    noWrap={true}
+                    bounds={[[-90, -180], [90, 180]]}
+                    tileSize={256}
+                    zoomOffset={0}
+                    updateWhenZooming={true}
+                    updateWhenIdle={true}
                 />
+                <RecenterButton />
             
             {/* Render country outlines */}
             {Object.values(countries).map((country) => (

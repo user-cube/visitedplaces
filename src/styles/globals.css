@@ -1,0 +1,37 @@
+
+
+.leaflet-container {
+    height: 100vh !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f8f9fa !important;
+}
+
+.leaflet-pane {
+    background-color: #f8f9fa !important;
+}
+
+.leaflet-tile-pane {
+    background-color: #f8f9fa !important;
+}
+
+.leaflet-overlay-pane {
+    background-color: #f8f9fa !important;
+}
+
+/* Force tiles to stretch */
+.leaflet-tile {
+    background-color: #f8f9fa !important;
+}
+
+/* Remove any default margins/padding from map elements */
+.leaflet-map-pane,
+.leaflet-tile-pane,
+.leaflet-overlay-pane,
+.leaflet-marker-pane,
+.leaflet-shadow-pane,
+.leaflet-tooltip-pane,
+.leaflet-popup-pane {
+    background-color: #f8f9fa !important;
+}
