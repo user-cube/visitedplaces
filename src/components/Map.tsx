@@ -289,7 +289,11 @@ export default function Map({ cities }: MapProps) {
         <div style={{ 
             height: '100vh', 
             width: '100vw', 
-            position: 'relative',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
             overflow: 'hidden',
             margin: 0,
             padding: 0
@@ -460,11 +464,13 @@ export default function Map({ cities }: MapProps) {
                     position: 'absolute',
                     top: 0,
                     left: 0,
+                    right: 0,
+                    bottom: 0,
                     margin: 0,
                     padding: 0,
                     backgroundColor: '#f8f9fa'
                 }}
-                worldCopyJump={false}
+                worldCopyJump={true}
                 minZoom={2}
                 maxZoom={18}
                 maxBounds={[[-90, -180], [90, 180]]}
@@ -478,7 +484,7 @@ export default function Map({ cities }: MapProps) {
                 <TileLayer
                     url={MAP_STYLES[selectedMapStyle].url}
                     attribution={MAP_STYLES[selectedMapStyle].attribution}
-                    noWrap={true}
+                    noWrap={false}
                     bounds={[[-90, -180], [90, 180]]}
                     tileSize={256}
                     zoomOffset={0}
