@@ -4,8 +4,11 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    // basePath: '/visitedplaces', // Uncomment for GitHub Pages
-    // assetPrefix: '/visitedplaces/', // Uncomment for GitHub Pages
+    // Use basePath only in production (GitHub Pages)
+    ...(process.env.NODE_ENV === 'production' && {
+        basePath: '/visitedplaces',
+        assetPrefix: '/visitedplaces/',
+    }),
 };
 
 module.exports = nextConfig;
