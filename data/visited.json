@@ -193,7 +193,12 @@
         {
             "city": "Athens",
             "country": "Greece",
-            "coordinates": [37.9838, 23.7275]
+            "coordinates": [37.9838, 23.7275],
+            "photos": [
+                "places/europe/greece/athens/athens-1.webp",
+                "places/europe/greece/athens/athens-2.webp",
+                "places/europe/greece/athens/athens-3.webp"
+            ]
         },
         {
             "city": "Meteora",
