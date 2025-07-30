@@ -9,6 +9,7 @@ import {
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState, useCallback } from 'react';
 import { SimpleGallery } from './SimpleGallery';
+import { GeoJsonObject } from 'geojson';
 
 interface City {
   city: string;
@@ -589,7 +590,7 @@ export default function Map({ cities }: MapProps) {
         {Object.values(countries).map(country => (
           <GeoJSON
             key={country.name}
-            data={country.geojson as any}
+            data={country.geojson as GeoJsonObject}
             style={{
               color: COLOR_SCHEMES[selectedColorScheme].countryBorder,
               weight: 3,
