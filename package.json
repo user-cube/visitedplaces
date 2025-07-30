@@ -2,6 +2,10 @@
   "name": "visitedplaces",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:user-cube/visitedplaces.git"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -23,7 +27,7 @@
     "@eslint/eslintrc": "^3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.1.4",
+    "@semantic-release/github": "^9.2.6",
     "@semantic-release/npm": "^10.0.6",
     "@tailwindcss/postcss": "^4",
     "@types/geojson": "^7946.0.16",
