@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, GeoJSON, CircleMarker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { SimpleGallery } from './SimpleGallery';
 
 interface City {
@@ -10,9 +10,21 @@ interface City {
     photos?: string[];
 }
 
+interface GeoJSONFeature {
+    type: 'Feature';
+    properties: {
+        name: string;
+        [key: string]: unknown;
+    };
+    geometry: {
+        type: string;
+        coordinates: number[][][] | number[][][][];
+    };
+}
+
 interface Country {
     name: string;
-    geojson: any;
+    geojson: GeoJSONFeature;
     cities: City[];
 }
 
@@ -27,16 +39,16 @@ let globalRecenterFunction: (() => void) | null = null;
 function RecenterButton() {
     const map = useMap();
     
-    const handleRecenter = () => {
+    const handleRecenter = useCallback(() => {
         map.setView([48.8566, 2.3522], 5, {
             animate: true,
             duration: 1
         });
-    };
+    }, [map]);
     
     useEffect(() => {
         globalRecenterFunction = handleRecenter;
-    }, []);
+    }, [handleRecenter]);
     
     return null; // This component doesn't render anything, it just provides the function
 }
@@ -176,14 +188,13 @@ export default function Map({ cities }: MapProps) {
     const [selectedCity, setSelectedCity] = useState<City | null>(null);
     const [selectedMapStyle, setSelectedMapStyle] = useState<keyof typeof MAP_STYLES>('light');
     const [selectedColorScheme, setSelectedColorScheme] = useState<keyof typeof COLOR_SCHEMES>('green');
-    const mapRef = useRef<any>(null);
 
     useEffect(() => {
         const loadCountries = async () => {
             try {
                 // Load local GeoJSON data
                 const geojsonResponse = await fetch('/countries-features.json');
-                const geojsonData = await geojsonResponse.json();
+                const geojsonData: { features: GeoJSONFeature[] } = await geojsonResponse.json();
                 
                 // Group cities by country
                 const citiesByCountry: Record<string, City[]> = {};
@@ -199,29 +210,29 @@ export default function Map({ cities }: MapProps) {
                 
                 for (const [countryName, countryCities] of Object.entries(citiesByCountry)) {
                     // Find the country in GeoJSON data
-                    let countryFeatures = geojsonData.features.filter((feature: any) => {
+                    let countryFeatures = geojsonData.features.filter((feature: GeoJSONFeature) => {
                         return feature.properties.name === countryName;
                     });
 
-                                            if (countryFeatures.length === 0) {
-                            // Try alternative names
-                            const alternativeNames: Record<string, string> = {
-                                'Spain': 'España',
-                                'Germany': 'Deutschland',
-                                'Italy': 'Italia',
-                                'Netherlands': 'Nederland',
-                                'Switzerland': 'Schweiz',
-                                'Czech Republic': 'Czechia',
-                                'United Kingdom': 'United Kingdom of Great Britain and Northern Ireland'
-                            };
-                            
-                            const altName = alternativeNames[countryName];
-                            if (altName) {
-                                countryFeatures = geojsonData.features.filter((feature: any) => {
-                                    return feature.properties.name === altName;
-                                });
-                            }
+                    if (countryFeatures.length === 0) {
+                        // Try alternative names
+                        const alternativeNames: Record<string, string> = {
+                            'Spain': 'España',
+                            'Germany': 'Deutschland',
+                            'Italy': 'Italia',
+                            'Netherlands': 'Nederland',
+                            'Switzerland': 'Schweiz',
+                            'Czech Republic': 'Czechia',
+                            'United Kingdom': 'United Kingdom of Great Britain and Northern Ireland'
+                        };
+                        
+                        const altName = alternativeNames[countryName];
+                        if (altName) {
+                            countryFeatures = geojsonData.features.filter((feature: GeoJSONFeature) => {
+                                return feature.properties.name === altName;
+                            });
                         }
+                    }
 
                     if (countryFeatures.length > 0) {
                         // For European countries, filter to mainland Europe
@@ -229,7 +240,7 @@ export default function Map({ cities }: MapProps) {
                         
                         if (['France', 'Spain', 'Portugal', 'Italy', 'Germany', 'Netherlands', 'Belgium', 'Switzerland', 'Austria'].includes(countryName)) {
                             // Find the feature that is in Europe
-                            const europeanFeature = countryFeatures.find((feature: any) => {
+                            const europeanFeature = countryFeatures.find((feature: GeoJSONFeature) => {
                                 try {
                                     const geometry = feature.geometry;
                                     if (!geometry || !geometry.coordinates) return false;
@@ -239,13 +250,15 @@ export default function Map({ cities }: MapProps) {
                                     let totalLat = 0;
                                     let pointCount = 0;
                                     
-                                    const extractCoords = (coords: any[]) => {
-                                        if (typeof coords[0] === 'number') {
-                                            totalLon += coords[0];
-                                            totalLat += coords[1];
-                                            pointCount++;
-                                        } else {
-                                            coords.forEach(coord => extractCoords(coord));
+                                    const extractCoords = (coords: unknown) => {
+                                        if (Array.isArray(coords)) {
+                                            if (coords.length >= 2 && typeof coords[0] === 'number' && typeof coords[1] === 'number') {
+                                                totalLon += coords[0];
+                                                totalLat += coords[1];
+                                                pointCount++;
+                                            } else {
+                                                coords.forEach(coord => extractCoords(coord));
+                                            }
                                         }
                                     };
                                     
@@ -258,7 +271,7 @@ export default function Map({ cities }: MapProps) {
                                     
                                     // Europe boundaries
                                     return avgLon >= -10 && avgLon <= 30 && avgLat >= 35 && avgLat <= 70;
-                                } catch (error) {
+                                } catch {
                                     return false;
                                 }
                             });
@@ -277,8 +290,8 @@ export default function Map({ cities }: MapProps) {
                 }
 
                 setCountries(countryData);
-            } catch (error) {
-                console.error('Error loading countries:', error);
+            } catch {
+                console.error('Error loading countries');
             }
         };
 
@@ -497,7 +510,7 @@ export default function Map({ cities }: MapProps) {
             {Object.values(countries).map((country) => (
                 <GeoJSON
                     key={country.name}
-                    data={country.geojson}
+                    data={country.geojson as any}
                     style={{
                         color: COLOR_SCHEMES[selectedColorScheme].countryBorder,
                         weight: 3,

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface SimpleGalleryProps {
     photos: string[];
@@ -81,9 +82,11 @@ export function SimpleGallery({ photos, cityName, onClose }: SimpleGalleryProps)
 
                 {/* Photo Container */}
                 <div style={{ position: 'relative', backgroundColor: '#000' }}>
-                    <img
+                    <Image
                         src={photos[currentIndex]}
                         alt={`${cityName} - Photo ${currentIndex + 1}`}
+                        width={800}
+                        height={600}
                         style={{
                             width: '100%',
                             height: 'auto',
@@ -91,9 +94,13 @@ export function SimpleGallery({ photos, cityName, onClose }: SimpleGalleryProps)
                             objectFit: 'contain',
                             display: 'block'
                         }}
+                        unoptimized
                         onError={(e) => {
                             e.currentTarget.style.display = 'none';
-                            e.currentTarget.nextElementSibling!.style.display = 'flex';
+                            const nextSibling = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (nextSibling) {
+                                nextSibling.style.display = 'flex';
+                            }
                         }}
                     />
                     <div style={{
@@ -219,14 +226,17 @@ export function SimpleGallery({ photos, cityName, onClose }: SimpleGalleryProps)
                                         }
                                     }}
                                 >
-                                    <img
+                                    <Image
                                         src={photo}
                                         alt={`Thumbnail ${index + 1}`}
+                                        width={60}
+                                        height={60}
                                         style={{
                                             width: '100%',
                                             height: '100%',
                                             objectFit: 'cover'
                                         }}
+                                        unoptimized
                                     />
                                 </button>
                             ))}

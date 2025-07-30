@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface PhotoGalleryProps {
     photos: string[];
@@ -37,10 +38,13 @@ export function PhotoGallery({ photos, cityName, onClose }: PhotoGalleryProps) {
 
                 {/* Photo */}
                 <div className="relative">
-                    <img
+                    <Image
                         src={photos[currentPhotoIndex]}
                         alt={`${cityName} - Photo ${currentPhotoIndex + 1}`}
+                        width={800}
+                        height={600}
                         className="w-full h-auto max-h-[70vh] object-cover"
+                        unoptimized
                     />
                     
                     {/* Navigation arrows */}
@@ -80,10 +84,13 @@ export function PhotoGallery({ photos, cityName, onClose }: PhotoGalleryProps) {
                                     index === currentPhotoIndex ? 'ring-2 ring-blue-500' : ''
                                 }`}
                             >
-                                <img
+                                <Image
                                     src={photo}
                                     alt={`Thumbnail ${index + 1}`}
+                                    width={64}
+                                    height={64}
                                     className="w-full h-full object-cover"
+                                    unoptimized
                                 />
                             </button>
                         ))}
