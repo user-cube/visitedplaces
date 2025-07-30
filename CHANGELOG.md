@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/user-cube/visitedplaces/compare/v1.0.3...v1.0.4) (2025-07-30)
+
+
+### Bug Fixes
+
+* CNAME configurations ([#4](https://github.com/user-cube/visitedplaces/issues/4)) ([77c2493](https://github.com/user-cube/visitedplaces/commit/77c24937ab3d3579f43f6ca85aaff34ddd174cf2))
+
 ## [1.0.3](https://github.com/user-cube/visitedplaces/compare/v1.0.2...v1.0.3) (2025-07-30)
 
 
