@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/user-cube/visitedplaces/compare/v1.0.4...v1.0.5) (2025-07-30)
+
+
+### Bug Fixes
+
+* Refactor; Pictures ([#5](https://github.com/user-cube/visitedplaces/issues/5)) ([af820e0](https://github.com/user-cube/visitedplaces/commit/af820e01f716e712a7c1b4c5b52432c580e234b3))
+
 ## [1.0.4](https://github.com/user-cube/visitedplaces/compare/v1.0.3...v1.0.4) (2025-07-30)
 
 
