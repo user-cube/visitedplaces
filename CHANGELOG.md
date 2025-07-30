@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/user-cube/visitedplaces/compare/v1.0.0...v1.0.1) (2025-07-30)
+
+
+### Bug Fixes
+
+* Fix Lint issues ([#1](https://github.com/user-cube/visitedplaces/issues/1)) ([8bb9df0](https://github.com/user-cube/visitedplaces/commit/8bb9df03ca9edee48b990d3ea0731a55bffbf980))
+
 # 1.0.0 (2025-07-30)
 
 
