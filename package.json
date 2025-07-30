@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com:user-cube/visitedplaces.git"
+    "url": "https://github.com/user-cube/visitedplaces.git"
   },
   "scripts": {
     "dev": "next dev --turbopack",
