@@ -4,8 +4,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    // basePath: '/visitedplaces', // Uncomment for GitHub Pages
-    // assetPrefix: '/visitedplaces/', // Uncomment for GitHub Pages
+    basePath: '/visitedplaces', // Uncomment for GitHub Pages
+    assetPrefix: '/visitedplaces/', // Uncomment for GitHub Pages
 };
 
 module.exports = nextConfig;
