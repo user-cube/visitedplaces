@@ -203,10 +203,7 @@ export default function Map({ cities }: MapProps) {
     const loadCountries = async () => {
       try {
         // Load local GeoJSON data
-        const basePath = '/visitedplaces';
-        const geojsonResponse = await fetch(
-          `${basePath}/countries-features.json`
-        );
+        const geojsonResponse = await fetch(`/countries-features.json`);
         const geojsonData: { features: GeoJSONFeature[] } =
           await geojsonResponse.json();
 
