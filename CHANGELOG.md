@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/user-cube/visitedplaces/compare/v1.0.2...v1.0.3) (2025-07-30)
+
+
+### Bug Fixes
+
+* Update path for countires json ([#3](https://github.com/user-cube/visitedplaces/issues/3)) ([f1a742f](https://github.com/user-cube/visitedplaces/commit/f1a742f321a683a116edc824ba53aa98ec05826c))
+
 ## [1.0.2](https://github.com/user-cube/visitedplaces/compare/v1.0.1...v1.0.2) (2025-07-30)
 
 
