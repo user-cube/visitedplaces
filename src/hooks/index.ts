@@ -1,2 +1,2 @@
 export { useMapState } from './useMapState';
-export { useRecenter } from './useRecenter'; 
+export { useRecenter } from './useRecenter';

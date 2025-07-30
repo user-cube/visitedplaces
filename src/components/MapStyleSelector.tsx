@@ -5,7 +5,10 @@ interface MapStyleSelectorProps {
   onStyleChange: (style: keyof typeof MAP_STYLES) => void;
 }
 
-export function MapStyleSelector({ selectedStyle, onStyleChange }: MapStyleSelectorProps) {
+export function MapStyleSelector({
+  selectedStyle,
+  onStyleChange,
+}: MapStyleSelectorProps) {
   return (
     <div style={{ marginBottom: '16px' }}>
       <label
@@ -103,4 +106,4 @@ export function MapStyleSelector({ selectedStyle, onStyleChange }: MapStyleSelec
       </div>
     </div>
   );
-} 
+}

@@ -68,4 +68,4 @@ export function RecenterButtonUI({ onRecenter }: RecenterButtonProps) {
 // Function to trigger recenter from outside
 export function triggerRecenter() {
   globalRecenterFunction?.();
-} 
+}

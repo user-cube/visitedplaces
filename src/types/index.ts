@@ -170,4 +170,4 @@ export const COLOR_SCHEMES: Record<string, ColorScheme> = {
     cityFill: '#EF4444',
     cityFillOpacity: 0.9,
   },
-}; 
+};

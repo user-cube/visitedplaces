@@ -1,10 +1,13 @@
-import {
-  MapContainer,
-  TileLayer,
-} from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapProps, MAP_STYLES, COLOR_SCHEMES } from '../types';
-import { MapControls, RecenterButton, CountryLayer, CityMarkers, SimpleGallery } from './';
+import {
+  MapControls,
+  RecenterButton,
+  CountryLayer,
+  CityMarkers,
+  SimpleGallery,
+} from './';
 import { useMapState, useRecenter } from '../hooks';
 import {
   MAP_CENTER,
@@ -59,10 +62,7 @@ export default function Map({ cities }: MapProps) {
         <RecenterButton />
 
         {/* Render country outlines */}
-        <CountryLayer
-          countries={countries}
-          colorScheme={currentColorScheme}
-        />
+        <CountryLayer countries={countries} colorScheme={currentColorScheme} />
 
         {/* Render city markers - AFTER countries so they appear on top */}
         <CityMarkers

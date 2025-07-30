@@ -29,7 +29,9 @@ const EUROPEAN_COUNTRIES = [
 /**
  * Calculate the centroid of a geometry
  */
-function calculateCentroid(coordinates: unknown): { lat: number; lon: number } | null {
+function calculateCentroid(
+  coordinates: unknown
+): { lat: number; lon: number } | null {
   let totalLon = 0;
   let totalLat = 0;
   let pointCount = 0;
@@ -78,7 +80,7 @@ function findBestFeature(
 
   // For European countries, try to find the feature that is in Europe
   if (EUROPEAN_COUNTRIES.includes(countryName)) {
-    const europeanFeature = features.find((feature) => {
+    const europeanFeature = features.find(feature => {
       try {
         const centroid = calculateCentroid(feature.geometry.coordinates);
         return centroid ? isInEurope(centroid.lat, centroid.lon) : false;
@@ -99,11 +101,14 @@ function findBestFeature(
 /**
  * Load and process country data
  */
-export async function loadCountryData(cities: City[]): Promise<Record<string, Country>> {
+export async function loadCountryData(
+  cities: City[]
+): Promise<Record<string, Country>> {
   try {
     // Load local GeoJSON data
     const geojsonResponse = await fetch('/countries-features.json');
-    const geojsonData: { features: GeoJSONFeature[] } = await geojsonResponse.json();
+    const geojsonData: { features: GeoJSONFeature[] } =
+      await geojsonResponse.json();
 
     // Group cities by country
     const citiesByCountry: Record<string, City[]> = {};
@@ -117,19 +122,25 @@ export async function loadCountryData(cities: City[]): Promise<Record<string, Co
     // Find GeoJSON features for each country
     const countryData: Record<string, Country> = {};
 
-    for (const [countryName, countryCities] of Object.entries(citiesByCountry)) {
+    for (const [countryName, countryCities] of Object.entries(
+      citiesByCountry
+    )) {
       // Find the country in GeoJSON data
-      let countryFeatures = geojsonData.features.filter((feature: GeoJSONFeature) => {
-        return feature.properties.name === countryName;
-      });
+      let countryFeatures = geojsonData.features.filter(
+        (feature: GeoJSONFeature) => {
+          return feature.properties.name === countryName;
+        }
+      );
 
       if (countryFeatures.length === 0) {
         // Try alternative names
         const altName = ALTERNATIVE_NAMES[countryName];
         if (altName) {
-          countryFeatures = geojsonData.features.filter((feature: GeoJSONFeature) => {
-            return feature.properties.name === altName;
-          });
+          countryFeatures = geojsonData.features.filter(
+            (feature: GeoJSONFeature) => {
+              return feature.properties.name === altName;
+            }
+          );
         }
       }
 
@@ -149,4 +160,4 @@ export async function loadCountryData(cities: City[]): Promise<Record<string, Co
     console.error('Error loading countries:', error);
     return {};
   }
-} 
+}

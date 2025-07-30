@@ -49,4 +49,4 @@ export const CONTAINER_STYLES = {
 export const MAP_CONTAINER_STYLES = {
   ...CONTAINER_STYLES,
   backgroundColor: '#f8f9fa',
-}; 
+};

@@ -5,7 +5,10 @@ interface ColorSchemeSelectorProps {
   onSchemeChange: (scheme: keyof typeof COLOR_SCHEMES) => void;
 }
 
-export function ColorSchemeSelector({ selectedScheme, onSchemeChange }: ColorSchemeSelectorProps) {
+export function ColorSchemeSelector({
+  selectedScheme,
+  onSchemeChange,
+}: ColorSchemeSelectorProps) {
   return (
     <div>
       <label
@@ -69,4 +72,4 @@ export function ColorSchemeSelector({ selectedScheme, onSchemeChange }: ColorSch
       </div>
     </div>
   );
-} 
+}

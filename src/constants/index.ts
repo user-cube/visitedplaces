@@ -1,1 +1,1 @@
-export * from './mapConfig'; 
+export * from './mapConfig';

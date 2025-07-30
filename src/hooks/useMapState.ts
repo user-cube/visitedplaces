@@ -5,8 +5,10 @@ import { loadCountryData } from '../utils';
 export function useMapState(cities: City[]) {
   const [countries, setCountries] = useState<Record<string, Country>>({});
   const [selectedCity, setSelectedCity] = useState<City | null>(null);
-  const [selectedMapStyle, setSelectedMapStyle] = useState<keyof typeof MAP_STYLES>('light');
-  const [selectedColorScheme, setSelectedColorScheme] = useState<keyof typeof COLOR_SCHEMES>('green');
+  const [selectedMapStyle, setSelectedMapStyle] =
+    useState<keyof typeof MAP_STYLES>('light');
+  const [selectedColorScheme, setSelectedColorScheme] =
+    useState<keyof typeof COLOR_SCHEMES>('green');
 
   useEffect(() => {
     const loadCountries = async () => {
@@ -37,4 +39,4 @@ export function useMapState(cities: City[]) {
     handleCityClick,
     handleCloseGallery,
   };
-} 
+}

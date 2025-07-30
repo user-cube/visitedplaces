@@ -7,7 +7,11 @@ interface CityMarkersProps {
   onCityClick: (city: City) => void;
 }
 
-export function CityMarkers({ cities, colorScheme, onCityClick }: CityMarkersProps) {
+export function CityMarkers({
+  cities,
+  colorScheme,
+  onCityClick,
+}: CityMarkersProps) {
   return (
     <>
       {cities.map(city => (
@@ -54,4 +58,4 @@ export function CityMarkers({ cities, colorScheme, onCityClick }: CityMarkersPro
       ))}
     </>
   );
-} 
+}

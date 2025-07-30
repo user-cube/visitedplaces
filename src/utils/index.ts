@@ -1,1 +1,1 @@
-export { loadCountryData } from './countryData'; 
+export { loadCountryData } from './countryData';
