@@ -131,7 +131,7 @@
             "coordinates": [42.2406, -8.7207]
         },
         {
-            "city": "Ilhas Cíes",
+            "city": "Cies Islands",
             "country": "Spain",
             "coordinates": [42.2228, -8.9067]
         },
@@ -146,32 +146,37 @@
             "coordinates": [48.0794, 7.3585]
         },
         {
-            "city": "Estrasburgo",
+            "city": "Strasbourg",
             "country": "France",
             "coordinates": [48.5734, 7.7521]
         },
         {
-            "city": "Roma",
+            "city": "Rome",
             "country": "Italy",
             "coordinates": [41.9028, 12.4964]
         },
         {
-            "city": "Amsterdão",
+            "city": "Vatican City",
+            "country": "Vatican City",
+            "coordinates": [41.9029, 12.4534]
+        },
+        {
+            "city": "Amsterdam",
             "country": "Netherlands",
             "coordinates": [52.3676, 4.9041]
         },
         {
-            "city": "Viena",
+            "city": "Vienna",
             "country": "Austria",
             "coordinates": [48.2082, 16.3738]
         },
         {
-            "city": "Budapeste",
+            "city": "Budapest",
             "country": "Hungary",
             "coordinates": [47.4979, 19.0402]
         },
         {
-            "city": "Praga",
+            "city": "Prague",
             "country": "Czech Republic",
             "coordinates": [50.0755, 14.4378]
         },
@@ -181,14 +186,19 @@
             "coordinates": [55.6050, 13.0038]
         },
         {
-            "city": "Estocolmo",
+            "city": "Stockholm",
             "country": "Sweden",
             "coordinates": [59.3293, 18.0686]
         },
         {
-            "city": "Atenas",
+            "city": "Athens",
             "country": "Greece",
-            "coordinates": [37.9838, 23.7275]
+            "coordinates": [37.9838, 23.7275],
+            "photos": [
+                "places/europe/greece/athens/athens-1.webp",
+                "places/europe/greece/athens/athens-2.webp",
+                "places/europe/greece/athens/athens-3.webp"
+            ]
         },
         {
             "city": "Meteora",
@@ -196,17 +206,17 @@
             "coordinates": [39.7211, 21.6306]
         },
         {
-            "city": "Bruxelas",
+            "city": "Brussels",
             "country": "Belgium",
             "coordinates": [50.8503, 4.3517]
         },
         {
-            "city": "Copenhaga",
+            "city": "Copenhagen",
             "country": "Denmark",
             "coordinates": [55.6761, 12.5683]
         },
         {
-            "city": "Londres",
+            "city": "London",
             "country": "United Kingdom",
             "coordinates": [51.5074, -0.1278]
         },
