@@ -32,32 +32,7 @@ export function RecenterButtonUI({ onRecenter }: RecenterButtonProps) {
   return (
     <button
       onClick={onRecenter}
-      style={{
-        width: '100%',
-        padding: '8px 12px',
-        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-        border: '1px solid rgba(59, 130, 246, 0.2)',
-        borderRadius: '6px',
-        cursor: 'pointer',
-        transition: 'all 0.2s ease',
-        fontSize: '11px',
-        fontWeight: '600',
-        color: '#3B82F6',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '6px',
-        textTransform: 'uppercase',
-        letterSpacing: '0.5px',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.2)';
-        e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.3)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
-        e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.2)';
-      }}
+      className="recenter-button"
       title="Recenter map to Europe"
     >
       🎯 Recenter

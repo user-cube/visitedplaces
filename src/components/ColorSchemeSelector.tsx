@@ -10,61 +10,28 @@ export function ColorSchemeSelector({
   onSchemeChange,
 }: ColorSchemeSelectorProps) {
   return (
-    <div>
-      <label
-        style={{
-          fontSize: '11px',
-          fontWeight: '600',
-          marginBottom: '8px',
-          display: 'block',
-          color: '#374151',
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px',
-        }}
-      >
+    <div className="color-scheme-selector">
+      <label className="color-scheme-label">
         🎨 Color Scheme
       </label>
 
-      {/* Color Preview Squares */}
-      <div
-        style={{
-          display: 'flex',
-          gap: '4px',
-          justifyContent: 'center',
-        }}
-      >
+      <div className="color-scheme-grid">
         {Object.entries(COLOR_SCHEMES).map(([key, scheme]) => (
           <div
             key={key}
             onClick={() => onSchemeChange(key as keyof typeof COLOR_SCHEMES)}
+            className={`color-scheme-option ${selectedScheme === key ? 'selected' : ''}`}
             style={{
-              width: '20px',
-              height: '20px',
-              borderRadius: '4px',
               backgroundColor: scheme.countryFill,
-              border: `2px solid ${scheme.countryBorder}`,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease',
-              transform: selectedScheme === key ? 'scale(1.1)' : 'scale(1)',
-              boxShadow:
-                selectedScheme === key
-                  ? '0 2px 8px rgba(0, 0, 0, 0.2)'
-                  : '0 1px 3px rgba(0, 0, 0, 0.1)',
-              position: 'relative',
+              borderColor: scheme.countryBorder,
             }}
             title={`${scheme.name} color scheme`}
           >
-            {/* Small red dot to show city color */}
             <div
+              className="color-scheme-dot"
               style={{
-                position: 'absolute',
-                top: '2px',
-                right: '2px',
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
                 backgroundColor: scheme.cityFill,
-                border: `1px solid ${scheme.cityBorder}`,
+                borderColor: scheme.cityBorder,
               }}
             />
           </div>
