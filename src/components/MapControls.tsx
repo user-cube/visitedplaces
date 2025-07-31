@@ -18,7 +18,7 @@ export function MapControls({
   onColorSchemeChange,
   onRecenter,
 }: MapControlsProps) {
-  const [isExpanded, setIsExpanded] = React.useState(true);
+  const [isExpanded, setIsExpanded] = React.useState(false);
 
   const selectedScheme = COLOR_SCHEMES[selectedColorScheme];
   const mapPreviewUrl = getMapStylePreviewUrl(selectedMapStyle);

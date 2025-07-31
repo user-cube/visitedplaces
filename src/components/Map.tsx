@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapProps, MAP_STYLES, COLOR_SCHEMES } from '../types';
 import {
@@ -51,6 +51,7 @@ export default function Map({ cities }: MapProps) {
         zoom={DEFAULT_ZOOM}
         style={MAP_CONTAINER_STYLES}
         {...MAP_CONFIG}
+        zoomControl={false}
         maxBounds={MAP_BOUNDS}
       >
         <TileLayer
@@ -59,6 +60,7 @@ export default function Map({ cities }: MapProps) {
           bounds={MAP_BOUNDS}
           {...TILE_CONFIG}
         />
+        <ZoomControl position="bottomleft" />
         <RecenterButton />
 
         {/* Render country outlines */}
