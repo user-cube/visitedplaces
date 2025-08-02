@@ -1,0 +1,22 @@
+.city-popup {
+  text-align: center;
+}
+
+.city-popup-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.city-popup-country {
+  color: #666;
+}
+
+.city-popup-photos {
+  margin-top: 8px;
+}
+
+.city-popup-photos-text {
+  color: #007bff;
+  font-size: 12px;
+  display: block;
+}

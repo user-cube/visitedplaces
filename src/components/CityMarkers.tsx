@@ -35,19 +35,13 @@ export function CityMarkers({
           pane="markerPane"
         >
           <Popup>
-            <div style={{ textAlign: 'center' }}>
-              <strong style={{ fontSize: '16px' }}>{city.city}</strong>
+            <div className="city-popup">
+              <strong className="city-popup-title">{city.city}</strong>
               <br />
-              <span style={{ color: '#666' }}>{city.country}</span>
+              <span className="city-popup-country">{city.country}</span>
               {city.photos && city.photos.length > 0 && (
-                <div style={{ marginTop: '8px' }}>
-                  <span
-                    style={{
-                      color: '#007bff',
-                      fontSize: '12px',
-                      display: 'block',
-                    }}
-                  >
+                <div className="city-popup-photos">
+                  <span className="city-popup-photos-text">
                     📸 Click on marker to see {city.photos.length} photo(s)
                   </span>
                 </div>
