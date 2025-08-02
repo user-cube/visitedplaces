@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/user-cube/visitedplaces/compare/v1.0.5...v1.1.0) (2025-08-02)
+
+
+### Features
+
+* Cosmetic changes ([#6](https://github.com/user-cube/visitedplaces/issues/6)) ([8384d95](https://github.com/user-cube/visitedplaces/commit/8384d952238ae719453c789aef261938373c7dfd))
+
 ## [1.0.5](https://github.com/user-cube/visitedplaces/compare/v1.0.4...v1.0.5) (2025-07-30)
 
 
