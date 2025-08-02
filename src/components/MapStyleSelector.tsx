@@ -12,9 +12,7 @@ export function MapStyleSelector({
 }: MapStyleSelectorProps) {
   return (
     <div className="map-style-selector">
-      <label className="map-style-label">
-        🗺️ Map Style
-      </label>
+      <label className="map-style-label">🗺️ Map Style</label>
 
       <div className="map-style-grid">
         {Object.entries(MAP_STYLES).map(([key, style]) => (
@@ -27,12 +25,10 @@ export function MapStyleSelector({
             <div
               className="map-style-thumbnail-image"
               style={{
-                backgroundImage: `url("${getMapStylePreviewUrl(key as keyof typeof MAP_STYLES)}")`
+                backgroundImage: `url("${getMapStylePreviewUrl(key as keyof typeof MAP_STYLES)}")`,
               }}
             />
-            <div className="map-style-name">
-              {style.name}
-            </div>
+            <div className="map-style-name">{style.name}</div>
           </div>
         ))}
       </div>

@@ -31,13 +31,8 @@ export function SimpleGallery({
       <div className="simple-gallery-container">
         {/* Header */}
         <div className="simple-gallery-header">
-          <h2 className="simple-gallery-title">
-            📸 {cityName}
-          </h2>
-          <button
-            onClick={onClose}
-            className="simple-gallery-close-button"
-          >
+          <h2 className="simple-gallery-title">📸 {cityName}</h2>
+          <button onClick={onClose} className="simple-gallery-close-button">
             ×
           </button>
         </div>

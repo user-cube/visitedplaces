@@ -25,25 +25,27 @@ export function MapControls({
 
   return (
     <div className={`map-controls ${isExpanded ? 'expanded' : 'collapsed'}`}>
-      <div className={`map-controls-header ${isExpanded ? 'expanded' : 'collapsed'}`}>
+      <div
+        className={`map-controls-header ${isExpanded ? 'expanded' : 'collapsed'}`}
+      >
         {!isExpanded && (
           <div className="map-preview-container">
-            <div 
+            <div
               className="map-style-preview"
               style={{ backgroundImage: `url('${mapPreviewUrl}')` }}
             />
-            <div 
+            <div
               className="color-scheme-preview"
-              style={{ 
+              style={{
                 backgroundColor: selectedScheme.countryFill,
-                borderColor: selectedScheme.countryBorder
+                borderColor: selectedScheme.countryBorder,
               }}
             >
-              <div 
+              <div
                 className="color-scheme-preview-dot"
                 style={{
                   backgroundColor: selectedScheme.cityFill,
-                  borderColor: selectedScheme.cityBorder
+                  borderColor: selectedScheme.cityBorder,
                 }}
               />
             </div>
@@ -58,7 +60,9 @@ export function MapControls({
         </button>
       </div>
 
-      <div className={`map-controls-content ${isExpanded ? 'expanded' : 'collapsed'}`}>
+      <div
+        className={`map-controls-content ${isExpanded ? 'expanded' : 'collapsed'}`}
+      >
         <MapStyleSelector
           selectedStyle={selectedMapStyle}
           onStyleChange={onMapStyleChange}

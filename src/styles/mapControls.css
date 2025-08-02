@@ -128,14 +128,14 @@
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .map-style-thumbnail.selected {
   transform: scale(1.05);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  border: 2px solid #3B82F6;
+  border: 2px solid #3b82f6;
 }
 
 .map-style-thumbnail-image {
@@ -219,7 +219,7 @@
   transition: all 0.2s ease;
   font-size: 11px;
   font-weight: 600;
-  color: #3B82F6;
+  color: #3b82f6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,4 +231,4 @@
 .recenter-button:hover {
   background-color: rgba(59, 130, 246, 0.2);
   border-color: rgba(59, 130, 246, 0.3);
-} 
+}

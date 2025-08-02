@@ -11,9 +11,7 @@ export function ColorSchemeSelector({
 }: ColorSchemeSelectorProps) {
   return (
     <div className="color-scheme-selector">
-      <label className="color-scheme-label">
-        🎨 Color Scheme
-      </label>
+      <label className="color-scheme-label">🎨 Color Scheme</label>
 
       <div className="color-scheme-grid">
         {Object.entries(COLOR_SCHEMES).map(([key, scheme]) => (
