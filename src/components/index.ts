@@ -12,6 +12,7 @@ export { CustomZoomControl } from './CustomZoomControl';
 export { CountryLayer } from './CountryLayer';
 export { CityMarkers } from './CityMarkers';
 export { SimpleGallery } from './SimpleGallery';
+export { SidePanel } from './SidePanel';
 
 // Itinerary components
 export { default as ItineraryMap } from './ItineraryMap';

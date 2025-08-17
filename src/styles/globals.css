@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import './mapControls.css';
+@import './sidePanel.css';
 
 /* Global styles to ensure full page coverage */
 html,
@@ -89,4 +91,21 @@ body {
 .leaflet-tooltip-pane,
 .leaflet-popup-pane {
   background-color: #f8f9fa !important;
+}
+
+/* Map container responsive styles */
+.map-container {
+  margin-left: 320px; /* Space for side panel on desktop */
+  transition: margin-left 0.3s ease;
+}
+
+/* When side panel is closed, remove margin */
+body.side-panel-closed .map-container {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    margin-left: 0; /* No margin on mobile */
+  }
 }
