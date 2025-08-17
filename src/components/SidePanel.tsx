@@ -147,7 +147,9 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
                             {itinerary.startDate} - {itinerary.endDate}
                           </span>
                           <span className="itinerary-points">
-                            {itinerary.points.length} points
+                            {itinerary.metadata?.pointsCount ||
+                              itinerary.points.length}{' '}
+                            points
                           </span>
                         </div>
                       </div>
