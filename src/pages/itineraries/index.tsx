@@ -315,8 +315,8 @@ export default function ItinerariesList() {
               No itineraries found
             </h3>
             <p className="text-gray-600 mb-4">
-              Try adjusting your search terms or filters to find what you're
-              looking for.
+              Try adjusting your search terms or filters to find what
+              you&apos;re looking for.
             </p>
             <button
               onClick={() => {
