@@ -53,15 +53,23 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
         onClick={() => setIsOpen(!isOpen)}
         title={isOpen ? 'Close panel' : 'Open panel'}
       >
-        {isOpen ? (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        ) : (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        )}
+        <div className="toggle-content">
+          {isOpen ? (
+            <>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+              <span className="toggle-text">Close</span>
+            </>
+          ) : (
+            <>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              <span className="toggle-text">Menu</span>
+            </>
+          )}
+        </div>
       </button>
       
       <div className={`side-panel ${isOpen ? 'open' : 'closed'}`}>
