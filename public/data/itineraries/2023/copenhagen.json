@@ -1,0 +1,200 @@
+{
+  "id": "copenhagen-2023",
+  "title": "Copenhagen",
+  "startDate": "2023-12-01",
+  "endDate": "2023-12-05",
+  "description": "5-day trip to Copenhagen exploring Danish culture, castles, and the magic of Tivoli Gardens",
+  "image": "/images/itineraries/2023/copenhagen.webp",
+  "metadata": {
+    "flags": "🇩🇰 🇸🇪",
+    "emoji": "🧜‍♀️",
+    "countries": ["Denmark", "Sweden"],
+    "pointsCount": 25
+  },
+  "points": [
+    {
+      "name": "TP1931 (TAP Air Portugal)",
+      "address": "OPO ✈ LIS",
+      "date": "2023-12-01",
+      "coordinates": [-9.1393, 38.7223],
+      "category": "Flight"
+    },
+    {
+      "name": "TP756 (TAP Air Portugal)",
+      "address": "LIS ✈ CPH",
+      "date": "2023-12-01",
+      "coordinates": [12.6508, 55.6180],
+      "category": "Flight"
+    },
+    {
+      "name": "The Little Mermaid",
+      "address": "Langelinie 19, 2100 København Ø, Denmark",
+      "date": "2023-12-02",
+      "phone": "+45 33 25 74 00",
+      "coordinates": [12.5995, 55.6929],
+      "category": "Landmark"
+    },
+    {
+      "name": "Kastellet",
+      "address": "Kastellet 1, 2100 København Ø, Denmark",
+      "date": "2023-12-02",
+      "phone": "+45 72 81 11 43",
+      "coordinates": [12.5935, 55.6909],
+      "category": "Fortress"
+    },
+    {
+      "name": "Frederik's Church",
+      "address": "Frederiksgade 4, 1265 København K, Denmark",
+      "date": "2023-12-02",
+      "phone": "+45 61 62 03 01",
+      "coordinates": [12.5875, 55.6839],
+      "category": "Church"
+    },
+    {
+      "name": "Amalienborg",
+      "address": "Amalienborg Slotsplads 1257 Copenhagen K Denmark",
+      "date": "2023-12-02",
+      "phone": "+45 33 15 32 86",
+      "coordinates": [12.5925, 55.6839],
+      "category": "Palace"
+    },
+    {
+      "name": "Ved Stranden",
+      "address": "Ved Stranden, 1061 København K, Denmark",
+      "date": "2023-12-02",
+      "coordinates": [12.5875, 55.6809],
+      "category": "Street"
+    },
+    {
+      "name": "Nyhavn",
+      "address": "Nyhavn 47C, 1051 København K, Denmark",
+      "date": "2023-12-02",
+      "phone": "+45 33 30 86 20",
+      "coordinates": [12.5905, 55.6809],
+      "category": "Harbor"
+    },
+    {
+      "name": "Kongens Have",
+      "address": "Øster Voldgade 4A 1350 København K Danmark",
+      "date": "2023-12-02",
+      "phone": "+45 33 95 42 00",
+      "coordinates": [12.5775, 55.6839],
+      "category": "Park"
+    },
+    {
+      "name": "Rosenborg Castle",
+      "address": "Øster Voldgade 4A, 1350 Copenhagen K, Denmark",
+      "date": "2023-12-02",
+      "phone": "+45 33 15 32 86",
+      "coordinates": [12.5775, 55.6839],
+      "category": "Castle"
+    },
+    {
+      "name": "Frederiksborggade 21",
+      "address": "Frederiksborggade 21, 1360 København K, Denmark",
+      "date": "2023-12-02",
+      "coordinates": [12.5775, 55.6839],
+      "category": "Street"
+    },
+    {
+      "name": "Christianshavn",
+      "address": "København K, Denmark",
+      "date": "2023-12-03",
+      "coordinates": [12.5905, 55.6739],
+      "category": "Neighborhood"
+    },
+    {
+      "name": "Vor Frelsers Kirke",
+      "address": "Sankt Annæ Gade 29, 1416 København K, Denmark",
+      "date": "2023-12-03",
+      "phone": "+45 32 54 68 83",
+      "coordinates": [12.5905, 55.6739],
+      "category": "Church"
+    },
+    {
+      "name": "Christiansborg Palace",
+      "address": "Prins Jørgens Gård 5 1218 Copenhagen K Denmark",
+      "date": "2023-12-03",
+      "phone": "+45 73 70 73 10",
+      "coordinates": [12.5805, 55.6769],
+      "category": "Palace"
+    },
+    {
+      "name": "Ruins Under Christiansborg",
+      "address": "Prins Jørgens Gård 1, 1218 Copenhagen K, Denmark",
+      "date": "2023-12-03",
+      "phone": "+45 33 92 64 92",
+      "coordinates": [12.5805, 55.6769],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Strøget",
+      "address": "Østergade 33, 1100 København K, Denmark",
+      "date": "2023-12-03",
+      "phone": "+45 33 25 74 00",
+      "coordinates": [12.5755, 55.6809],
+      "category": "Shopping Street"
+    },
+    {
+      "name": "Copenhagen City Hall",
+      "address": "Rådhuspladsen 1, 1550 København V, Denmark",
+      "date": "2023-12-03",
+      "phone": "+45 33 66 33 66",
+      "coordinates": [12.5705, 55.6739],
+      "category": "City Hall"
+    },
+    {
+      "name": "Rundetaarn",
+      "address": "Købmagergade 52 A, 1150 Copenhagen K, Denmark",
+      "date": "2023-12-03",
+      "phone": "+45 33 73 03 73",
+      "coordinates": [12.5755, 55.6819],
+      "category": "Tower"
+    },
+    {
+      "name": "Tivoli",
+      "address": "Vesterbrogade 3, 1620 København V, Danmark",
+      "date": "2023-12-03",
+      "phone": "+45 33 15 10 01",
+      "coordinates": [12.5685, 55.6739],
+      "category": "Amusement Park"
+    },
+    {
+      "name": "Fredensborg",
+      "address": "Fredensborg, Denmark",
+      "date": "2023-12-04",
+      "coordinates": [12.3985, 55.9789],
+      "category": "Town"
+    },
+    {
+      "name": "Kronborg Slot",
+      "address": "Kronborg 2C, 3000 Helsingør, Denmark",
+      "date": "2023-12-04",
+      "phone": "+45 49 21 30 78",
+      "coordinates": [12.6215, 56.0389],
+      "category": "Castle"
+    },
+    {
+      "name": "Malmö",
+      "address": "Jungmansgatan 12, 211 11 Malmö, Sweden",
+      "date": "2023-12-04",
+      "phone": "+46 40-607 82 40",
+      "coordinates": [13.0005, 55.6059],
+      "category": "City"
+    },
+    {
+      "name": "TP755 (TAP Air Portugal)",
+      "address": "CPH ✈ LIS",
+      "date": "2023-12-05",
+      "coordinates": [-9.1393, 38.7223],
+      "category": "Flight"
+    },
+    {
+      "name": "TP1938 (TAP Air Portugal)",
+      "address": "LIS ✈ OPO",
+      "date": "2023-12-05",
+      "coordinates": [-8.7819, 41.2481],
+      "category": "Flight"
+    }
+  ]
+}

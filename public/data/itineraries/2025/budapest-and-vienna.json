@@ -7,6 +7,13 @@
   "image": "/images/itineraries/2025/budapest.webp",
   "points": [
     {
+      "name": "FR4244 (Ryanair)",
+      "address": "OPO ✈ BUD",
+      "date": "2025-02-26",
+      "coordinates": [19.0344, 47.5025],
+      "category": "Flight"
+    },
+    {
       "name": "Fisherman's Bastion",
       "address": "1014 Budapest, District I, Hess András tér 1-3., Hungary",
       "date": "2025-02-26",
@@ -352,6 +359,13 @@
         47.5135
       ],
       "category": "Nightlife"
+    },
+    {
+      "name": "FR4243 (Ryanair)",
+      "address": "BUD ✈ OPO",
+      "date": "2025-03-02",
+      "coordinates": [19.0344, 47.5025],
+      "category": "Flight"
     }
   ]
 }

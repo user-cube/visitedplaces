@@ -1,0 +1,124 @@
+{
+  "id": "paris-2022",
+  "title": "Paris",
+  "startDate": "2022-05-12",
+  "endDate": "2022-05-16",
+  "description": "5-day trip to Paris exploring iconic landmarks, museums, and the magic of Disneyland Paris",
+  "image": "/images/itineraries/2022/paris.webp",
+  "metadata": {
+    "flags": "🇫🇷",
+    "emoji": "🗼",
+    "countries": ["France"],
+    "pointsCount": 12
+  },
+  "points": [
+    {
+      "name": "TO7601 (Transavia France)",
+      "address": "OPO ✈ ORY",
+      "date": "2022-05-12",
+      "coordinates": [2.3522, 48.8566],
+      "category": "Flight"
+    },
+    {
+      "name": "Torre Eiffel",
+      "address": "5 Avenue Anatole France, 75007 Paris, France",
+      "date": "2022-05-12",
+      "phone": "+33 892 701 239",
+      "coordinates": [2.2945, 48.8584],
+      "category": "Landmark"
+    },
+    {
+      "name": "Parc du Champ de Mars",
+      "address": "2 Allée Adrienne Lecouvreur, 75007 Paris, France",
+      "date": "2022-05-12",
+      "phone": "+33 1 42 76 40 40",
+      "coordinates": [2.2992, 48.8566],
+      "category": "Park"
+    },
+    {
+      "name": "École militaire",
+      "address": "1 Place Joffre 75007 Paris France",
+      "date": "2022-05-12",
+      "coordinates": [2.3069, 48.8566],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Invalides",
+      "address": "Paris, France",
+      "date": "2022-05-12",
+      "coordinates": [2.3126, 48.8566],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Arc de triomphe",
+      "address": "Place Charles de Gaulle 75008 Paris France",
+      "date": "2022-05-12",
+      "phone": "+33 1 44 61 20 00",
+      "coordinates": [2.2950, 48.8738],
+      "category": "Landmark"
+    },
+    {
+      "name": "Disneyland Paris",
+      "address": "Disneyland Paris, 77700 Chessy, France",
+      "date": "2022-05-13",
+      "phone": "+33 1 60 30 60 53",
+      "coordinates": [2.7810, 48.8673],
+      "category": "Amusement Park"
+    },
+    {
+      "name": "Panthéon",
+      "address": "Place du Panthéon, 75005 Paris, France",
+      "date": "2022-05-14",
+      "phone": "+33 1 44 32 18 00",
+      "coordinates": [2.3460, 48.8462],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Notre-Dame Cathedral",
+      "address": "6 Parvis Notre-Dame - Place Jean-Paul II 75004 Paris France",
+      "date": "2022-05-14",
+      "phone": "+33 1 42 34 56 10",
+      "coordinates": [2.3499, 48.8530],
+      "category": "Cathedral"
+    },
+    {
+      "name": "Musée du Louvre",
+      "address": "93 Rue de Rivoli, 75001 Paris, France",
+      "date": "2022-05-14",
+      "phone": "+33 1 40 20 53 17",
+      "coordinates": [2.3376, 48.8606],
+      "category": "Museum"
+    },
+    {
+      "name": "Sacré-Cœur Basilica",
+      "address": "35 Rue du Chevalier de la Barre, 75018 Paris, France",
+      "date": "2022-05-14",
+      "phone": "+33 1 53 41 89 00",
+      "coordinates": [2.3431, 48.8867],
+      "category": "Basilica"
+    },
+    {
+      "name": "Les Catacombes de Paris",
+      "address": "1 Avenue du Colonel Henri Rol-Tanguy, 75014 Paris, France",
+      "date": "2022-05-14",
+      "phone": "+33 1 43 22 47 63",
+      "coordinates": [2.3324, 48.8339],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Château de Versailles",
+      "address": "Place d'Armes, 78000 Versailles, France",
+      "date": "2022-05-15",
+      "phone": "+33 1 30 83 78 00",
+      "coordinates": [2.1204, 48.8044],
+      "category": "Palace"
+    },
+    {
+      "name": "TP457 (TAP Air Portugal)",
+      "address": "ORY ✈ OPO",
+      "date": "2022-05-16",
+      "coordinates": [2.3522, 48.8566],
+      "category": "Flight"
+    }
+  ]
+}

@@ -13,19 +13,19 @@
   },
   "points": [
     {
+      "name": "FR7073 (Ryanair)",
+      "address": "OPO ✈ DUB",
+      "date": "2025-03-29",
+      "coordinates": [-6.2603, 53.3441],
+      "category": "Flight"
+    },
+    {
       "name": "The Temple Bar Pub",
       "address": "47-48 Temple Bar Dublin 2 D02 N725 Ireland",
       "date": "2025-03-29",
       "phone": "+353 (1) 672 5286",
       "coordinates": [-6.2603, 53.3441],
       "category": "Nightlife"
-    },
-    {
-      "name": "FR7073 (Ryanair)",
-      "address": "OPO ✈ DUB",
-      "date": "2025-03-29",
-      "coordinates": [-6.2603, 53.3441],
-      "category": "Flight"
     },
     {
       "name": "Guinness Storehouse",
@@ -135,6 +135,13 @@
       "phone": "+353 (1) 454 3511",
       "coordinates": [-6.2714, 53.3395],
       "category": "Library"
+    },
+    {
+      "name": "FR7072 (Ryanair)",
+      "address": "DUB ✈ OPO",
+      "date": "2025-04-01",
+      "coordinates": [-6.2603, 53.3441],
+      "category": "Flight"
     }
   ]
 }
