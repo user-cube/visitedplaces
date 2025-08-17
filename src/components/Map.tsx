@@ -5,11 +5,12 @@ import { MapProps, MAP_STYLES, COLOR_SCHEMES } from '../types';
 import {
   MapControls,
   RecenterButton,
+  CustomZoomControl,
   CountryLayer,
   CityMarkers,
   SimpleGallery,
 } from './';
-import { useMapState, useRecenter } from '../hooks';
+import { useMapState } from '../hooks';
 import {
   MAP_CENTER,
   DEFAULT_ZOOM,
@@ -32,8 +33,6 @@ export default function Map({ cities }: MapProps) {
     handleCityClick,
     handleCloseGallery,
   } = useMapState(cities);
-
-  const { handleRecenter } = useRecenter();
 
   const currentColorScheme = COLOR_SCHEMES[selectedColorScheme];
 
@@ -58,7 +57,6 @@ export default function Map({ cities }: MapProps) {
         selectedColorScheme={selectedColorScheme}
         onMapStyleChange={setSelectedMapStyle}
         onColorSchemeChange={setSelectedColorScheme}
-        onRecenter={handleRecenter}
       />
 
       <MapContainer
@@ -75,8 +73,8 @@ export default function Map({ cities }: MapProps) {
           bounds={MAP_BOUNDS}
           {...TILE_CONFIG}
         />
-        <ZoomControl position="bottomleft" />
         <RecenterButton />
+        <CustomZoomControl position="bottomright" />
 
         {/* Render country outlines */}
         <CountryLayer countries={countries} colorScheme={currentColorScheme} />

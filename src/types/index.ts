@@ -52,7 +52,6 @@ export interface MapControlsProps {
   selectedColorScheme: keyof typeof COLOR_SCHEMES;
   onMapStyleChange: (style: keyof typeof MAP_STYLES) => void;
   onColorSchemeChange: (scheme: keyof typeof COLOR_SCHEMES) => void;
-  onRecenter: () => void;
 }
 
 export interface RecenterButtonProps {
