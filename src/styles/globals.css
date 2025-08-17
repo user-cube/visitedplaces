@@ -28,105 +28,14 @@ body.itinerary-page {
   width: 100vw !important;
 }
 
-/* Ensure Leaflet controls are visible on itinerary detail page */
-.itinerary-detail-page .leaflet-control-zoom,
-.itinerary-detail-page .leaflet-control-attribution,
-.itinerary-detail-page .leaflet-bar.leaflet-control {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 10000 !important;
-}
-
-.itinerary-detail-page .leaflet-control-zoom a,
-.itinerary-detail-page .leaflet-control-attribution a {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-/* Ensure Leaflet controls are visible on desktop */
+/* Force Leaflet controls to be visible */
 .leaflet-control-zoom,
 .leaflet-bar.leaflet-control {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  z-index: 10000 !important;
-}
-
-.leaflet-control-attribution {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 10000 !important;
-}
-
-/* Ensure controls are visible on all screen sizes */
-@media (min-width: 769px) {
-  .leaflet-control-zoom {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-  }
-
-  .leaflet-control-attribution {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-  }
-}
-
-/* Force controls to be visible */
-.leaflet-control-zoom,
-.leaflet-control-attribution {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  z-index: 15000 !important;
   pointer-events: auto !important;
-  position: relative !important;
-  z-index: 10000 !important;
-}
-
-.leaflet-control-zoom a,
-.leaflet-control-attribution a {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-/* Override any CSS that might hide controls on desktop */
-@media (min-width: 769px) {
-  .leaflet-control-zoom,
-  .leaflet-control-attribution,
-  .leaflet-bar.leaflet-control,
-  .leaflet-control-zoom a,
-  .leaflet-control-attribution a,
-  .leaflet-bar.leaflet-control a {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    position: relative !important;
-    z-index: 10000 !important;
-  }
-}
-
-/* Ensure controls are not hidden by any parent elements */
-.leaflet-control-zoom,
-.leaflet-control-attribution,
-.leaflet-bar.leaflet-control {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 10000 !important;
   transform: none !important;
   clip: auto !important;
   clip-path: none !important;

@@ -152,6 +152,7 @@ export function generateItineraryMetadata(
     flags: generateFlagsFromCountries(countries),
     emoji: generateEmojiFromCountries(countries),
     countries,
+    pointsCount: itinerary.points.length,
   };
 }
 

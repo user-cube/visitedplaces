@@ -14,9 +14,10 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
-    // Initialize map
+    // Initialize map with explicit control positioning
     const map = L.map(mapRef.current, {
       attributionControl: false, // Disable default attribution
+      zoomControl: false, // We'll add it manually with specific position
     }).setView([47.4979, 19.0402], 10);
     mapInstanceRef.current = map;
 
@@ -25,22 +26,34 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       attribution: '© OpenStreetMap contributors',
     }).addTo(map);
 
-    // Add zoom control to bottom right
-    L.control
-      .zoom({
-        position: 'bottomright',
-      })
-      .addTo(map);
+    // Add zoom control manually to ensure it appears
+    const zoomControl = L.control.zoom({ position: 'bottomright' });
+    zoomControl.addTo(map);
+    console.log('Zoom control added to map');
 
-    // Add attribution to bottom right (commented out to remove the message)
-    // const attributionControl = L.control
-    //   .attribution({
-    //     position: 'bottomright',
-    //   })
-    //   .addTo(map);
+    // Force the control to be visible with inline styles
+    setTimeout(() => {
+      const controlElements = document.querySelectorAll(
+        '.leaflet-control-zoom, .leaflet-bar.leaflet-control'
+      );
+      console.log('Found control elements:', controlElements.length);
+      controlElements.forEach(el => {
+        const element = el as HTMLElement;
+        element.style.display = 'block';
+        element.style.visibility = 'visible';
+        element.style.opacity = '1';
+        element.style.zIndex = '15000';
+        element.style.position = 'relative';
+        console.log('Applied styles to control element');
+      });
+    }, 100);
 
-    // Add custom recenter control
-    const recenterControl = L.Control.extend({
+    // Create markers and route arrays
+    const markers: L.Marker[] = [];
+    const routePoints: [number, number][] = [];
+
+    // Add simple recenter control
+    const RecenterControl = L.Control.extend({
       onAdd: function () {
         const container = L.DomUtil.create(
           'div',
@@ -51,13 +64,17 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
           'leaflet-control-zoom-in',
           container
         );
+
         button.innerHTML = '📍';
         button.title = 'Recenter to itinerary';
+        button.href = '#';
         button.style.fontSize = '16px';
         button.style.lineHeight = '30px';
         button.style.textAlign = 'center';
 
-        L.DomEvent.on(button, 'click', function () {
+        L.DomEvent.on(button, 'click', function (e) {
+          L.DomEvent.stopPropagation(e);
+          L.DomEvent.preventDefault(e);
           if (routePoints.length > 1) {
             const group = L.featureGroup(markers);
             map.fitBounds(group.getBounds().pad(0.1));
@@ -68,11 +85,8 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       },
     });
 
-    new recenterControl({ position: 'bottomright' }).addTo(map);
-
-    // Create markers and route
-    const markers: L.Marker[] = [];
-    const routePoints: [number, number][] = [];
+    // Add recenter control to bottom right
+    new RecenterControl({ position: 'bottomright' }).addTo(map);
 
     itinerary.points.forEach((point: ItineraryPoint, index: number) => {
       const [lng, lat] = point.coordinates;
@@ -191,10 +205,27 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
   }, [itinerary]);
 
   return (
-    <div
-      ref={mapRef}
-      className="w-full h-full"
-      style={{ height: 'calc(100vh - 64px)' }}
-    />
+    <>
+      <style jsx>{`
+        :global(.leaflet-control-zoom),
+        :global(.leaflet-bar.leaflet-control) {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          z-index: 15000 !important;
+          pointer-events: auto !important;
+        }
+        :global(.leaflet-control-zoom a) {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+        }
+      `}</style>
+      <div
+        ref={mapRef}
+        className="w-full h-full"
+        style={{ height: 'calc(100vh - 64px)' }}
+      />
+    </>
   );
 }
