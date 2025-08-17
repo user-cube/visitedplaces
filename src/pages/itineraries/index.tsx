@@ -137,10 +137,10 @@ export default function ItinerariesList() {
         <div className="fixed top-4 left-4 z-50 sm:top-4 sm:left-4">
           <button
             onClick={() => router.push('/')}
-            className="group inline-flex items-center px-3 py-2 sm:px-4 sm:py-3 lg:px-5 lg:py-3 border-2 border-gray-200 shadow-lg text-xs sm:text-sm lg:text-base font-semibold rounded-lg sm:rounded-xl text-gray-700 bg-white/95 backdrop-blur-sm hover:bg-white hover:border-[#667eea] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-all duration-300 transform hover:scale-105"
+            className="group inline-flex items-center px-3 py-2 sm:px-4 sm:py-3 lg:px-5 lg:py-3 border-2 border-gray-200 shadow-lg text-xs sm:text-sm lg:text-base font-semibold rounded-lg sm:rounded-xl text-gray-700 bg-white/95 backdrop-blur-sm hover:bg-white hover:border-[#667eea] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-all duration-200 transform hover:scale-105"
           >
             <svg
-              className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 mr-1 sm:mr-2 lg:mr-3 group-hover:-translate-x-1 transition-transform duration-300"
+              className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 mr-1 sm:mr-2 lg:mr-3 group-hover:-translate-x-1 transition-transform duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -225,7 +225,7 @@ export default function ItinerariesList() {
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
                   placeholder="Search by title, description, or country..."
-                  className="block w-full pl-10 pr-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-200"
+                  className="block w-full pl-10 pr-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
                 />
               </div>
             </div>
@@ -242,7 +242,7 @@ export default function ItinerariesList() {
                 id="country"
                 value={selectedCountry}
                 onChange={e => setSelectedCountry(e.target.value)}
-                className="block w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-200"
+                className="block w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
               >
                 <option value="">All countries</option>
                 {uniqueCountries.map(country => (
@@ -265,7 +265,7 @@ export default function ItinerariesList() {
                 id="year"
                 value={selectedYear}
                 onChange={e => setSelectedYear(e.target.value)}
-                className="block w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-200"
+                className="block w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
               >
                 <option value="">All years</option>
                 {uniqueYears.map(year => (
@@ -286,7 +286,7 @@ export default function ItinerariesList() {
                   setSelectedCountry('');
                   setSelectedYear('');
                 }}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-colors duration-200"
+                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-colors duration-150"
               >
                 <svg
                   className="w-4 h-4 mr-2"
@@ -324,7 +324,7 @@ export default function ItinerariesList() {
                 setSelectedCountry('');
                 setSelectedYear('');
               }}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-[#667eea] hover:bg-[#5a67d8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-colors duration-200"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-[#667eea] hover:bg-[#5a67d8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-colors duration-150"
             >
               Clear all filters
             </button>
@@ -334,14 +334,14 @@ export default function ItinerariesList() {
             {filteredItineraries.map((itinerary, index) => (
               <div
                 key={itinerary.id}
-                className={`${styles.itineraryCard} group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:scale-105 border border-white/20 w-full`}
+                className={`${styles.itineraryCard} group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer transform hover:-translate-y-2 hover:scale-105 border border-white/20 w-full`}
                 onClick={() => handleItinerarySelect(itinerary)}
                 style={{
                   animationDelay: `${index * 100}ms`,
                 }}
               >
                 {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#667eea]/5 to-[#764ba2]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#667eea]/5 to-[#764ba2]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-150"></div>
 
                 {/* Card content */}
                 <div className="relative p-5 sm:p-6 lg:p-8">
@@ -349,7 +349,7 @@ export default function ItinerariesList() {
                   <div className="flex items-start mb-4 sm:mb-6">
                     <div className="flex items-start space-x-3 sm:space-x-4 md:space-x-5">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 overflow-hidden relative">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 overflow-hidden relative">
                           {itinerary.image ? (
                             <img
                               src={itinerary.image}
@@ -365,7 +365,7 @@ export default function ItinerariesList() {
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 group-hover:text-[#667eea] transition-colors duration-300">
+                        <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 group-hover:text-[#667eea] transition-colors duration-200">
                           {itinerary.title}
                         </h2>
                         <div className="flex items-center space-x-2 mt-1 sm:mt-2">
@@ -452,11 +452,11 @@ export default function ItinerariesList() {
                       </div>
                     </div>
 
-                    <button className="group/btn w-full inline-flex items-center justify-center px-3 py-2 sm:px-5 sm:py-3 lg:px-6 lg:py-3 border border-transparent text-sm sm:text-base font-semibold rounded-lg text-white bg-gradient-to-r from-[#667eea] to-[#764ba2] hover:from-[#5a67d8] hover:to-[#6b46c1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <button className="group/btn w-full inline-flex items-center justify-center px-3 py-2 sm:px-5 sm:py-3 lg:px-6 lg:py-3 border border-transparent text-sm sm:text-base font-semibold rounded-lg text-white bg-gradient-to-r from-[#667eea] to-[#764ba2] hover:from-[#5a67d8] hover:to-[#6b46c1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                       <span className="hidden sm:inline">View itinerary</span>
                       <span className="sm:hidden">View</span>
                       <svg
-                        className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform duration-300"
+                        className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform duration-200"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
