@@ -52,7 +52,6 @@ export interface MapControlsProps {
   selectedColorScheme: keyof typeof COLOR_SCHEMES;
   onMapStyleChange: (style: keyof typeof MAP_STYLES) => void;
   onColorSchemeChange: (scheme: keyof typeof COLOR_SCHEMES) => void;
-  onRecenter: () => void;
 }
 
 export interface RecenterButtonProps {
@@ -78,6 +77,48 @@ export interface CityMarkersProps {
   cities: City[];
   colorScheme: ColorScheme;
   onCityClick: (city: City) => void;
+}
+
+export interface ItineraryPoint {
+  name: string;
+  address: string;
+  date: string;
+  phone?: string;
+  website?: string;
+  coordinates: [number, number];
+  category?: string;
+}
+
+export interface ItineraryMetadata {
+  flags: string;
+  emoji: string;
+  countries: string[];
+  pointsCount: number;
+}
+
+export interface Itinerary {
+  id: string;
+  title: string;
+  startDate: string;
+  endDate: string;
+  points: ItineraryPoint[];
+  description?: string;
+  image?: string;
+  metadata?: ItineraryMetadata;
+}
+
+export interface ItineraryListProps {
+  itineraries: Itinerary[];
+  onItinerarySelect: (itinerary: Itinerary) => void;
+}
+
+export interface ItineraryMapProps {
+  itinerary: Itinerary;
+}
+
+export interface ItinerarySidebarProps {
+  itinerary: Itinerary;
+  onClose: () => void;
 }
 
 // Map styles configuration

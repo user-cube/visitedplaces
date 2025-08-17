@@ -1,0 +1,183 @@
+{
+  "id": "krakow-2025",
+  "title": "Krakow",
+  "startDate": "2025-10-02",
+  "endDate": "2025-10-06",
+  "description": "5-day trip to Krakow exploring Polish history, medieval architecture and cultural heritage",
+  "image": "/images/itineraries/2025/krakow.webp",
+  "metadata": {
+    "flags": "🇵🇱",
+    "emoji": "🏰",
+    "countries": ["Poland"],
+    "pointsCount": 25
+  },
+  "points": [
+    {
+      "name": "FR3048 (Ryanair)",
+      "address": "OPO ✈ KRK",
+      "date": "2025-10-02",
+      "coordinates": [19.9453, 50.0777],
+      "category": "Flight"
+    },
+    {
+      "name": "Kraków Barbican",
+      "address": "Basztowa, 30-547 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 421 02 01",
+      "coordinates": [19.9419, 50.0657],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Floriańska",
+      "address": "Floriańska, Kraków, Poland",
+      "date": "2025-10-03",
+      "coordinates": [19.9419, 50.0657],
+      "category": "Street"
+    },
+    {
+      "name": "Main Square",
+      "address": "Rynek Główny, 31-422 Kraków, Poland",
+      "date": "2025-10-03",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Square"
+    },
+    {
+      "name": "MNK Sukiennice",
+      "address": "Rynek Główny 3, 31-042 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 433 54 00",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Museum"
+    },
+    {
+      "name": "St. Mary's Basilica",
+      "address": "plac Mariacki 5, 31-042 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 422 05 21",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Church"
+    },
+    {
+      "name": "Town Hall Tower",
+      "address": "Rynek Główny 1, 30-001 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 426 43 34",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Tower"
+    },
+    {
+      "name": "Muzeum Uniwersytetu Jagiellońskiego Collegium Maius",
+      "address": "Jagiellońska 15, 31-010 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 663 14 48",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Museum"
+    },
+    {
+      "name": "Saints Peter and Paul Church",
+      "address": "Grodzka 52A, 31-044 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 350 63 65",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Church"
+    },
+    {
+      "name": "Wawel Royal Castle",
+      "address": "Wawel 5, 31-001 Kraków, Poland",
+      "date": "2025-10-03",
+      "phone": "+48 12 422 51 55",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Castle"
+    },
+    {
+      "name": "Memorial and Museum Auschwitz-Birkenau",
+      "address": "Więźniów Oświęcimia 55, 32-600 Oświęcim, Poland",
+      "date": "2025-10-04",
+      "coordinates": [19.2036, 50.0344],
+      "category": "Museum"
+    },
+    {
+      "name": "Old Synagogue",
+      "address": "Szeroka 24, 31-053 Kraków, Poland",
+      "date": "2025-10-04",
+      "phone": "+48 12 422 09 62",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Synagogue"
+    },
+    {
+      "name": "Tempel Synagogue, Kraków",
+      "address": "Miodowa 24, 30-001 Kraków, Poland",
+      "date": "2025-10-04",
+      "phone": "+48 12 429 57 35",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Synagogue"
+    },
+    {
+      "name": "Auschwitz & Salt Mine tour to KrakowTrip.com",
+      "address": "Rynek Główny 8, 31-042 Kraków, Poland",
+      "date": "2025-10-05",
+      "phone": "+48 606 206 031",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Tour"
+    },
+    {
+      "name": "Corpus Christi Basilica",
+      "address": "Bożego Ciała 26, 31-059 Kraków, Poland",
+      "date": "2025-10-05",
+      "phone": "+48 12 430 59 95",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Church"
+    },
+    {
+      "name": "plac Nowy",
+      "address": "plac Nowy, 31-056 Kraków, Poland",
+      "date": "2025-10-05",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Square"
+    },
+    {
+      "name": "Plac Bohaterów Getta",
+      "address": "Plac Bohaterów Getta, Kraków, Poland",
+      "date": "2025-10-05",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Square"
+    },
+    {
+      "name": "Apteka pod Orłem",
+      "address": "Plac Bohaterów Getta 18, 33-332 Kraków, Poland",
+      "date": "2025-10-05",
+      "phone": "+48 12 656 56 25",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Museum"
+    },
+    {
+      "name": "Remains of the Ghetto wall",
+      "address": "Lwowska 29, 30-548 Kraków, Poland",
+      "date": "2025-10-05",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Oskar Schindler's Enamel Factory",
+      "address": "Lipowa 4, 30-702 Kraków, Poland",
+      "date": "2025-10-05",
+      "phone": "+48 12 257 00 96",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Museum"
+    },
+    {
+      "name": "Krakus Mound",
+      "address": "30-543 Kraków, Poland",
+      "date": "2025-10-05",
+      "coordinates": [19.9373, 50.0617],
+      "category": "Historical Site"
+    },
+    {
+      "name": "FR3047 (Ryanair)",
+      "address": "KRK ✈ OPO",
+      "date": "2025-10-06",
+      "coordinates": [19.9453, 50.0777],
+      "category": "Flight"
+    }
+  ]
+}

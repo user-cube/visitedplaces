@@ -1,0 +1,559 @@
+/* Side Panel Toggle Button */
+.side-panel-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1002;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  backdrop-filter: blur(20px);
+  border: none;
+  border-radius: 16px;
+  width: auto;
+  min-width: 80px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  user-select: none;
+  padding: 0 16px;
+}
+
+.toggle-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.toggle-text {
+  white-space: nowrap;
+}
+
+.side-panel-toggle:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+}
+
+.side-panel-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.side-panel-toggle:hover svg {
+  transform: scale(1.1);
+}
+
+/* When sidebar is open, move toggle button to avoid overlap */
+.side-panel.open ~ .side-panel-toggle {
+  left: 400px;
+  min-width: 90px;
+}
+
+.side-panel-toggle:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Side Panel */
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+  backdrop-filter: blur(30px);
+  border-right: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 8px 0 40px rgba(0, 0, 0, 0.12);
+  z-index: 1001;
+  overflow-y: auto;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+.side-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.side-panel::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+.side-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+.side-panel.closed {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.side-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Panel Header */
+.side-panel-header {
+  padding: 90px 28px 24px 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  position: relative;
+}
+
+.side-panel-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(102, 126, 234, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+.side-panel-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+.side-panel-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Panel Content */
+.side-panel-content {
+  padding: 28px 28px 32px 28px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 250, 252, 0.8) 100%
+  );
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 20px;
+  padding: 20px 12px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+.stat-number {
+  font-size: 30px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
+  padding: 0 2px;
+}
+
+/* Itineraries Section */
+.itineraries-section {
+  margin-top: 32px;
+}
+
+.section-header {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.025em;
+  position: relative;
+}
+
+.section-header h3::before {
+  content: '🗺️';
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Itineraries List */
+.itineraries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.itinerary-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 250, 252, 0.8) 100%
+  );
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.itinerary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.itinerary-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+  border-color: rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.12);
+}
+
+.itinerary-card:hover::before {
+  opacity: 1;
+}
+
+.itinerary-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.itinerary-image {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.itinerary-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.itinerary-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.itinerary-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.itinerary-dates {
+  font-weight: 600;
+  color: #475569;
+}
+
+.itinerary-points {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 100%
+  );
+  color: #667eea;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.5) 0%,
+    rgba(241, 245, 249, 0.3) 100%
+  );
+  border-radius: 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.2);
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  filter: grayscale(0.3);
+}
+
+.empty-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.01em;
+}
+
+/* View All Button */
+.view-all-button {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+.view-all-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.view-all-button:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+}
+
+.view-all-button:hover::before {
+  left: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .side-panel {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .side-panel.closed {
+    transform: translateY(-100%);
+  }
+
+  .side-panel.open {
+    transform: translateY(0);
+  }
+
+  .side-panel-toggle {
+    top: 16px;
+    left: 16px;
+    width: auto;
+    min-width: 70px;
+    height: 44px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    padding: 0 12px;
+  }
+
+  .toggle-content {
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  .side-panel-toggle:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+  }
+
+  /* On mobile, when sidebar is open, move toggle button down */
+  .side-panel.open ~ .side-panel-toggle {
+    left: 16px;
+    top: 90px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    min-width: 80px;
+  }
+
+  .side-panel-header {
+    padding: 70px 24px 20px 24px;
+  }
+
+  .side-panel-content {
+    padding: 20px 24px 24px;
+  }
+
+  .stats-grid {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .stat-card {
+    padding: 14px 10px;
+    min-height: 70px;
+  }
+
+  .stat-number {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 0.05em;
+  }
+
+  .section-header h3 {
+    font-size: 18px;
+  }
+
+  .itinerary-card {
+    padding: 16px;
+  }
+
+  .view-all-button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}

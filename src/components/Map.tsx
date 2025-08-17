@@ -1,14 +1,17 @@
-import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
+
 import 'leaflet/dist/leaflet.css';
 import { MapProps, MAP_STYLES, COLOR_SCHEMES } from '../types';
 import {
   MapControls,
   RecenterButton,
+  CustomZoomControl,
   CountryLayer,
   CityMarkers,
   SimpleGallery,
+  SidePanel,
 } from './';
-import { useMapState, useRecenter } from '../hooks';
+import { useMapState, useItineraries } from '../hooks';
 import {
   MAP_CENTER,
   DEFAULT_ZOOM,
@@ -31,19 +34,20 @@ export default function Map({ cities }: MapProps) {
     handleCloseGallery,
   } = useMapState(cities);
 
-  const { handleRecenter } = useRecenter();
-
+  const { itineraries } = useItineraries();
   const currentColorScheme = COLOR_SCHEMES[selectedColorScheme];
 
   return (
     <div style={CONTAINER_STYLES}>
+      {/* Side Panel */}
+      <SidePanel cities={cities} itineraries={itineraries} />
+
       {/* Map Controls Panel */}
       <MapControls
         selectedMapStyle={selectedMapStyle}
         selectedColorScheme={selectedColorScheme}
         onMapStyleChange={setSelectedMapStyle}
         onColorSchemeChange={setSelectedColorScheme}
-        onRecenter={handleRecenter}
       />
 
       <MapContainer
@@ -60,8 +64,8 @@ export default function Map({ cities }: MapProps) {
           bounds={MAP_BOUNDS}
           {...TILE_CONFIG}
         />
-        <ZoomControl position="bottomleft" />
         <RecenterButton />
+        <CustomZoomControl position="bottomright" />
 
         {/* Render country outlines */}
         <CountryLayer countries={countries} colorScheme={currentColorScheme} />

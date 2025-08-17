@@ -32,17 +32,20 @@ An interactive world map application that displays countries and cities you've v
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/user-cube/visitedplaces.git
    cd visitedplaces
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -64,16 +67,26 @@ visitedplaces/
 │   │   └── index.tsx        # Home page
 │   ├── styles/
 │   │   └── globals.css      # Global styles
+│   ├── utils/
+│   │   └── itineraryUtils.ts # Itinerary management utilities
 │   └── types/
 │       └── json.d.ts        # TypeScript definitions
-├── data/
-│   └── visited.json         # Visited places data
 ├── public/
-│   └── countries-features.json # Country GeoJSON data
+│   ├── data/
+│   │   ├── visited.json         # Visited places data
+│   │   └── itineraries/         # Travel itineraries (organized by year)
+│   │       ├── index.json       # Central index of all itineraries
+│   │       └── 2025/            # Year-based directories
+│   │           └── budapeste-and-vienna.json
+│   └── countries-features.json  # Country GeoJSON data
+├── scripts/
+│   └── migrate-itineraries.js   # Migrate itineraries to new structure
 └── .github/workflows/       # CI/CD pipelines
 ```
 
 ## 📊 Data Format
+
+### Visited Places
 
 The application uses a JSON file to store visited places data:
 
@@ -90,9 +103,31 @@ The application uses a JSON file to store visited places data:
 }
 ```
 
+### Travel Itineraries
+
+Itineraries are organized in a structured file system:
+
+```
+data/itineraries/
+├── index.json              # Central index with metadata
+└── 2025/                   # Year-based directories
+    └── budapeste-and-vienna.json  # Individual itinerary files
+```
+
+Each itinerary file contains:
+
+- Trip details (title, dates, description)
+- Points of interest with coordinates
+- Categories and metadata
+
+## 🔧 Scripts
+
+- `npm run migrate-itineraries` - Migrate itineraries to new structure
+
 ## 🎨 Customization
 
 ### Map Styles
+
 - **Standard**: OpenStreetMap tiles
 - **Dark**: Dark theme from CartoDB
 - **Light**: Light theme from CartoDB
@@ -101,6 +136,7 @@ The application uses a JSON file to store visited places data:
 - **Vintage**: Watercolor style from Stamen
 
 ### Color Schemes
+
 - **Green**: Green countries with red cities
 - **Blue**: Blue countries with red cities
 - **Purple**: Purple countries with orange cities

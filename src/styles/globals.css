@@ -1,3 +1,7 @@
+@import 'tailwindcss';
+@import './mapControls.css';
+@import './sidePanel.css';
+
 /* Global styles to ensure full page coverage */
 html,
 body {
@@ -6,6 +10,50 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+/* Allow scrolling on itinerary pages */
+body.itinerary-page {
+  overflow: auto;
+  height: auto;
+}
+
+/* Itinerary detail page specific styles */
+.itinerary-detail-page {
+  overflow: hidden;
+}
+
+.itinerary-detail-page .leaflet-container {
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+/* Force Leaflet controls to be visible */
+.leaflet-control-zoom,
+.leaflet-bar.leaflet-control {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 15000 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  clip: auto !important;
+  clip-path: none !important;
+}
+
+/* Style for recenter button */
+.leaflet-control-zoom-in[title='Recenter to itinerary'] {
+  background: white !important;
+  color: #374151 !important;
+  border: none !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+  border-radius: 0 !important;
+}
+
+.leaflet-control-zoom-in[title='Recenter to itinerary']:hover {
+  background: #f3f4f6 !important;
+  color: #1f2937 !important;
 }
 
 #__next {
@@ -87,4 +135,21 @@ body {
 .leaflet-tooltip-pane,
 .leaflet-popup-pane {
   background-color: #f8f9fa !important;
+}
+
+/* Map container responsive styles */
+.map-container {
+  margin-left: 320px; /* Space for side panel on desktop */
+  transition: margin-left 0.3s ease;
+}
+
+/* When side panel is closed, remove margin */
+body.side-panel-closed .map-container {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    margin-left: 0; /* No margin on mobile */
+  }
 }

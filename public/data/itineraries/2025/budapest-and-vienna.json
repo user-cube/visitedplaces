@@ -1,0 +1,357 @@
+{
+  "id": "budapest-vienna-2025",
+  "title": "Budapest and Vienna",
+  "startDate": "2025-02-26",
+  "endDate": "2025-03-02",
+  "description": "5-day trip from Porto to Budapest and Vienna",
+  "image": "/images/itineraries/2025/budapest.webp",
+  "points": [
+    {
+      "name": "Fisherman's Bastion",
+      "address": "1014 Budapest, District I, Hess András tér 1-3., Hungary",
+      "date": "2025-02-26",
+      "phone": "+36 1 458 3000",
+      "coordinates": [
+        19.0344,
+        47.5025
+      ],
+      "category": "Attraction"
+    },
+    {
+      "name": "Stephansplatz",
+      "address": "Stephansplatz, 1010 Vienna, Austria",
+      "date": "2025-02-27",
+      "coordinates": [
+        16.3738,
+        48.2082
+      ],
+      "category": "Attraction"
+    },
+    {
+      "name": "Dom Museum Wien",
+      "address": "Stephansplatz 6, 1010 Vienna, Austria",
+      "date": "2025-02-27",
+      "phone": "+43 1 515525300",
+      "coordinates": [
+        16.3738,
+        48.2082
+      ],
+      "category": "Museum"
+    },
+    {
+      "name": "St. Stephen's Cathedral",
+      "address": "Stephansplatz 3, 1010 Vienna, Austria",
+      "date": "2025-02-27",
+      "phone": "+43 1 515523054",
+      "coordinates": [
+        16.3738,
+        48.2082
+      ],
+      "category": "Church"
+    },
+    {
+      "name": "Schatzkammer des Deutschen Ordens",
+      "address": "Singerstraße 7, 1010 Vienna, Austria",
+      "date": "2025-02-27",
+      "phone": "+43 1 5121065214",
+      "coordinates": [
+        16.3738,
+        48.2082
+      ],
+      "category": "Museum"
+    },
+    {
+      "name": "State Hall",
+      "address": "Josefsplatz 1, 1010 Vienna, Austria",
+      "date": "2025-02-27",
+      "phone": "+43 1 53410",
+      "coordinates": [
+        16.3676,
+        48.2058
+      ],
+      "category": "Library"
+    },
+    {
+      "name": "Hofburg Imperial Palace",
+      "address": "Heldenplatz 1010 Vienna Austria",
+      "date": "2025-02-27",
+      "phone": "+43 1 5873666",
+      "coordinates": [
+        16.3676,
+        48.2058
+      ],
+      "category": "Palace"
+    },
+    {
+      "name": "Rathausplatz",
+      "address": "Rathausplatz, 1010 Vienna, Austria",
+      "date": "2025-02-27",
+      "coordinates": [
+        16.3584,
+        48.2104
+      ],
+      "category": "Square"
+    },
+    {
+      "name": "Sziklakórház Atombunker Múzeum",
+      "address": "1012 Budapest, District I, Lovas út 4C., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 70 701 0101",
+      "coordinates": [
+        19.0344,
+        47.5025
+      ],
+      "category": "Museum"
+    },
+    {
+      "name": "Buda Castle",
+      "address": "1014 Budapest, District I, Szent György tér 2., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 1 487 8800",
+      "coordinates": [
+        19.0394,
+        47.4965
+      ],
+      "category": "Castle"
+    },
+    {
+      "name": "Hungarian National Gallery",
+      "address": "1014 Budapest, District I, Szent György tér 2., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 20 439 7408",
+      "coordinates": [
+        19.0394,
+        47.4965
+      ],
+      "category": "Museum"
+    },
+    {
+      "name": "Budapest History Museum",
+      "address": "1014 Budapest, District I, Szent György tér 2., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 1 487 8871",
+      "coordinates": [
+        19.0394,
+        47.4965
+      ],
+      "category": "Museum"
+    },
+    {
+      "name": "Gellért-hegy",
+      "address": "Budapest, Hungary",
+      "date": "2025-02-28",
+      "coordinates": [
+        19.0494,
+        47.4835
+      ],
+      "category": "Hill"
+    },
+    {
+      "name": "Citadella",
+      "address": "1118 Budapest, District XI, Citadella sétány 1., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 1 466 5794",
+      "coordinates": [
+        19.0494,
+        47.4835
+      ],
+      "category": "Fortress"
+    },
+    {
+      "name": "St. Gerard Sagredo Statue",
+      "address": "1013 Budapest, District I, Döbrentei tér, Hungary",
+      "date": "2025-02-28",
+      "coordinates": [
+        19.0494,
+        47.4835
+      ],
+      "category": "Statue"
+    },
+    {
+      "name": "Nagycsarnok",
+      "address": "1093 Budapest, District IX, Vámház körút 1-3., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 1 366 3300",
+      "coordinates": [
+        19.0594,
+        47.4835
+      ],
+      "category": "Market"
+    },
+    {
+      "name": "Budapest Danube Boat Tour",
+      "address": "1075 Budapest, District VII, Károly körút 5., Hungary",
+      "date": "2025-02-28",
+      "phone": "+36 70 366 9641",
+      "coordinates": [
+        19.0594,
+        47.4835
+      ],
+      "category": "Tour"
+    },
+    {
+      "name": "Budapest Inner-city Mother Church Of Our Lady Of The Assumption",
+      "address": "1056 Budapest, District V, Március 15 tér 2–3., Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 318 3108",
+      "coordinates": [
+        19.0594,
+        47.4935
+      ],
+      "category": "Church"
+    },
+    {
+      "name": "House of Parliament",
+      "address": "1055 Budapest, District V, Kossuth Lajos tér 1-3., Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 441 4000",
+      "coordinates": [
+        19.0594,
+        47.4935
+      ],
+      "category": "Government"
+    },
+    {
+      "name": "Shoes on the Danube Bank",
+      "address": "1054 Budapest, District V, Széchenyi rakpart 5., Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 999 0830",
+      "coordinates": [
+        19.0494,
+        47.4935
+      ],
+      "category": "Memorial"
+    },
+    {
+      "name": "Széchenyi Chain Bridge",
+      "address": "1051 Budapest, District V, Széchenyi lánchíd, Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 438 8080",
+      "coordinates": [
+        19.0494,
+        47.4935
+      ],
+      "category": "Bridge"
+    },
+    {
+      "name": "St. Stephen's Basilica",
+      "address": "1051 Budapest, District V, Szt István tér 1., Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 311 0839",
+      "coordinates": [
+        19.0494,
+        47.5035
+      ],
+      "category": "Church"
+    },
+    {
+      "name": "Jewish synagogue",
+      "address": "1075 Budapest, District VII, Síp utca 12., Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 413 1515",
+      "coordinates": [
+        19.0594,
+        47.5035
+      ],
+      "category": "Synagogue"
+    },
+    {
+      "name": "Metropolitan Ervin Szabó Library",
+      "address": "1088 Budapest, District VIII, Szabó Ervin tér 1., Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 1 411 5017",
+      "coordinates": [
+        19.0694,
+        47.5035
+      ],
+      "category": "Library"
+    },
+    {
+      "name": "Széchenyi",
+      "address": "1146 Budapest, Állatkerti körút 9-11, Hungary",
+      "date": "2025-03-01",
+      "phone": "+36 20 435 0051",
+      "coordinates": [
+        19.0794,
+        47.5135
+      ],
+      "category": "Thermal Bath"
+    },
+    {
+      "name": "Vajdahunyad Castle",
+      "address": "1146 Budapest, District XIV, Vajdahunyad sétány, Hungary",
+      "date": "2025-03-02",
+      "phone": "+36 1 422 0765",
+      "coordinates": [
+        19.0794,
+        47.5135
+      ],
+      "category": "Castle"
+    },
+    {
+      "name": "Heroes' Square",
+      "address": "1068 Budapest, District XIV, Hősök tere, Hungary",
+      "date": "2025-03-02",
+      "phone": "+36 1 438 8080",
+      "coordinates": [
+        19.0794,
+        47.5135
+      ],
+      "category": "Square"
+    },
+    {
+      "name": "Andrássy út",
+      "address": "1061 Budapest, Andrássy út, Hungary",
+      "date": "2025-03-02",
+      "coordinates": [
+        19.0694,
+        47.5135
+      ],
+      "category": "Street"
+    },
+    {
+      "name": "Hungarian State Opera",
+      "address": "1061 Budapest, District VI, Andrássy út 22., Hungary",
+      "date": "2025-03-02",
+      "phone": "+36 1 814 7100",
+      "coordinates": [
+        19.0694,
+        47.5135
+      ],
+      "category": "Opera"
+    },
+    {
+      "name": "House of Terror",
+      "address": "1062 Budapest, District VI, Andrássy út 60., Hungary",
+      "date": "2025-03-02",
+      "phone": "+36 1 374 2600",
+      "coordinates": [
+        19.0694,
+        47.5135
+      ],
+      "category": "Museum"
+    },
+    {
+      "name": "New York Café",
+      "address": "1073 Budapest, District VII, Erzsébet körút 9-11., Hungary",
+      "date": "2025-03-02",
+      "phone": "+36 1 886 6167",
+      "coordinates": [
+        19.0594,
+        47.5135
+      ],
+      "category": "Cafe"
+    },
+    {
+      "name": "Szimpla Kert",
+      "address": "1075 Budapest, District VII, Kazinczy utca 14., Hungary",
+      "date": "2025-03-02",
+      "phone": "+36 1 352 4198",
+      "coordinates": [
+        19.0594,
+        47.5135
+      ],
+      "category": "Nightlife"
+    }
+  ]
+}

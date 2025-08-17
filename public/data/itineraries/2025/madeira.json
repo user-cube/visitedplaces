@@ -1,0 +1,127 @@
+{
+  "id": "madeira-2025",
+  "title": "Madeira",
+  "startDate": "2025-09-10",
+  "endDate": "2025-09-14",
+  "description": "5-day trip to Madeira island exploring Funchal and the beautiful landscapes",
+  "image": "/images/itineraries/2025/madeira.webp",
+  "metadata": {
+    "flags": "🇵🇹",
+    "emoji": "🏝️",
+    "countries": ["Portugal"],
+    "pointsCount": 15
+  },
+  "points": [
+    {
+      "name": "Centro Historico de Fuchal",
+      "address": "Largo do Corpo Santo 11, 9060-075 Funchal, Portugal",
+      "date": "2025-06-30",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Attraction"
+    },
+    {
+      "name": "TP1712 (TAP Air Portugal)",
+      "address": "OPO ✈ FNC",
+      "date": "2025-09-10",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Flight"
+    },
+    {
+      "name": "Aeroporto de Funchal",
+      "address": "Aeroporto Funchal, Santa Cruz, Funchal, Portugal, 9100-105",
+      "date": "2025-09-10",
+      "coordinates": [-16.7745, 32.6978],
+      "category": "Transport"
+    },
+    {
+      "name": "Mercado Dos Lavradores",
+      "address": "Largo dos Lavradores, 9060-158 Funchal, Portugal",
+      "date": "2025-09-10",
+      "phone": "+351 291 214 080",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Food Market"
+    },
+    {
+      "name": "Catedral Paróquia da Sé",
+      "address": "Rua do Aljube 13–43, 9000-067 Funchal, Portugal",
+      "date": "2025-09-10",
+      "phone": "+351 291 228 155",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Church"
+    },
+    {
+      "name": "Praça do Munícipio",
+      "address": "Praça do Munícipio, 9000-081 Funchal, Portugal",
+      "date": "2025-09-10",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Square"
+    },
+    {
+      "name": "Sao Tiago Fort",
+      "address": "Tv. do Forte 8, 9060-123 Funchal, Portugal",
+      "date": "2025-09-10",
+      "phone": "+351 291 213 340",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Fort"
+    },
+    {
+      "name": "Teleférico da Cidade do Funchal",
+      "address": "Rua de Dom Carlos I 32–33, 9060-397 Funchal, Portugal",
+      "date": "2025-09-10",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Transport"
+    },
+    {
+      "name": "Jardim Botânico",
+      "address": "Jardim Botânico, 9060-030 Funchal, Portugal",
+      "date": "2025-09-10",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Garden"
+    },
+    {
+      "name": "Monte Palace Tropical Garden",
+      "address": "Caminho do Monte 174, 9050-288 Funchal, Portugal",
+      "date": "2025-09-10",
+      "phone": "+351 291 742 650",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Garden"
+    },
+    {
+      "name": "Carreiros do Monte",
+      "address": "Caminho do Monte 4, 9050-015 Funchal, Portugal",
+      "date": "2025-09-10",
+      "phone": "+351 291 783 919",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Attraction"
+    },
+    {
+      "name": "Zona Velha do Funchal",
+      "address": "Rua de Santa Maria 1, 9060-291 Funchal, Portugal",
+      "date": "2025-09-10",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Attraction"
+    },
+    {
+      "name": "Praia do Garajau",
+      "address": "9125-059 Santa Cruz, Portugal",
+      "date": "2025-09-13",
+      "phone": "+351 915 768 236",
+      "coordinates": [-16.7745, 32.6978],
+      "category": "Beach"
+    },
+    {
+      "name": "Miradouro Francisco Alvares Nobrega",
+      "address": "Estrada Francisco Alvares da Nóbrega, 9200-209 Machico, Portugal",
+      "date": "2025-09-13",
+      "coordinates": [-16.7745, 32.6978],
+      "category": "Viewpoint"
+    },
+    {
+      "name": "Ponta de São Lourenço",
+      "address": "Machico, Portugal",
+      "date": "2025-09-13",
+      "coordinates": [-16.7745, 32.6978],
+      "category": "Attraction"
+    }
+  ]
+}

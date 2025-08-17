@@ -1,0 +1,192 @@
+{
+  "id": "athens-2025",
+  "title": "Athens",
+  "startDate": "2025-05-27",
+  "endDate": "2025-05-31",
+  "description": "5-day trip to Athens exploring ancient Greek history, Acropolis, and archaeological sites",
+  "image": "/images/itineraries/2025/athens.webp",
+  "metadata": {
+    "flags": "🇬🇷",
+    "emoji": "🏛️",
+    "countries": ["Greece"],
+    "pointsCount": 25
+  },
+  "points": [
+    {
+      "name": "A3725 (Aegean Airlines)",
+      "address": "OPO ✈ ATH",
+      "date": "2025-05-27",
+      "coordinates": [23.7275, 37.9838],
+      "category": "Flight"
+    },
+    {
+      "name": "Areopagus",
+      "address": "Theorias 26–44, 105 55 Athens, Greece",
+      "date": "2025-05-28",
+      "phone": "+30 21 0321 0185",
+      "coordinates": [23.7183, 37.9715],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Monastiraki Square",
+      "address": "Plateia Monastirakiou 6, 105 55 Athens, Greece",
+      "date": "2025-05-28",
+      "coordinates": [23.7275, 37.9764],
+      "category": "Square"
+    },
+    {
+      "name": "Church of Metamorphosis",
+      "address": "Theorias 12, 105 55 Athens, Greece",
+      "date": "2025-05-28",
+      "coordinates": [23.7275, 37.9764],
+      "category": "Church"
+    },
+    {
+      "name": "Roman Agora of Athens",
+      "address": "Plaka, 105 55 Athens, Greece",
+      "date": "2025-05-28",
+      "phone": "+30 21 0324 5220",
+      "coordinates": [23.7275, 37.9742],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Acropolis",
+      "address": "Athens, Greece",
+      "date": "2025-05-28",
+      "coordinates": [23.7275, 37.9715],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Parthenon",
+      "address": "Akropoli Athinon, 105 58 Athens, Greece",
+      "date": "2025-05-28",
+      "phone": "+30 21 0321 4172",
+      "coordinates": [23.7275, 37.9715],
+      "category": "Temple"
+    },
+    {
+      "name": "Museum of the Center for the Acropolis Studies",
+      "address": "Stratigou Makrygianni Ioanni 2, 117 42 Athens, Greece",
+      "date": "2025-05-28",
+      "phone": "+30 21 0923 9381",
+      "coordinates": [23.7275, 37.9715],
+      "category": "Museum"
+    },
+    {
+      "name": "Library of Hadrian",
+      "address": "Areos 3, 105 55 Athens, Greece",
+      "date": "2025-05-28",
+      "phone": "+30 21 0324 9350",
+      "coordinates": [23.7275, 37.9764],
+      "category": "Library"
+    },
+    {
+      "name": "Byzantine & Christian Museum",
+      "address": "Leoforos Vasilissis Sofias 22, 106 75 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 3213 9500",
+      "coordinates": [23.7475, 37.9750],
+      "category": "Museum"
+    },
+    {
+      "name": "Panathenaic Stadium",
+      "address": "Leoforos Vasileos Konstantinou, 116 36 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0752 2984",
+      "coordinates": [23.7475, 37.9683],
+      "category": "Stadium"
+    },
+    {
+      "name": "Syntagma Square",
+      "address": "Voulis 15, 105 63 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0331 0392",
+      "coordinates": [23.7375, 37.9750],
+      "category": "Square"
+    },
+    {
+      "name": "Tzistarakis Mosque",
+      "address": "Areos 1, 105 55 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0324 2066",
+      "coordinates": [23.7275, 37.9764],
+      "category": "Mosque"
+    },
+    {
+      "name": "Mount Lycabettus",
+      "address": "Mount Lycabettus, 114 71 Athens, Greece",
+      "date": "2025-05-29",
+      "coordinates": [23.7475, 37.9817],
+      "category": "Mountain"
+    },
+    {
+      "name": "Temple of Olympian Zeus",
+      "address": "Vasilissis Olgas Avenue 1, 105 57 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0922 6330",
+      "coordinates": [23.7375, 37.9692],
+      "category": "Temple"
+    },
+    {
+      "name": "National Archaeological Museum",
+      "address": "28is Oktovriou 44, 106 82 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 3214 4800",
+      "coordinates": [23.7375, 37.9892],
+      "category": "Museum"
+    },
+    {
+      "name": "Panaghia Kapnikarea Church",
+      "address": "Platia Kapnikareas 3 105 63 Athens Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0322 4462",
+      "coordinates": [23.7275, 37.9764],
+      "category": "Church"
+    },
+    {
+      "name": "Ancient Agora of Athens- Areios Pagos",
+      "address": "Adrianou 24, 105 55 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0321 0185",
+      "coordinates": [23.7275, 37.9742],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Temple of Hephaestus",
+      "address": "Thiseiou 13–17, 105 55 Athens, Greece",
+      "date": "2025-05-29",
+      "phone": "+30 21 0321 0185",
+      "coordinates": [23.7275, 37.9742],
+      "category": "Temple"
+    },
+    {
+      "name": "Meteora",
+      "address": "Meteora, 320 03 Paralia Distomou, Greece",
+      "date": "2025-05-30",
+      "coordinates": [21.6306, 39.7142],
+      "category": "Monastery"
+    },
+    {
+      "name": "Archaeological Site of Delphi",
+      "address": "330 54 Delfoi, Greece",
+      "date": "2025-05-31",
+      "phone": "+30 2265 082313",
+      "coordinates": [22.5000, 38.4824],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Tholos of Athena Pronaia",
+      "address": "National Road 48, 330 54 Delfoi, Greece",
+      "date": "2025-05-31",
+      "coordinates": [22.5000, 38.4824],
+      "category": "Temple"
+    },
+    {
+      "name": "A3724 (Aegean Airlines)",
+      "address": "ATH ✈ OPO",
+      "date": "2025-05-31",
+      "coordinates": [23.7275, 37.9838],
+      "category": "Flight"
+    }
+  ]
+}
