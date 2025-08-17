@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import { loadItineraryById } from '../../utils/itineraryUtils';
 import { Itinerary } from '../../types';
 import ItinerarySidebar from '../../components/ItinerarySidebar';
 
@@ -9,10 +8,12 @@ const ItineraryMap = dynamic(() => import('../../components/ItineraryMap'), {
   ssr: false,
 });
 
-export default function ItineraryPage() {
+interface ItineraryPageProps {
+  itinerary?: Itinerary;
+}
+
+export default function ItineraryPage({ itinerary }: ItineraryPageProps) {
   const router = useRouter();
-  const { id } = router.query;
-  const [itinerary, setItinerary] = useState<Itinerary | null>(null);
   const [showSidebar, setShowSidebar] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -29,22 +30,6 @@ export default function ItineraryPage() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  useEffect(() => {
-    async function loadItinerary() {
-      if (id && typeof id === 'string') {
-        try {
-          const foundItinerary = await loadItineraryById(id);
-          setItinerary(foundItinerary);
-        } catch (error) {
-          console.error('Error loading itinerary:', error);
-          setItinerary(null);
-        }
-      }
-    }
-
-    loadItinerary();
-  }, [id]);
 
   if (!itinerary) {
     return (
@@ -158,4 +143,97 @@ export default function ItineraryPage() {
       )}
     </div>
   );
+}
+
+// Generate static paths for all itineraries
+export async function getStaticPaths() {
+  try {
+    const fs = await import('fs');
+    const path = await import('path');
+
+    const itinerariesDir = path.default.join(
+      process.cwd(),
+      'public/data/itineraries'
+    );
+    const indexFile = path.default.join(itinerariesDir, 'index.json');
+
+    if (!fs.default.existsSync(indexFile)) {
+      return {
+        paths: [],
+        fallback: false,
+      };
+    }
+
+    const indexData = JSON.parse(fs.default.readFileSync(indexFile, 'utf8'));
+    const paths = indexData.itineraries.map((itinerary: { id: string }) => ({
+      params: { id: itinerary.id },
+    }));
+
+    return {
+      paths,
+      fallback: false,
+    };
+  } catch (error) {
+    console.error('Error generating static paths:', error);
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+}
+
+// Generate static props for each itinerary
+export async function getStaticProps({ params }: { params: { id: string } }) {
+  try {
+    const fs = await import('fs');
+    const path = await import('path');
+
+    const itinerariesDir = path.default.join(
+      process.cwd(),
+      'public/data/itineraries'
+    );
+    const indexFile = path.default.join(itinerariesDir, 'index.json');
+
+    if (!fs.default.existsSync(indexFile)) {
+      return {
+        notFound: true,
+      };
+    }
+
+    const indexData = JSON.parse(fs.default.readFileSync(indexFile, 'utf8'));
+    const itineraryIndex = indexData.itineraries.find(
+      (item: { id: string }) => item.id === params.id
+    );
+
+    if (!itineraryIndex) {
+      return {
+        notFound: true,
+      };
+    }
+
+    const itineraryFile = path.default.join(
+      itinerariesDir,
+      itineraryIndex.file
+    );
+    if (!fs.default.existsSync(itineraryFile)) {
+      return {
+        notFound: true,
+      };
+    }
+
+    const itineraryData = JSON.parse(
+      fs.default.readFileSync(itineraryFile, 'utf8')
+    );
+
+    return {
+      props: {
+        itinerary: itineraryData,
+      },
+    };
+  } catch (error) {
+    console.error('Error loading itinerary:', error);
+    return {
+      notFound: true,
+    };
+  }
 }
