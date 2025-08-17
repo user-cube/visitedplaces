@@ -73,10 +73,10 @@ export default function ItinerariesList() {
       {/* Background decoration */}
       <div className="fixed inset-0 pointer-events-none">
         <div
-          className={`${styles.floating} absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl`}
+          className={`${styles.floating} absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-full blur-3xl`}
         ></div>
         <div
-          className={`${styles.floating} absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-pink-400/20 rounded-full blur-3xl`}
+          className={`${styles.floating} absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-[#667eea]/8 to-[#764ba2]/8 rounded-full blur-3xl`}
           style={{ animationDelay: '3s' }}
         ></div>
       </div>
@@ -86,7 +86,7 @@ export default function ItinerariesList() {
         <div className="fixed top-4 left-4 z-50 sm:top-4 sm:left-4">
           <button
             onClick={() => router.push('/')}
-            className="group inline-flex items-center px-3 py-2 sm:px-4 sm:py-3 lg:px-5 lg:py-3 border-2 border-gray-200 shadow-lg text-xs sm:text-sm lg:text-base font-semibold rounded-lg sm:rounded-xl text-gray-700 bg-white/90 backdrop-blur-sm hover:bg-white hover:border-blue-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105"
+            className="group inline-flex items-center px-3 py-2 sm:px-4 sm:py-3 lg:px-5 lg:py-3 border-2 border-gray-200 shadow-lg text-xs sm:text-sm lg:text-base font-semibold rounded-lg sm:rounded-xl text-gray-700 bg-white/95 backdrop-blur-sm hover:bg-white hover:border-[#667eea] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-all duration-300 transform hover:scale-105"
           >
             <svg
               className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 mr-1 sm:mr-2 lg:mr-3 group-hover:-translate-x-1 transition-transform duration-300"
@@ -108,7 +108,7 @@ export default function ItinerariesList() {
         <div
           className={`${styles.headerContainer} text-center mb-8 sm:mb-12 md:mb-16 pt-16 sm:pt-8`}
         >
-          <div className="inline-flex items-center justify-center p-3 sm:p-4 md:p-6 bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6">
+          <div className="inline-flex items-center justify-center p-3 sm:p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6">
             <span className="text-3xl sm:text-5xl md:text-6xl mr-2 sm:mr-4 md:mr-6 animate-bounce">
               🗺️
             </span>
@@ -142,14 +142,14 @@ export default function ItinerariesList() {
           {itineraries.map((itinerary, index) => (
             <div
               key={itinerary.id}
-              className={`${styles.itineraryCard} group relative bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:scale-105 border border-white/20 w-full`}
+              className={`${styles.itineraryCard} group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:scale-105 border border-white/20 w-full`}
               onClick={() => handleItinerarySelect(itinerary)}
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#667eea]/5 to-[#764ba2]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Card content */}
               <div className="relative p-5 sm:p-6 lg:p-8">
@@ -157,14 +157,14 @@ export default function ItinerariesList() {
                 <div className="flex items-start mb-4 sm:mb-6">
                   <div className="flex items-start space-x-3 sm:space-x-4 md:space-x-5">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <span className="text-2xl sm:text-3xl lg:text-4xl">
                           {getTravelEmoji(itinerary)}
                         </span>
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 group-hover:text-[#667eea] transition-colors duration-300">
                         {itinerary.title}
                       </h2>
                       <div className="flex items-center space-x-2 mt-1 sm:mt-2">
@@ -185,9 +185,9 @@ export default function ItinerariesList() {
                   </p>
                 )}
 
-                <div className="flex items-center text-sm text-gray-600 mb-4 sm:mb-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-blue-100/50">
+                <div className="flex items-center text-sm text-gray-600 mb-4 sm:mb-6 bg-gradient-to-r from-[#667eea]/5 to-[#764ba2]/5 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-[#667eea]/20">
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-[#667eea] to-[#764ba2] rounded-lg flex items-center justify-center">
                       <svg
                         className="w-4 h-4 sm:w-5 sm:h-5 text-white"
                         fill="none"
@@ -251,7 +251,7 @@ export default function ItinerariesList() {
                     </div>
                   </div>
 
-                  <button className="group/btn w-full inline-flex items-center justify-center px-3 py-2 sm:px-5 sm:py-3 lg:px-6 lg:py-3 border border-transparent text-sm sm:text-base font-semibold rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                  <button className="group/btn w-full inline-flex items-center justify-center px-3 py-2 sm:px-5 sm:py-3 lg:px-6 lg:py-3 border border-transparent text-sm sm:text-base font-semibold rounded-lg text-white bg-gradient-to-r from-[#667eea] to-[#764ba2] hover:from-[#5a67d8] hover:to-[#6b46c1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                     <span className="hidden sm:inline">View itinerary</span>
                     <span className="sm:hidden">View</span>
                     <svg
