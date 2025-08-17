@@ -9,7 +9,6 @@ interface ItinerarySidebarProps {
 
 export default function ItinerarySidebar({
   itinerary,
-  onClose,
   isMobile = false,
 }: ItinerarySidebarProps) {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
@@ -20,13 +19,6 @@ export default function ItinerarySidebar({
       day: '2-digit',
       month: 'long',
       year: 'numeric',
-    });
-  };
-
-  const formatTime = (dateString: string) => {
-    return new Date(dateString).toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
     });
   };
 

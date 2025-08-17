@@ -1,6 +1,5 @@
 import { useMap } from 'react-leaflet';
 import { useCallback, useEffect } from 'react';
-import L from 'leaflet';
 import { MAP_CENTER, DEFAULT_ZOOM } from '../constants';
 
 interface RecenterButtonProps {
@@ -27,8 +26,6 @@ export function RecenterButton() {
 
   return null; // This component doesn't render anything, it just provides the function
 }
-
-
 
 // UI Button component for the control panel
 export function RecenterButtonUI({ onRecenter }: RecenterButtonProps) {

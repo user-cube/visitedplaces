@@ -16,7 +16,6 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
 
     // Initialize map
     const map = L.map(mapRef.current, {
-      zoomControl: false, // Disable default zoom control
       attributionControl: false, // Disable default attribution
     }).setView([47.4979, 19.0402], 10);
     mapInstanceRef.current = map;
@@ -27,7 +26,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
     }).addTo(map);
 
     // Add zoom control to bottom right
-    const zoomControl = L.control
+    L.control
       .zoom({
         position: 'bottomright',
       })
@@ -109,7 +108,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
 
     // Draw route line
     if (routePoints.length > 1) {
-      const routeLine = L.polyline(routePoints, {
+      L.polyline(routePoints, {
         color: '#3B82F6',
         weight: 4,
         opacity: 0.8,

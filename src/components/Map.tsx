@@ -1,5 +1,5 @@
-import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
-import { useRouter } from 'next/router';
+import { MapContainer, TileLayer } from 'react-leaflet';
+
 import 'leaflet/dist/leaflet.css';
 import { MapProps, MAP_STYLES, COLOR_SCHEMES } from '../types';
 import {
@@ -23,7 +23,6 @@ import {
 } from '../constants';
 
 export default function Map({ cities }: MapProps) {
-  const router = useRouter();
   const {
     countries,
     selectedCity,

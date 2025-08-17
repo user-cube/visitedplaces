@@ -35,7 +35,6 @@ export function MapControls({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const selectedScheme = COLOR_SCHEMES[selectedColorScheme];
   const mapPreviewUrl = getMapStylePreviewUrl(selectedMapStyle);
 
   return (

@@ -2,8 +2,10 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { Itinerary } from '../types';
 
+import { City } from '../types';
+
 interface SidePanelProps {
-  cities: any[];
+  cities: City[];
   itineraries: Itinerary[];
 }
 
@@ -111,7 +113,7 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
 
           <div className="itineraries-section">
             <div className="section-header">
-              <h3>Recent Itineraries</h3>
+              <h3>Itineraries</h3>
             </div>
 
             <button
