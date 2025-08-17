@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/user-cube/visitedplaces/compare/v1.2.1...v1.2.2) (2025-08-17)
+
+
+### Bug Fixes
+
+* added trailing slash ([#9](https://github.com/user-cube/visitedplaces/issues/9)) ([e98b0aa](https://github.com/user-cube/visitedplaces/commit/e98b0aa61d2a6d58d087cecc8f634c8178e53f24))
+
 ## [1.2.1](https://github.com/user-cube/visitedplaces/compare/v1.2.0...v1.2.1) (2025-08-17)
 
 
