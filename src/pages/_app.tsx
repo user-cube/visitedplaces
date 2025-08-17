@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import '../styles/mapControls.css';
 import '../styles/simpleGallery.css';
 import '../styles/cityMarkers.css';
+import '../styles/itinerary.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;

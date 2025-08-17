@@ -11,3 +11,7 @@ export {
 export { CountryLayer } from './CountryLayer';
 export { CityMarkers } from './CityMarkers';
 export { SimpleGallery } from './SimpleGallery';
+
+// Itinerary components
+export { default as ItineraryMap } from './ItineraryMap';
+export { default as ItinerarySidebar } from './ItinerarySidebar';

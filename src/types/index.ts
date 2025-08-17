@@ -80,6 +80,39 @@ export interface CityMarkersProps {
   onCityClick: (city: City) => void;
 }
 
+export interface ItineraryPoint {
+  name: string;
+  address: string;
+  date: string;
+  phone?: string;
+  website?: string;
+  coordinates: [number, number];
+  category?: string;
+}
+
+export interface Itinerary {
+  id: string;
+  title: string;
+  startDate: string;
+  endDate: string;
+  points: ItineraryPoint[];
+  description?: string;
+}
+
+export interface ItineraryListProps {
+  itineraries: Itinerary[];
+  onItinerarySelect: (itinerary: Itinerary) => void;
+}
+
+export interface ItineraryMapProps {
+  itinerary: Itinerary;
+}
+
+export interface ItinerarySidebarProps {
+  itinerary: Itinerary;
+  onClose: () => void;
+}
+
 // Map styles configuration
 export const MAP_STYLES: Record<string, MapStyle> = {
   standard: {
