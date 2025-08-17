@@ -12,6 +12,12 @@ body {
   overflow: hidden;
 }
 
+/* Allow scrolling on itinerary pages */
+body.itinerary-page {
+  overflow: auto;
+  height: auto;
+}
+
 #__next {
   height: 100vh;
   width: 100vw;

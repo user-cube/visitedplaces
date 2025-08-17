@@ -1,0 +1,139 @@
+{
+  "id": "dublin-2025",
+  "title": "Dublin",
+  "startDate": "2025-03-29",
+  "endDate": "2025-04-01",
+  "description": "4-day trip to Dublin exploring Irish culture, history and the famous Guinness Storehouse",
+  "metadata": {
+    "flags": "🇮🇪",
+    "emoji": "🍺",
+    "countries": ["Ireland"],
+    "pointsCount": 16
+  },
+  "points": [
+    {
+      "name": "The Temple Bar Pub",
+      "address": "47-48 Temple Bar Dublin 2 D02 N725 Ireland",
+      "date": "2025-03-29",
+      "phone": "+353 (1) 672 5286",
+      "coordinates": [-6.2603, 53.3441],
+      "category": "Nightlife"
+    },
+    {
+      "name": "FR7073 (Ryanair)",
+      "address": "OPO ✈ DUB",
+      "date": "2025-03-29",
+      "coordinates": [-6.2603, 53.3441],
+      "category": "Flight"
+    },
+    {
+      "name": "Guinness Storehouse",
+      "address": "St.James's Gate Dublin 8 D08 VF8H Ireland",
+      "date": "2025-03-29",
+      "phone": "+353 (1) 408 4800",
+      "coordinates": [-6.2868, 53.3419],
+      "category": "Museum"
+    },
+    {
+      "name": "Kilmainham Gaol Museum",
+      "address": "Kilmainham Courthouse, Inchicore Road, Dublin 8, D08 RK28, Ireland",
+      "date": "2025-03-30",
+      "phone": "+353 (1) 453 5984",
+      "coordinates": [-6.3099, 53.3420],
+      "category": "Museum"
+    },
+    {
+      "name": "Christ Church Cathedral",
+      "address": "Christchurch Place, Dublin, D08 TF98, Ireland",
+      "date": "2025-03-30",
+      "phone": "+353 (1) 677 8099",
+      "coordinates": [-6.2714, 53.3434],
+      "category": "Church"
+    },
+    {
+      "name": "Dublin Castle",
+      "address": "Dame St, Dublin 2, D02 XN27, Ireland",
+      "date": "2025-03-30",
+      "phone": "+353 (46) 942 2213",
+      "coordinates": [-6.2675, 53.3429],
+      "category": "Castle"
+    },
+    {
+      "name": "Chester Beatty",
+      "address": "Dublin Castle, Dublin 2, D02 AD92, Ireland",
+      "date": "2025-03-30",
+      "phone": "+353 (1) 407 0750",
+      "coordinates": [-6.2675, 53.3429],
+      "category": "Museum"
+    },
+    {
+      "name": "Grafton Street",
+      "address": "Grafton St, Dublin 2, D02 TD85, Ireland",
+      "date": "2025-03-30",
+      "phone": "+353 (1) 679 6984",
+      "coordinates": [-6.2603, 53.3441],
+      "category": "Shopping"
+    },
+    {
+      "name": "Trinity College Dublin",
+      "address": "College Green Dublin 2 D02 PN40 Ireland",
+      "date": "2025-03-30",
+      "phone": "+353 1896 10 00",
+      "coordinates": [-6.2534, 53.3439],
+      "category": "University"
+    },
+    {
+      "name": "Cliffs of Moher Coastal Walk",
+      "address": "Cliffs of Moher Coastal Walk, Liscannor Co. Clare, Ireland",
+      "date": "2025-03-31",
+      "coordinates": [-9.4283, 52.9716],
+      "category": "Park"
+    },
+    {
+      "name": "EPIC The Irish Emigration Museum",
+      "address": "The chq Building Custom House Quay Dublin 1 D01 R9Y0 Ireland",
+      "date": "2025-04-01",
+      "phone": "+353 (1) 906 0861",
+      "coordinates": [-6.2499, 53.3478],
+      "category": "Museum"
+    },
+    {
+      "name": "National Museum of Ireland",
+      "address": "Kildare St, Dublin 2, D02 FH48, Ireland",
+      "date": "2025-04-01",
+      "phone": "+353 (1) 677 7444",
+      "coordinates": [-6.2534, 53.3397],
+      "category": "Museum"
+    },
+    {
+      "name": "St Stephen's Green",
+      "address": "St Stephen's Gn, Dublin 2 Co. Dublin, Ireland",
+      "date": "2025-04-01",
+      "coordinates": [-6.2603, 53.3377],
+      "category": "Park"
+    },
+    {
+      "name": "Saint Patrick's Cathedral",
+      "address": "St Patrick's Close, Dublin 8, D08 H6X3, Ireland",
+      "date": "2025-04-01",
+      "phone": "+353 (1) 453 9472",
+      "coordinates": [-6.2714, 53.3395],
+      "category": "Church"
+    },
+    {
+      "name": "Merrion Square South",
+      "address": "Merrion Sq S, Dublin 2 Co. Dublin, Ireland",
+      "date": "2025-04-01",
+      "coordinates": [-6.2534, 53.3397],
+      "category": "Park"
+    },
+    {
+      "name": "Marsh's Library",
+      "address": "Saint Patrick's Close, Dublin, D08 FK79, Ireland",
+      "date": "2025-04-01",
+      "phone": "+353 (1) 454 3511",
+      "coordinates": [-6.2714, 53.3395],
+      "category": "Library"
+    }
+  ]
+}
