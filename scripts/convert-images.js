@@ -2,72 +2,95 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const imagesDir = path.join(__dirname, '../public/images/itineraries/2025');
-const outputDir = path.join(__dirname, '../public/images/itineraries/2025');
-
-// Ensure output directory exists
-if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir, { recursive: true });
-}
+const itinerariesDir = path.join(__dirname, '../public/images/itineraries');
 
 async function convertToWebP() {
   try {
     console.log('🔄 Converting images to WebP...');
 
-    // Get all image files
-    const files = fs.readdirSync(imagesDir).filter(file => {
-      const ext = path.extname(file).toLowerCase();
-      return ['.jpg', '.jpeg', '.png'].includes(ext);
-    });
+    // Get all year directories
+    const yearDirs = fs
+      .readdirSync(itinerariesDir)
+      .filter(item => {
+        const itemPath = path.join(itinerariesDir, item);
+        return fs.statSync(itemPath).isDirectory() && /^\d{4}$/.test(item);
+      })
+      .sort();
 
-    if (files.length === 0) {
-      console.log('ℹ️  No images found to convert');
-      return;
-    }
+    let totalConverted = 0;
 
-    console.log(`📁 Found ${files.length} images to convert:`);
+    for (const year of yearDirs) {
+      const yearDir = path.join(itinerariesDir, year);
 
-    for (const file of files) {
-      const inputPath = path.join(imagesDir, file);
-      const nameWithoutExt = path.parse(file).name;
-      const outputPath = path.join(outputDir, `${nameWithoutExt}.webp`);
+      // Ensure output directory exists
+      if (!fs.existsSync(yearDir)) {
+        fs.mkdirSync(yearDir, { recursive: true });
+      }
 
-      console.log(`\n🔄 Converting: ${file}`);
+      // Get all image files in this year directory
+      const files = fs.readdirSync(yearDir).filter(file => {
+        const ext = path.extname(file).toLowerCase();
+        return ['.jpg', '.jpeg', '.png'].includes(ext);
+      });
 
-      try {
-        // Convert to WebP with optimization
-        await sharp(inputPath)
-          .webp({
-            quality: 80,
-            effort: 6,
-            nearLossless: false,
-          })
-          .resize(800, null, {
-            // Resize to 800px width, maintain aspect ratio
-            withoutEnlargement: true,
-            fit: 'inside',
-          })
-          .toFile(outputPath);
+      if (files.length === 0) {
+        console.log(`ℹ️  No images found in ${year}/`);
+        continue;
+      }
 
-        // Get file sizes for comparison
-        const originalSize = fs.statSync(inputPath).size;
-        const webpSize = fs.statSync(outputPath).size;
-        const savings = (
-          ((originalSize - webpSize) / originalSize) *
-          100
-        ).toFixed(1);
+      console.log(
+        `\n📁 Processing ${year}/ - Found ${files.length} images to convert:`
+      );
 
-        console.log(`✅ Converted: ${nameWithoutExt}.webp`);
-        console.log(`   Original: ${(originalSize / 1024).toFixed(1)}KB`);
-        console.log(`   WebP: ${(webpSize / 1024).toFixed(1)}KB`);
-        console.log(`   Savings: ${savings}%`);
-      } catch (error) {
-        console.error(`❌ Error converting ${file}:`, error.message);
+      for (const file of files) {
+        const inputPath = path.join(yearDir, file);
+        const nameWithoutExt = path.parse(file).name;
+        const outputPath = path.join(yearDir, `${nameWithoutExt}.webp`);
+
+        console.log(`🔄 Converting: ${file}`);
+
+        try {
+          // Convert to WebP with optimization
+          await sharp(inputPath)
+            .webp({
+              quality: 80,
+              effort: 6,
+              nearLossless: false,
+            })
+            .resize(800, null, {
+              // Resize to 800px width, maintain aspect ratio
+              withoutEnlargement: true,
+              fit: 'inside',
+            })
+            .toFile(outputPath);
+
+          // Get file sizes for comparison
+          const originalSize = fs.statSync(inputPath).size;
+          const webpSize = fs.statSync(outputPath).size;
+          const savings = (
+            ((originalSize - webpSize) / originalSize) *
+            100
+          ).toFixed(1);
+
+          console.log(`✅ Converted: ${nameWithoutExt}.webp`);
+          console.log(`   Original: ${(originalSize / 1024).toFixed(1)}KB`);
+          console.log(`   WebP: ${(webpSize / 1024).toFixed(1)}KB`);
+          console.log(`   Savings: ${savings}%`);
+
+          totalConverted++;
+        } catch (error) {
+          console.error(`❌ Error converting ${file}:`, error.message);
+        }
       }
     }
 
-    console.log('\n✅ WebP conversion completed!');
-    console.log('📁 WebP files saved in:', outputDir);
+    if (totalConverted === 0) {
+      console.log('\nℹ️  No images found to convert in any directory');
+    } else {
+      console.log(
+        `\n✅ WebP conversion completed! Converted ${totalConverted} images.`
+      );
+    }
   } catch (error) {
     console.error('❌ Error during conversion:', error);
     process.exit(1);

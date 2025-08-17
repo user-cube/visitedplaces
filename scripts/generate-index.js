@@ -57,6 +57,8 @@ const COUNTRY_FLAGS = {
   Monaco: '🇲🇨',
   'San Marino': '🇸🇲',
   'Vatican City': '🇻🇦',
+  'Città del Vaticano': '🇻🇦',
+  'Roma Vatican City': '🇻🇦',
   Andorra: '🇦🇩',
 };
 
@@ -109,6 +111,8 @@ const COUNTRY_EMOJIS = {
   Monaco: '🏎️',
   'San Marino': '🏰',
   'Vatican City': '⛪',
+  'Città del Vaticano': '⛪',
+  'Roma Vatican City': '⛪',
   Andorra: '🏔️',
 };
 
@@ -120,7 +124,13 @@ function extractCountriesFromItinerary(itinerary) {
     const addressParts = point.address.split(',').map(part => part.trim());
     const lastPart = addressParts[addressParts.length - 1];
 
-    if (lastPart && COUNTRY_FLAGS[lastPart]) {
+    // Special handling for Vatican addresses
+    if (
+      point.address.includes('Vatican') ||
+      point.address.includes('Vaticano')
+    ) {
+      countries.add('Vatican City');
+    } else if (lastPart && COUNTRY_FLAGS[lastPart]) {
       countries.add(lastPart);
     }
   });
