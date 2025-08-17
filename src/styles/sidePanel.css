@@ -67,7 +67,11 @@
   left: 0;
   width: 380px;
   height: 100vh;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
   backdrop-filter: blur(30px);
   border-right: 1px solid rgba(148, 163, 184, 0.1);
   box-shadow: 8px 0 40px rgba(0, 0, 0, 0.12);
@@ -108,7 +112,11 @@
 /* Panel Header */
 .side-panel-header {
   padding: 90px 28px 24px 28px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
   border-bottom: 1px solid rgba(148, 163, 184, 0.1);
   position: relative;
 }
@@ -120,7 +128,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.2) 50%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(102, 126, 234, 0.2) 50%,
+    transparent 100%
+  );
 }
 
 .side-panel-header h2 {
@@ -172,7 +185,11 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 250, 252, 0.8) 100%
+  );
   border: 1px solid rgba(148, 163, 184, 0.15);
   border-radius: 20px;
   padding: 20px 12px;
@@ -199,7 +216,11 @@
 }
 
 .stat-card:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
   border-color: rgba(102, 126, 234, 0.2);
@@ -270,7 +291,11 @@
 }
 
 .itinerary-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 250, 252, 0.8) 100%
+  );
   border: 1px solid rgba(148, 163, 184, 0.15);
   border-radius: 16px;
   padding: 18px;
@@ -293,7 +318,11 @@
 }
 
 .itinerary-card:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
   border-color: rgba(102, 126, 234, 0.2);
   transform: translateY(-3px) scale(1.01);
   box-shadow: 0 8px 30px rgba(102, 126, 234, 0.12);
@@ -326,7 +355,11 @@
 }
 
 .itinerary-points {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 100%
+  );
   color: #667eea;
   padding: 4px 10px;
   border-radius: 8px;
@@ -340,7 +373,11 @@
   text-align: center;
   padding: 40px 20px;
   color: #64748b;
-  background: linear-gradient(135deg, rgba(248, 250, 252, 0.5) 0%, rgba(241, 245, 249, 0.3) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.5) 0%,
+    rgba(241, 245, 249, 0.3) 100%
+  );
   border-radius: 16px;
   border: 1px dashed rgba(148, 163, 184, 0.2);
 }
@@ -374,6 +411,7 @@
   position: relative;
   overflow: hidden;
   letter-spacing: 0.02em;
+  margin-bottom: 20px;
 }
 
 .view-all-button::before {
@@ -383,7 +421,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -407,15 +450,15 @@
     border-bottom: 1px solid rgba(148, 163, 184, 0.1);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
   }
-  
+
   .side-panel.closed {
     transform: translateY(-100%);
   }
-  
+
   .side-panel.open {
     transform: translateY(0);
   }
-  
+
   .side-panel-toggle {
     top: 16px;
     left: 16px;
@@ -429,18 +472,18 @@
     box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
     padding: 0 12px;
   }
-  
+
   .toggle-content {
     gap: 4px;
     font-size: 12px;
   }
-  
+
   .side-panel-toggle:hover {
     background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
   }
-  
+
   /* On mobile, when sidebar is open, move toggle button down */
   .side-panel.open ~ .side-panel-toggle {
     left: 16px;
@@ -452,43 +495,43 @@
     box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
     min-width: 80px;
   }
-  
+
   .side-panel-header {
     padding: 70px 24px 20px 24px;
   }
-  
+
   .side-panel-content {
     padding: 20px 24px 24px;
   }
-  
+
   .stats-grid {
     gap: 12px;
     margin-bottom: 28px;
   }
-  
+
   .stat-card {
     padding: 14px 10px;
     min-height: 70px;
   }
-  
+
   .stat-number {
     font-size: 26px;
     margin-bottom: 6px;
   }
-  
+
   .stat-label {
     font-size: 9px;
     letter-spacing: 0.05em;
   }
-  
+
   .section-header h3 {
     font-size: 18px;
   }
-  
+
   .itinerary-card {
     padding: 16px;
   }
-  
+
   .view-all-button {
     padding: 14px 20px;
     font-size: 14px;

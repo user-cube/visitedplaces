@@ -205,6 +205,11 @@
   .floating {
     display: none;
   }
+
+  /* Ensure header doesn't overlap with fixed button */
+  .headerContainer {
+    padding-top: 80px !important;
+  }
 }
 
 /* Extra small mobile devices */

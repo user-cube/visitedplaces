@@ -81,9 +81,33 @@ export default function ItinerariesList() {
         ></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pb-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 lg:py-12 pb-8">
+        {/* Fixed Back to Map Button */}
+        <div className="fixed top-4 left-4 z-50 sm:top-4 sm:left-4">
+          <button
+            onClick={() => router.push('/')}
+            className="group inline-flex items-center px-3 py-2 sm:px-4 sm:py-3 lg:px-5 lg:py-3 border-2 border-gray-200 shadow-lg text-xs sm:text-sm lg:text-base font-semibold rounded-lg sm:rounded-xl text-gray-700 bg-white/90 backdrop-blur-sm hover:bg-white hover:border-blue-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105"
+          >
+            <svg
+              className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 mr-1 sm:mr-2 lg:mr-3 group-hover:-translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            <span>Back to map</span>
+          </button>
+        </div>
         {/* Header Section */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+        <div
+          className={`${styles.headerContainer} text-center mb-8 sm:mb-12 md:mb-16 pt-16 sm:pt-8`}
+        >
           <div className="inline-flex items-center justify-center p-3 sm:p-4 md:p-6 bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-lg mb-4 sm:mb-6">
             <span className="text-3xl sm:text-5xl md:text-6xl mr-2 sm:mr-4 md:mr-6 animate-bounce">
               🗺️
@@ -248,28 +272,6 @@ export default function ItinerariesList() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-8 sm:mt-12 md:mt-16 text-center">
-          <button
-            onClick={() => router.push('/')}
-            className="group inline-flex items-center px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-4 border-2 border-gray-200 shadow-lg text-sm sm:text-base font-semibold rounded-xl sm:rounded-2xl text-gray-700 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-blue-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105"
-          >
-            <svg
-              className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:-translate-x-1 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            Back to map
-          </button>
         </div>
       </div>
     </div>

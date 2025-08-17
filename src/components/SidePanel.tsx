@@ -41,14 +41,14 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
 
   // Calculate unique countries visited
   const uniqueCountries = new Set(cities.map(city => city.country)).size;
-  
+
   // Get last 5 itineraries
   const last5Itineraries = itineraries.slice(-5).reverse();
 
   return (
     <>
       {/* Toggle button */}
-      <button 
+      <button
         className="side-panel-toggle"
         onClick={() => setIsOpen(!isOpen)}
         title={isOpen ? 'Close panel' : 'Open panel'}
@@ -56,39 +56,53 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
         <div className="toggle-content">
           {isOpen ? (
             <>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M15 18l-6-6 6-6"/>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M15 18l-6-6 6-6" />
               </svg>
               <span className="toggle-text">Close</span>
             </>
           ) : (
             <>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 18l6-6-6-6"/>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M9 18l6-6-6-6" />
               </svg>
               <span className="toggle-text">Menu</span>
             </>
           )}
         </div>
       </button>
-      
+
       <div className={`side-panel ${isOpen ? 'open' : 'closed'}`}>
         <div className="side-panel-header">
           <h2>Travel Stats</h2>
         </div>
-        
+
         <div className="side-panel-content">
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">{cities.length}</div>
               <div className="stat-label">Cities</div>
             </div>
-            
+
             <div className="stat-card">
               <div className="stat-number">{uniqueCountries}</div>
               <div className="stat-label">Countries</div>
             </div>
-            
+
             <div className="stat-card">
               <div className="stat-number">{itineraries.length}</div>
               <div className="stat-label">Itineraries</div>
@@ -99,11 +113,18 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
             <div className="section-header">
               <h3>Recent Itineraries</h3>
             </div>
-            
+
+            <button
+              className="view-all-button"
+              onClick={() => router.push('/itineraries')}
+            >
+              View All Itineraries
+            </button>
+
             <div className="itineraries-list">
               {last5Itineraries.length > 0 ? (
-                last5Itineraries.map((itinerary) => (
-                  <div 
+                last5Itineraries.map(itinerary => (
+                  <div
                     key={itinerary.id}
                     className="itinerary-card"
                     onClick={() => router.push(`/itineraries/${itinerary.id}`)}
@@ -126,13 +147,6 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
                 </div>
               )}
             </div>
-            
-            <button 
-              className="view-all-button"
-              onClick={() => router.push('/itineraries')}
-            >
-              View All Itineraries
-            </button>
           </div>
         </div>
       </div>
