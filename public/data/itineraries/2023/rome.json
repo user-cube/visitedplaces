@@ -1,0 +1,239 @@
+{
+  "id": "rome-2023",
+  "title": "Rome",
+  "startDate": "2023-05-21",
+  "endDate": "2023-05-26",
+  "description": "6-day trip to Rome exploring ancient history, Vatican City, and iconic Italian landmarks",
+  "image": "/images/itineraries/2023/rome.webp",
+  "metadata": {
+    "flags": "🇮🇹 🇻🇦",
+    "emoji": "🏛️",
+    "countries": ["Italy", "Vatican City"],
+    "pointsCount": 25
+  },
+  "points": [
+    {
+      "name": "W68501 (Wizz Air)",
+      "address": "OPO ✈ CIA",
+      "date": "2023-05-21",
+      "coordinates": [12.6508, 41.7994],
+      "category": "Flight"
+    },
+    {
+      "name": "Trastevere",
+      "address": "Rome Lazio, Italy",
+      "date": "2023-05-21",
+      "coordinates": [12.4694, 41.8919],
+      "category": "Neighborhood"
+    },
+    {
+      "name": "St. Peter's Basilica",
+      "address": "Piazza San Pietro 00120 Città del Vaticano",
+      "date": "2023-05-21",
+      "phone": "+379 6988 3731",
+      "coordinates": [12.4534, 41.9022],
+      "category": "Basilica"
+    },
+    {
+      "name": "Vatican Museums",
+      "address": "Viale Vaticano snc 00165 Roma Vatican City",
+      "date": "2023-05-21",
+      "phone": "+379 6988 3145",
+      "coordinates": [12.4544, 41.9069],
+      "category": "Museum"
+    },
+    {
+      "name": "Piazza del Popolo",
+      "address": "Piazza del Popolo, 00187 Rome, Italy",
+      "date": "2023-05-22",
+      "phone": "+39 06 32651 438",
+      "coordinates": [12.4764, 41.9107],
+      "category": "Square"
+    },
+    {
+      "name": "Passeggiata del Pincio",
+      "address": "Viale dei Bambini, 00187 Rome, Italy",
+      "date": "2023-05-22",
+      "phone": "+39 06 0606",
+      "coordinates": [12.4764, 41.9107],
+      "category": "Park"
+    },
+    {
+      "name": "Borghese Gallery",
+      "address": "Piazzale Scipione Borghese 5, 00197 Rome, Italy",
+      "date": "2023-05-22",
+      "phone": "+39 06 84139 79",
+      "coordinates": [12.4914, 41.9144],
+      "category": "Museum"
+    },
+    {
+      "name": "Spanish Steps",
+      "address": "Spanish Steps, Piazza della Trinità de Monti 380, 00187 Rome, Italy",
+      "date": "2023-05-22",
+      "phone": "+39 06 0608",
+      "coordinates": [12.4830, 41.9064],
+      "category": "Landmark"
+    },
+    {
+      "name": "Museo e Cripta dei Frati Cappuccini",
+      "address": "Via Vittorio Veneto 27, 00187 Rome, Italy",
+      "date": "2023-05-22",
+      "phone": "+39 06 88803 695",
+      "coordinates": [12.4884, 41.9044],
+      "category": "Museum"
+    },
+    {
+      "name": "Trevi Fountain",
+      "address": "Piazza di Trevi, 00187 Rome, Italy",
+      "date": "2023-05-22",
+      "coordinates": [12.4833, 41.9009],
+      "category": "Fountain"
+    },
+    {
+      "name": "Vicus Caprarius",
+      "address": "Vicolo del Puttarello 25, 00187 Rome, Italy",
+      "date": "2023-05-22",
+      "phone": "+39 339 7786192",
+      "coordinates": [12.4833, 41.9009],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Galleria Sciarra",
+      "address": "Galleria Sciarra, 00187 Rome Lazio, Italy",
+      "date": "2023-05-22",
+      "coordinates": [12.4833, 41.9009],
+      "category": "Gallery"
+    },
+    {
+      "name": "Piazza Venezia",
+      "address": "Piazza Venezia, 00187 Rome Lazio, Italy",
+      "date": "2023-05-22",
+      "coordinates": [12.4823, 41.8965],
+      "category": "Square"
+    },
+    {
+      "name": "Piazza del Campidoglio",
+      "address": "Piazza del Campidoglio, 00186 Rome Lazio, Italy",
+      "date": "2023-05-22",
+      "coordinates": [12.4823, 41.8933],
+      "category": "Square"
+    },
+    {
+      "name": "Colosseum",
+      "address": "Piazza del Colosseo 1, 00184 Rome, Italy",
+      "date": "2023-05-23",
+      "phone": "+39 06 39967 700",
+      "coordinates": [12.4924, 41.8902],
+      "category": "Amphitheater"
+    },
+    {
+      "name": "Forum Romanum",
+      "address": "Largo della Salara Vecchia 5/6, 00186 Rome, Italy",
+      "date": "2023-05-23",
+      "phone": "+39 06 69984 443",
+      "coordinates": [12.4853, 41.8925],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Palatine Hill",
+      "address": "Via di San Gregorio 30, 00186 Rome, Italy",
+      "date": "2023-05-23",
+      "phone": "+39 06 39967 700",
+      "coordinates": [12.4884, 41.8894],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Mouth of Truth",
+      "address": "Piazza della Bocca della Verità 18, 00186 Rome, Italy",
+      "date": "2023-05-23",
+      "phone": "+39 06 67877 59",
+      "coordinates": [12.4818, 41.8886],
+      "category": "Historical Site"
+    },
+    {
+      "name": "Forum of Caesar",
+      "address": "Clivo Argentario, 00186 Rome, Italy",
+      "date": "2023-05-24",
+      "phone": "+39 06 0608",
+      "coordinates": [12.4853, 41.8925],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Forum of Augustus",
+      "address": "Piazza del Grillo 1, 00184 Rome, Italy",
+      "date": "2023-05-24",
+      "phone": "+39 06 0608",
+      "coordinates": [12.4853, 41.8925],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Terme di Caracalla",
+      "address": "Viale delle Terme di Caracalla 52, 00153 Rome, Italy",
+      "date": "2023-05-24",
+      "phone": "+39 06 67233 681",
+      "coordinates": [12.4924, 41.8794],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Synagogue of Rome",
+      "address": "Largo Stefano Gaj Taché, 00186 Rome, Italy",
+      "date": "2023-05-25",
+      "phone": "+39 06 68400 651",
+      "coordinates": [12.4774, 41.8919],
+      "category": "Synagogue"
+    },
+    {
+      "name": "Largo di Torre Argentina",
+      "address": "Largo di Torre Argentina, 00186 Rome Lazio, Italy",
+      "date": "2023-05-25",
+      "coordinates": [12.4774, 41.8944],
+      "category": "Archaeological Site"
+    },
+    {
+      "name": "Campo de' Fiori",
+      "address": "Piazza Campo De' Fiori 00186 Rome Italy",
+      "date": "2023-05-25",
+      "phone": "+39 339 7057132",
+      "coordinates": [12.4724, 41.8954],
+      "category": "Square"
+    },
+    {
+      "name": "Piazza Navona",
+      "address": "Piazza Navona, 00186 Rome Lazio, Italy",
+      "date": "2023-05-25",
+      "coordinates": [12.4734, 41.8994],
+      "category": "Square"
+    },
+    {
+      "name": "Pantheon",
+      "address": "Piazza della Rotonda, 00186 Rome RM, Italy",
+      "date": "2023-05-25",
+      "phone": "+39 06 68300 230",
+      "coordinates": [12.4769, 41.8986],
+      "category": "Temple"
+    },
+    {
+      "name": "Castel Sant'Angelo",
+      "address": "Lungotevere Castello 50 00193 Rome Italy",
+      "date": "2023-05-25",
+      "phone": "+39 06 68191 11",
+      "coordinates": [12.4664, 41.9031],
+      "category": "Castle"
+    },
+    {
+      "name": "Monte Testaccio",
+      "address": "Via Nicola Zabaglia 24, 00153 Rome, Italy",
+      "date": "2023-05-25",
+      "phone": "+39 06 48899 1",
+      "coordinates": [12.4774, 41.8754],
+      "category": "Historical Site"
+    },
+    {
+      "name": "W68501 (Wizz Air)",
+      "address": "FCO ✈ OPO",
+      "date": "2023-05-26",
+      "coordinates": [12.2508, 41.8044],
+      "category": "Flight"
+    }
+  ]
+}

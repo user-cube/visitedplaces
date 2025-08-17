@@ -65,7 +65,7 @@
         "countries": [
           "Ireland"
         ],
-        "pointsCount": 16
+        "pointsCount": 17
       }
     },
     {
@@ -83,7 +83,60 @@
           "Hungary",
           "Austria"
         ],
-        "pointsCount": 32
+        "pointsCount": 34
+      }
+    },
+    {
+      "id": "copenhagen-2023",
+      "title": "Copenhagen",
+      "startDate": "2023-12-01",
+      "endDate": "2023-12-05",
+      "description": "5-day trip to Copenhagen exploring Danish culture, castles, and the magic of Tivoli Gardens",
+      "image": "/images/itineraries/2023/copenhagen.webp",
+      "file": "2023/copenhagen.json",
+      "metadata": {
+        "flags": "🇩🇰 🇸🇪",
+        "emoji": "🧜‍♀️",
+        "countries": [
+          "Denmark",
+          "Sweden"
+        ],
+        "pointsCount": 24
+      }
+    },
+    {
+      "id": "rome-2023",
+      "title": "Rome",
+      "startDate": "2023-05-21",
+      "endDate": "2023-05-26",
+      "description": "6-day trip to Rome exploring ancient history, Vatican City, and iconic Italian landmarks",
+      "image": "/images/itineraries/2023/rome.webp",
+      "file": "2023/rome.json",
+      "metadata": {
+        "flags": "🇮🇹 🇻🇦",
+        "emoji": "🏛️",
+        "countries": [
+          "Italy",
+          "Vatican City"
+        ],
+        "pointsCount": 29
+      }
+    },
+    {
+      "id": "paris-2022",
+      "title": "Paris",
+      "startDate": "2022-05-12",
+      "endDate": "2022-05-16",
+      "description": "5-day trip to Paris exploring iconic landmarks, museums, and the magic of Disneyland Paris",
+      "image": "/images/itineraries/2022/paris.webp",
+      "file": "2022/paris.json",
+      "metadata": {
+        "flags": "🇫🇷",
+        "emoji": "🗼",
+        "countries": [
+          "France"
+        ],
+        "pointsCount": 14
       }
     }
   ]

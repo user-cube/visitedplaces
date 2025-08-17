@@ -13,18 +13,18 @@
   },
   "points": [
     {
-      "name": "Centro Historico de Fuchal",
-      "address": "Largo do Corpo Santo 11, 9060-075 Funchal, Portugal",
-      "date": "2025-06-30",
-      "coordinates": [-16.9051, 32.6497],
-      "category": "Attraction"
-    },
-    {
       "name": "TP1712 (TAP Air Portugal)",
       "address": "OPO ✈ FNC",
       "date": "2025-09-10",
       "coordinates": [-16.9051, 32.6497],
       "category": "Flight"
+    },
+    {
+      "name": "Centro Historico de Fuchal",
+      "address": "Largo do Corpo Santo 11, 9060-075 Funchal, Portugal",
+      "date": "2025-09-10",
+      "coordinates": [-16.9051, 32.6497],
+      "category": "Attraction"
     },
     {
       "name": "Aeroporto de Funchal",
