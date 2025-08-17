@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/user-cube/visitedplaces/compare/v1.2.2...v1.2.3) (2025-08-17)
+
+
+### Bug Fixes
+
+* added middleware ([#10](https://github.com/user-cube/visitedplaces/issues/10)) ([2edab07](https://github.com/user-cube/visitedplaces/commit/2edab0799b9262bf851c39ccde96fbc724e447ad))
+
 ## [1.2.2](https://github.com/user-cube/visitedplaces/compare/v1.2.1...v1.2.2) (2025-08-17)
 
 
