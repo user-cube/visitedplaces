@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/user-cube/visitedplaces/compare/v1.2.0...v1.2.1) (2025-08-17)
+
+
+### Bug Fixes
+
+* update itineraries; add rome, copenhagen and paris ([#8](https://github.com/user-cube/visitedplaces/issues/8)) ([897cd9a](https://github.com/user-cube/visitedplaces/commit/897cd9ab9b64ffec283af5c831d869b59d799825))
+
 # [1.2.0](https://github.com/user-cube/visitedplaces/compare/v1.1.0...v1.2.0) (2025-08-17)
 
 
