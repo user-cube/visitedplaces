@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/user-cube/visitedplaces/compare/v1.2.4...v1.3.0) (2025-08-17)
+
+
+### Features
+
+* search itinerary ([#12](https://github.com/user-cube/visitedplaces/issues/12)) ([5d01fb0](https://github.com/user-cube/visitedplaces/commit/5d01fb0b43112642be8412d9d71207c76f1a91f3))
+
 ## [1.2.4](https://github.com/user-cube/visitedplaces/compare/v1.2.3...v1.2.4) (2025-08-17)
 
 
