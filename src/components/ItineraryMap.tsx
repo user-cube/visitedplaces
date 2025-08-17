@@ -17,24 +17,32 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
     // Initialize map
     const map = L.map(mapRef.current, {
       zoomControl: false, // Disable default zoom control
-      attributionControl: false // Disable default attribution
+      attributionControl: false, // Disable default attribution
     }).setView([47.4979, 19.0402], 10);
     mapInstanceRef.current = map;
 
     // Add tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
+      attribution: '© OpenStreetMap contributors',
     }).addTo(map);
 
     // Add zoom control to bottom right
-    L.control.zoom({
-      position: 'bottomright'
-    }).addTo(map);
+    const zoomControl = L.control
+      .zoom({
+        position: 'bottomright',
+      })
+      .addTo(map);
 
     // Add attribution to bottom right
-    L.control.attribution({
-      position: 'bottomright'
-    }).addTo(map);
+    const attributionControl = L.control
+      .attribution({
+        position: 'bottomright',
+      })
+      .addTo(map);
+
+    // Debug: Check if controls are added
+    console.log('Zoom control added:', zoomControl);
+    console.log('Attribution control added:', attributionControl);
 
     // Create markers and route
     const markers: L.Marker[] = [];
@@ -55,12 +63,11 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         `,
         iconSize: [30, 30],
         iconAnchor: [15, 15],
-        popupAnchor: [0, -15]
+        popupAnchor: [0, -15],
       });
 
       // Create marker
-      const marker = L.marker([lat, lng], { icon: customIcon })
-        .addTo(map)
+      const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map)
         .bindPopup(`
           <div class="popup-content">
             <h3 class="font-semibold text-lg mb-2">${point.name}</h3>
@@ -79,7 +86,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         color: '#3B82F6',
         weight: 4,
         opacity: 0.8,
-        dashArray: '10, 10'
+        dashArray: '10, 10',
       }).addTo(map);
 
       // Fit map to show all markers
@@ -94,7 +101,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         background: transparent;
         border: none;
       }
-      
+
       .marker-content {
         position: relative;
         width: 30px;
@@ -109,18 +116,18 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         cursor: pointer;
         transition: all 0.2s ease;
       }
-      
+
       .marker-content:hover {
         transform: scale(1.1);
         background: #2563EB;
       }
-      
+
       .marker-number {
         color: white;
         font-weight: bold;
         font-size: 12px;
       }
-      
+
       .marker-tooltip {
         position: absolute;
         bottom: 100%;
@@ -137,11 +144,11 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         transition: opacity 0.2s ease;
         margin-bottom: 5px;
       }
-      
+
       .marker-content:hover .marker-tooltip {
         opacity: 1;
       }
-      
+
       .popup-content {
         min-width: 200px;
       }
@@ -158,8 +165,8 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
   }, [itinerary]);
 
   return (
-    <div 
-      ref={mapRef} 
+    <div
+      ref={mapRef}
       className="w-full h-full"
       style={{ height: 'calc(100vh - 64px)' }}
     />
