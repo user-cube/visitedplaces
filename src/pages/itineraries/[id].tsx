@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import itinerariesData from '../../../data/itineraries.json';
+import { loadItineraryById } from '../../utils/itineraryUtils';
 import { Itinerary } from '../../types';
 import ItinerarySidebar from '../../components/ItinerarySidebar';
 
@@ -15,12 +15,19 @@ export default function ItineraryPage() {
   const showSidebar = true;
 
   useEffect(() => {
-    if (id && typeof id === 'string') {
-      const foundItinerary = (itinerariesData.itineraries as Itinerary[]).find(
-        (it: Itinerary) => it.id === id
-      );
-      setItinerary(foundItinerary || null);
+    async function loadItinerary() {
+      if (id && typeof id === 'string') {
+        try {
+          const foundItinerary = await loadItineraryById(id);
+          setItinerary(foundItinerary);
+        } catch (error) {
+          console.error('Error loading itinerary:', error);
+          setItinerary(null);
+        }
+      }
     }
+    
+    loadItinerary();
   }, [id]);
 
   if (!itinerary) {

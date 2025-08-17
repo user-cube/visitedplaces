@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import visitedData from '../../data/visited.json';
+import visitedData from '../../public/data/visited.json';
 import { VisitedData } from '../types';
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false });

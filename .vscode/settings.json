@@ -1,0 +1,62 @@
+{
+    // ====== FORMATAÇÃO ======
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+
+    // Usa Prettier como formatador padrão
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    // ====== JAVASCRIPT / TYPESCRIPT / REACT ======
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // ====== JSON ======
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // ====== ESLINT ======
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "json"
+    ],
+    "eslint.alwaysShowStatus": true,
+
+    // Corrigir automaticamente erros ao salvar
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "source.fixAll.eslint": "always"
+    },
+
+    // ====== NEXT.JS QUALITY OF LIFE ======
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+
+    // Suporte para imports automáticos e ordenação
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+
+    // ====== UI / QUALIDADE DE VIDA ======
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "explorer.compactFolders": false,
+    "editor.tabSize": 2
+  }

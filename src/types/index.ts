@@ -89,6 +89,13 @@ export interface ItineraryPoint {
   category?: string;
 }
 
+export interface ItineraryMetadata {
+  flags: string;
+  emoji: string;
+  countries: string[];
+  pointsCount: number;
+}
+
 export interface Itinerary {
   id: string;
   title: string;
@@ -96,6 +103,7 @@ export interface Itinerary {
   endDate: string;
   points: ItineraryPoint[];
   description?: string;
+  metadata?: ItineraryMetadata;
 }
 
 export interface ItineraryListProps {

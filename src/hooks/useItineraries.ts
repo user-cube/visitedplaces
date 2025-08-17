@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Itinerary } from '../types';
+import { getItineraryIndex } from '../utils/itineraryUtils';
 
 export function useItineraries() {
   const [itineraries, setItineraries] = useState<Itinerary[]>([]);
@@ -9,12 +10,18 @@ export function useItineraries() {
   useEffect(() => {
     async function loadItineraries() {
       try {
-        const response = await fetch('/data/itineraries.json');
-        if (!response.ok) {
-          throw new Error('Failed to load itineraries');
-        }
-        const data = await response.json();
-        setItineraries(data.itineraries || []);
+        const itineraryIndexes = await getItineraryIndex();
+        // Convert index entries to Itinerary objects for compatibility
+        const itinerariesFromIndex = itineraryIndexes.map(index => ({
+          id: index.id,
+          title: index.title,
+          startDate: index.startDate,
+          endDate: index.endDate,
+          description: index.description,
+          points: [], // We don't load points for the list view
+          metadata: index.metadata
+        }));
+        setItineraries(itinerariesFromIndex);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {

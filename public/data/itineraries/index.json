@@ -1,0 +1,21 @@
+{
+  "itineraries": [
+    {
+      "id": "budapest-vienna-2025",
+      "title": "Budapest and Vienna",
+      "startDate": "2025-02-26",
+      "endDate": "2025-03-02",
+      "description": "5-day trip from Porto to Budapest and Vienna",
+      "file": "2025/budapest-and-vienna.json",
+      "metadata": {
+        "flags": "🇭🇺 🇦🇹",
+        "emoji": "🏛️",
+        "countries": [
+          "Hungary",
+          "Austria"
+        ],
+        "pointsCount": 32
+      }
+    }
+  ]
+}
