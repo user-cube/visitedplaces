@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/user-cube/visitedplaces/compare/v1.2.3...v1.2.4) (2025-08-17)
+
+
+### Bug Fixes
+
+* Solve 404 errors; 404 custom page ([#11](https://github.com/user-cube/visitedplaces/issues/11)) ([a25ddcd](https://github.com/user-cube/visitedplaces/commit/a25ddcdf0d0d4fae005b06328ec569fb5328665d))
+
 ## [1.2.3](https://github.com/user-cube/visitedplaces/compare/v1.2.2...v1.2.3) (2025-08-17)
 
 
