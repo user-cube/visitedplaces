@@ -16,7 +16,24 @@ export function MapControls({
   onMapStyleChange,
   onColorSchemeChange,
 }: MapControlsProps) {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(() => {
+    // Check if we're on mobile (screen width < 768px)
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 768;
+    }
+    return true; // Default to expanded on server-side
+  });
+
+  // Listen for window resize to update the state
+  React.useEffect(() => {
+    const handleResize = () => {
+      const shouldBeExpanded = window.innerWidth >= 768;
+      setIsExpanded(shouldBeExpanded);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const selectedScheme = COLOR_SCHEMES[selectedColorScheme];
   const mapPreviewUrl = getMapStylePreviewUrl(selectedMapStyle);
