@@ -1,4 +1,4 @@
-declare module "*/itineraries.json" {
+declare module '*/itineraries.json' {
   interface ItineraryPointData {
     name: string;
     address: string;
@@ -25,7 +25,7 @@ declare module "*/itineraries.json" {
   export default data;
 }
 
-declare module "*/visited.json" {
+declare module '*/visited.json' {
   const value: {
     visited: Array<{
       city: string;
