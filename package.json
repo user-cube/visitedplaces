@@ -19,7 +19,9 @@
     "export": "next export",
     "migrate-itineraries": "node scripts/migrate-itineraries.js",
     "update-metadata": "node scripts/update-itinerary-metadata.js",
-    "generate-index": "node scripts/generate-index.js"
+    "generate-index": "node scripts/generate-index.js",
+    "convert-images": "node scripts/convert-images.js",
+    "cleanup-images": "node scripts/cleanup-images.js"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.20",
@@ -28,6 +30,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-leaflet": "^5.0.0",
+    "sharp": "^0.34.3",
     "topojson-client": "^3.1.0",
     "world-atlas": "^2.0.2"
   },

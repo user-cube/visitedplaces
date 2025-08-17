@@ -18,8 +18,9 @@ export function useItineraries() {
           startDate: index.startDate,
           endDate: index.endDate,
           description: index.description,
+          image: index.image,
           points: [], // We don't load points for the list view
-          metadata: index.metadata
+          metadata: index.metadata,
         }));
         setItineraries(itinerariesFromIndex);
       } catch (err) {

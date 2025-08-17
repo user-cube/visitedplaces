@@ -157,10 +157,19 @@ export default function ItinerariesList() {
                 <div className="flex items-start mb-4 sm:mb-6">
                   <div className="flex items-start space-x-3 sm:space-x-4 md:space-x-5">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-2xl sm:text-3xl lg:text-4xl">
-                          {getTravelEmoji(itinerary)}
-                        </span>
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 overflow-hidden relative">
+                        {itinerary.image ? (
+                          <img
+                            src={itinerary.image}
+                            alt={`${itinerary.title} destination`}
+                            className="absolute inset-0 w-full h-full object-cover rounded-lg sm:rounded-xl"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <span className="text-2xl sm:text-3xl lg:text-4xl">
+                            {getTravelEmoji(itinerary)}
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">

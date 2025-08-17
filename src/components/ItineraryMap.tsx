@@ -33,16 +33,43 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       })
       .addTo(map);
 
-    // Add attribution to bottom right
-    const attributionControl = L.control
-      .attribution({
-        position: 'bottomright',
-      })
-      .addTo(map);
+    // Add attribution to bottom right (commented out to remove the message)
+    // const attributionControl = L.control
+    //   .attribution({
+    //     position: 'bottomright',
+    //   })
+    //   .addTo(map);
 
-    // Debug: Check if controls are added
-    console.log('Zoom control added:', zoomControl);
-    console.log('Attribution control added:', attributionControl);
+    // Add custom recenter control
+    const recenterControl = L.Control.extend({
+      onAdd: function () {
+        const container = L.DomUtil.create(
+          'div',
+          'leaflet-bar leaflet-control'
+        );
+        const button = L.DomUtil.create(
+          'a',
+          'leaflet-control-zoom-in',
+          container
+        );
+        button.innerHTML = '📍';
+        button.title = 'Recenter to itinerary';
+        button.style.fontSize = '16px';
+        button.style.lineHeight = '30px';
+        button.style.textAlign = 'center';
+
+        L.DomEvent.on(button, 'click', function () {
+          if (routePoints.length > 1) {
+            const group = L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+          }
+        });
+
+        return container;
+      },
+    });
+
+    new recenterControl({ position: 'bottomright' }).addTo(map);
 
     // Create markers and route
     const markers: L.Marker[] = [];

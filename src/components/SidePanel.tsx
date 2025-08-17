@@ -129,14 +129,28 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
                     className="itinerary-card"
                     onClick={() => router.push(`/itineraries/${itinerary.id}`)}
                   >
-                    <div className="itinerary-title">{itinerary.title}</div>
-                    <div className="itinerary-meta">
-                      <span className="itinerary-dates">
-                        {itinerary.startDate} - {itinerary.endDate}
-                      </span>
-                      <span className="itinerary-points">
-                        {itinerary.points.length} points
-                      </span>
+                    <div className="itinerary-header">
+                      {itinerary.image && (
+                        <div className="itinerary-image">
+                          <img
+                            src={itinerary.image}
+                            alt={`${itinerary.title} destination`}
+                            className="w-full h-full object-cover rounded-lg"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className="itinerary-content">
+                        <div className="itinerary-title">{itinerary.title}</div>
+                        <div className="itinerary-meta">
+                          <span className="itinerary-dates">
+                            {itinerary.startDate} - {itinerary.endDate}
+                          </span>
+                          <span className="itinerary-points">
+                            {itinerary.points.length} points
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))

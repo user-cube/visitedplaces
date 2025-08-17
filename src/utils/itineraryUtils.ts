@@ -6,6 +6,7 @@ export interface ItineraryIndex {
   startDate: string;
   endDate: string;
   description: string;
+  image?: string;
   file: string;
   metadata?: ItineraryMetadata;
 }

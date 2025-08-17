@@ -332,6 +332,26 @@
   opacity: 1;
 }
 
+.itinerary-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.itinerary-image {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.itinerary-content {
+  flex: 1;
+  min-width: 0;
+}
+
 .itinerary-title {
   font-size: 15px;
   font-weight: 700;

@@ -185,6 +185,7 @@ function generateIndex() {
           startDate: itinerary.startDate,
           endDate: itinerary.endDate,
           description: itinerary.description,
+          image: itinerary.image,
           file: `${year}/${file}`,
           metadata,
         };

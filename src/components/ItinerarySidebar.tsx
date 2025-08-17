@@ -82,7 +82,7 @@ export default function ItinerarySidebar({
         width: isMobile ? '100%' : '400px',
         backgroundColor: 'white',
         boxShadow: '4px 0 20px rgba(0,0,0,0.15)',
-        zIndex: 9999,
+        zIndex: 1000,
         overflow: 'hidden',
       }}
     >
@@ -105,8 +105,9 @@ export default function ItinerarySidebar({
             borderRadius: '16px',
             overflow: 'hidden',
             height: isMobile ? '120px' : '140px',
-            background:
-              'url("https://images.unsplash.com/photo-1551867633-194f125695d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80")',
+            background: itinerary.image
+              ? `url("${itinerary.image}")`
+              : 'url("https://images.unsplash.com/photo-1551867633-194f125695d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

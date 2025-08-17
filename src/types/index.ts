@@ -103,6 +103,7 @@ export interface Itinerary {
   endDate: string;
   points: ItineraryPoint[];
   description?: string;
+  image?: string;
   metadata?: ItineraryMetadata;
 }
 

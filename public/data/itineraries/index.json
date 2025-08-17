@@ -6,6 +6,7 @@
       "startDate": "2025-10-02",
       "endDate": "2025-10-06",
       "description": "5-day trip to Krakow exploring Polish history, medieval architecture and cultural heritage",
+      "image": "/images/itineraries/2025/krakow.webp",
       "file": "2025/krakow.json",
       "metadata": {
         "flags": "🇵🇱",
@@ -22,6 +23,7 @@
       "startDate": "2025-09-10",
       "endDate": "2025-09-14",
       "description": "5-day trip to Madeira island exploring Funchal and the beautiful landscapes",
+      "image": "/images/itineraries/2025/madeira.webp",
       "file": "2025/madeira.json",
       "metadata": {
         "flags": "🇵🇹",
@@ -38,6 +40,7 @@
       "startDate": "2025-05-27",
       "endDate": "2025-05-31",
       "description": "5-day trip to Athens exploring ancient Greek history, Acropolis, and archaeological sites",
+      "image": "/images/itineraries/2025/athens.webp",
       "file": "2025/athens.json",
       "metadata": {
         "flags": "🇬🇷",
@@ -54,6 +57,7 @@
       "startDate": "2025-03-29",
       "endDate": "2025-04-01",
       "description": "4-day trip to Dublin exploring Irish culture, history and the famous Guinness Storehouse",
+      "image": "/images/itineraries/2025/dublin.webp",
       "file": "2025/dublin.json",
       "metadata": {
         "flags": "🇮🇪",
@@ -70,6 +74,7 @@
       "startDate": "2025-02-26",
       "endDate": "2025-03-02",
       "description": "5-day trip from Porto to Budapest and Vienna",
+      "image": "/images/itineraries/2025/budapest.webp",
       "file": "2025/budapest-and-vienna.json",
       "metadata": {
         "flags": "🇭🇺 🇦🇹",
