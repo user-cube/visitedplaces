@@ -15,12 +15,25 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
     if (!mapRef.current || mapInstanceRef.current) return;
 
     // Initialize map
-    const map = L.map(mapRef.current).setView([47.4979, 19.0402], 10);
+    const map = L.map(mapRef.current, {
+      zoomControl: false, // Disable default zoom control
+      attributionControl: false // Disable default attribution
+    }).setView([47.4979, 19.0402], 10);
     mapInstanceRef.current = map;
 
     // Add tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add zoom control to bottom right
+    L.control.zoom({
+      position: 'bottomright'
+    }).addTo(map);
+
+    // Add attribution to bottom right
+    L.control.attribution({
+      position: 'bottomright'
     }).addTo(map);
 
     // Create markers and route

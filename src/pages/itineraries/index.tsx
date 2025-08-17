@@ -19,50 +19,183 @@ export default function ItinerariesList() {
     });
   };
 
+  // Function to get country flags based on itinerary title
+  const getCountryFlags = (title: string) => {
+    const flags: { [key: string]: string } = {
+      'Budapeste': '🇭🇺 🇦🇹', // Hungary and Austria
+      'Budapest': '🇭🇺 🇦🇹',
+      'Vienna': '🇦🇹',
+      'Paris': '🇫🇷',
+      'London': '🇬🇧',
+      'Rome': '🇮🇹',
+      'Madrid': '🇪🇸',
+      'Berlin': '🇩🇪',
+      'Amsterdam': '🇳🇱',
+      'Prague': '🇨🇿',
+      'Porto': '🇵🇹',
+      'Lisbon': '🇵🇹',
+      'Barcelona': '🇪🇸',
+      'Milan': '🇮🇹',
+      'Florence': '🇮🇹',
+      'Venice': '🇮🇹',
+      'Munich': '🇩🇪',
+      'Zurich': '🇨🇭',
+      'Brussels': '🇧🇪',
+      'Copenhagen': '🇩🇰',
+      'Stockholm': '🇸🇪',
+      'Oslo': '🇳🇴',
+      'Helsinki': '🇫🇮',
+      'Dublin': '🇮🇪',
+      'Edinburgh': '🇬🇧',
+      'Glasgow': '🇬🇧',
+      'Manchester': '🇬🇧',
+      'Liverpool': '🇬🇧',
+      'Birmingham': '🇬🇧',
+      'Leeds': '🇬🇧',
+      'Sheffield': '🇬🇧',
+      'Newcastle': '🇬🇧',
+      'Cardiff': '🇬🇧',
+      'Belfast': '🇬🇧',
+      'Aberdeen': '🇬🇧',
+      'Dundee': '🇬🇧',
+      'Inverness': '🇬🇧',
+      'Perth': '🇬🇧',
+      'Stirling': '🇬🇧',
+      'Dunfermline': '🇬🇧',
+      'Paisley': '🇬🇧',
+      'East Kilbride': '🇬🇧',
+      'Livingston': '🇬🇧',
+      'Hamilton': '🇬🇧',
+      'Cumbernauld': '🇬🇧',
+      'Kirkcaldy': '🇬🇧',
+      'Ayr': '🇬🇧',
+      'Kilmarnock': '🇬🇧',
+      'Greenock': '🇬🇧',
+      'Falkirk': '🇬🇧',
+      'Irvine': '🇬🇧',
+      'Dumfries': '🇬🇧'
+    };
+    
+    return flags[title] || '🌍';
+  };
+
+  // Function to get travel emoji based on itinerary
+  const getTravelEmoji = (title: string) => {
+    const emojis: { [key: string]: string } = {
+      'Budapeste': '🏛️',
+      'Budapest': '🏛️',
+      'Vienna': '🎭',
+      'Paris': '🗼',
+      'London': '🇬🇧',
+      'Rome': '🏛️',
+      'Madrid': '🌞',
+      'Berlin': '🏛️',
+      'Amsterdam': '🌷',
+      'Prague': '🏰',
+      'Porto': '🍷',
+      'Lisbon': '🌊',
+      'Barcelona': '🏖️',
+      'Milan': '👗',
+      'Florence': '🎨',
+      'Venice': '🛶',
+      'Munich': '🍺',
+      'Zurich': '🏔️',
+      'Brussels': '🍫',
+      'Copenhagen': '🧜‍♀️',
+      'Stockholm': '🏰',
+      'Oslo': '❄️',
+      'Helsinki': '🎅',
+      'Dublin': '🍺',
+      'Edinburgh': '🏰',
+      'Glasgow': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Manchester': '⚽',
+      'Liverpool': '🎵',
+      'Birmingham': '🏭',
+      'Leeds': '🎭',
+      'Sheffield': '🔪',
+      'Newcastle': '🍺',
+      'Cardiff': '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
+      'Belfast': '🍀',
+      'Aberdeen': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Dundee': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Inverness': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Perth': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Stirling': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Dunfermline': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Paisley': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'East Kilbride': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Livingston': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Hamilton': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Cumbernauld': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Kirkcaldy': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Ayr': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Kilmarnock': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Greenock': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Falkirk': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Irvine': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'Dumfries': '🏴󠁧󠁢󠁳󠁣󠁴󠁿'
+    };
+    
+    return emojis[title] || '✈️';
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Travel Itineraries</h1>
-          <p className="text-gray-600">Explore your travel itineraries and discover new destinations</p>
+        <div className="mb-8 text-center">
+          <div className="flex items-center justify-center mb-4">
+            <span className="text-4xl mr-3">🗺️</span>
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Travel Itineraries</h1>
+            <span className="text-4xl ml-3">✈️</span>
+          </div>
+          <p className="text-gray-600 text-lg">Explore your travel itineraries and discover new destinations around the world</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {itineraries.map((itinerary) => (
             <div
               key={itinerary.id}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
               onClick={() => handleItinerarySelect(itinerary)}
             >
               <div className="p-6">
+                {/* Header with flags and emoji */}
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold text-gray-900">{itinerary.title}</h2>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-2xl">{getTravelEmoji(itinerary.title)}</span>
+                    <div>
+                      <h2 className="text-xl font-bold text-gray-900">{itinerary.title}</h2>
+                      <div className="flex items-center space-x-1 mt-1">
+                        <span className="text-lg">{getCountryFlags(itinerary.title)}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-sm">
                     {itinerary.points.length} points
                   </span>
                 </div>
                 
                 {itinerary.description && (
-                  <p className="text-gray-600 mb-4">{itinerary.description}</p>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{itinerary.description}</p>
                 )}
                 
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center text-sm text-gray-500 mb-4 bg-gray-50 rounded-lg p-3">
+                  <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  {formatDate(itinerary.startDate)} - {formatDate(itinerary.endDate)}
+                  <span className="font-medium">{formatDate(itinerary.startDate)} - {formatDate(itinerary.endDate)}</span>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    {itinerary.points.length} locations
+                    <span className="font-medium">{itinerary.points.length} locations</span>
                   </div>
                   
-                  <button className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                  <button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-md hover:shadow-lg">
                     View itinerary
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

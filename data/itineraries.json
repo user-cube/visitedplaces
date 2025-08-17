@@ -1,11 +1,11 @@
 {
   "itineraries": [
     {
-      "id": "budapest-2025",
-      "title": "Budapeste",
+      "id": "budapest-vienna-2025",
+      "title": "Budapeste and Vienna",
       "startDate": "2025-02-26",
       "endDate": "2025-03-02",
-      "description": "5-day trip to Budapest and Vienna",
+      "description": "5-day trip from Porto to Budapest and Vienna",
       "points": [
         {
           "name": "Fisherman's Bastion",
