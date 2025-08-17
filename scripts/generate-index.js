@@ -10,173 +10,174 @@ const indexFile = path.join(itinerariesDir, 'index.json');
 
 // Country to flag mapping
 const COUNTRY_FLAGS = {
-  'Hungary': '🇭🇺',
-  'Austria': '🇦🇹',
-  'France': '🇫🇷',
+  Hungary: '🇭🇺',
+  Austria: '🇦🇹',
+  France: '🇫🇷',
   'United Kingdom': '🇬🇧',
-  'Italy': '🇮🇹',
-  'Spain': '🇪🇸',
-  'Germany': '🇩🇪',
-  'Netherlands': '🇳🇱',
+  Italy: '🇮🇹',
+  Spain: '🇪🇸',
+  Germany: '🇩🇪',
+  Netherlands: '🇳🇱',
   'Czech Republic': '🇨🇿',
-  'Czechia': '🇨🇿',
-  'Portugal': '🇵🇹',
-  'Switzerland': '🇨🇭',
-  'Belgium': '🇧🇪',
-  'Denmark': '🇩🇰',
-  'Sweden': '🇸🇪',
-  'Norway': '🇳🇴',
-  'Finland': '🇫🇮',
-  'Ireland': '🇮🇪',
-  'Poland': '🇵🇱',
-  'Greece': '🇬🇷',
-  'Croatia': '🇭🇷',
-  'Slovenia': '🇸🇮',
-  'Slovakia': '🇸🇰',
-  'Romania': '🇷🇴',
-  'Bulgaria': '🇧🇬',
-  'Serbia': '🇷🇸',
+  Czechia: '🇨🇿',
+  Portugal: '🇵🇹',
+  Switzerland: '🇨🇭',
+  Belgium: '🇧🇪',
+  Denmark: '🇩🇰',
+  Sweden: '🇸🇪',
+  Norway: '🇳🇴',
+  Finland: '🇫🇮',
+  Ireland: '🇮🇪',
+  Poland: '🇵🇱',
+  Greece: '🇬🇷',
+  Croatia: '🇭🇷',
+  Slovenia: '🇸🇮',
+  Slovakia: '🇸🇰',
+  Romania: '🇷🇴',
+  Bulgaria: '🇧🇬',
+  Serbia: '🇷🇸',
   'Bosnia and Herzegovina': '🇧🇦',
-  'Montenegro': '🇲🇪',
-  'Albania': '🇦🇱',
+  Montenegro: '🇲🇪',
+  Albania: '🇦🇱',
   'North Macedonia': '🇲🇰',
-  'Kosovo': '🇽🇰',
-  'Moldova': '🇲🇩',
-  'Ukraine': '🇺🇦',
-  'Belarus': '🇧🇾',
-  'Lithuania': '🇱🇹',
-  'Latvia': '🇱🇻',
-  'Estonia': '🇪🇪',
-  'Russia': '🇷🇺',
-  'Turkey': '🇹🇷',
-  'Cyprus': '🇨🇾',
-  'Malta': '🇲🇹',
-  'Iceland': '🇮🇸',
-  'Luxembourg': '🇱🇺',
-  'Liechtenstein': '🇱🇮',
-  'Monaco': '🇲🇨',
+  Kosovo: '🇽🇰',
+  Moldova: '🇲🇩',
+  Ukraine: '🇺🇦',
+  Belarus: '🇧🇾',
+  Lithuania: '🇱🇹',
+  Latvia: '🇱🇻',
+  Estonia: '🇪🇪',
+  Russia: '🇷🇺',
+  Turkey: '🇹🇷',
+  Cyprus: '🇨🇾',
+  Malta: '🇲🇹',
+  Iceland: '🇮🇸',
+  Luxembourg: '🇱🇺',
+  Liechtenstein: '🇱🇮',
+  Monaco: '🇲🇨',
   'San Marino': '🇸🇲',
   'Vatican City': '🇻🇦',
-  'Andorra': '🇦🇩',
+  Andorra: '🇦🇩',
 };
 
 // Country to emoji mapping
 const COUNTRY_EMOJIS = {
-  'Hungary': '🏛️',
-  'Austria': '🎭',
-  'France': '🗼',
+  Hungary: '🏛️',
+  Austria: '🎭',
+  France: '🗼',
   'United Kingdom': '🇬🇧',
-  'Italy': '🏛️',
-  'Spain': '🌞',
-  'Germany': '🏛️',
-  'Netherlands': '🌷',
+  Italy: '🏛️',
+  Spain: '🌞',
+  Germany: '🏛️',
+  Netherlands: '🌷',
   'Czech Republic': '🏰',
-  'Czechia': '🏰',
-  'Portugal': '🍷',
-  'Switzerland': '🏔️',
-  'Belgium': '🍫',
-  'Denmark': '🧜‍♀️',
-  'Sweden': '🏰',
-  'Norway': '❄️',
-  'Finland': '🎅',
-  'Ireland': '🍺',
-  'Poland': '🏰',
-  'Greece': '🏛️',
-  'Croatia': '🏖️',
-  'Slovenia': '🏔️',
-  'Slovakia': '🏰',
-  'Romania': '🏰',
-  'Bulgaria': '🌹',
-  'Serbia': '🏰',
+  Czechia: '🏰',
+  Portugal: '🍷',
+  Switzerland: '🏔️',
+  Belgium: '🍫',
+  Denmark: '🧜‍♀️',
+  Sweden: '🏰',
+  Norway: '❄️',
+  Finland: '🎅',
+  Ireland: '🍺',
+  Poland: '🏰',
+  Greece: '🏛️',
+  Croatia: '🏖️',
+  Slovenia: '🏔️',
+  Slovakia: '🏰',
+  Romania: '🏰',
+  Bulgaria: '🌹',
+  Serbia: '🏰',
   'Bosnia and Herzegovina': '🏔️',
-  'Montenegro': '🏔️',
-  'Albania': '🏔️',
+  Montenegro: '🏔️',
+  Albania: '🏔️',
   'North Macedonia': '🏔️',
-  'Kosovo': '🏔️',
-  'Moldova': '🍇',
-  'Ukraine': '🌻',
-  'Belarus': '🌲',
-  'Lithuania': '🏰',
-  'Latvia': '🌲',
-  'Estonia': '🌲',
-  'Russia': '🏰',
-  'Turkey': '🕌',
-  'Cyprus': '🏖️',
-  'Malta': '🏰',
-  'Iceland': '🌋',
-  'Luxembourg': '🏰',
-  'Liechtenstein': '🏔️',
-  'Monaco': '🏎️',
+  Kosovo: '🏔️',
+  Moldova: '🍇',
+  Ukraine: '🌻',
+  Belarus: '🌲',
+  Lithuania: '🏰',
+  Latvia: '🌲',
+  Estonia: '🌲',
+  Russia: '🏰',
+  Turkey: '🕌',
+  Cyprus: '🏖️',
+  Malta: '🏰',
+  Iceland: '🌋',
+  Luxembourg: '🏰',
+  Liechtenstein: '🏔️',
+  Monaco: '🏎️',
   'San Marino': '🏰',
   'Vatican City': '⛪',
-  'Andorra': '🏔️',
+  Andorra: '🏔️',
 };
 
 function extractCountriesFromItinerary(itinerary) {
   const countries = new Set();
-  
+
   itinerary.points.forEach(point => {
     // Try to extract country from address
     const addressParts = point.address.split(',').map(part => part.trim());
     const lastPart = addressParts[addressParts.length - 1];
-    
+
     if (lastPart && COUNTRY_FLAGS[lastPart]) {
       countries.add(lastPart);
     }
   });
-  
+
   return Array.from(countries);
 }
 
 function generateFlagsFromCountries(countries) {
-  return countries
-    .map(country => COUNTRY_FLAGS[country] || '🌍')
-    .join(' ');
+  return countries.map(country => COUNTRY_FLAGS[country] || '🌍').join(' ');
 }
 
 function generateEmojiFromCountries(countries) {
   if (countries.length === 0) return '✈️';
-  
+
   const firstCountry = countries[0];
   return COUNTRY_EMOJIS[firstCountry] || '✈️';
 }
 
 function generateMetadata(itinerary) {
   const countries = extractCountriesFromItinerary(itinerary);
-  
+
   return {
     flags: generateFlagsFromCountries(countries),
     emoji: generateEmojiFromCountries(countries),
     countries,
-    pointsCount: itinerary.points.length
+    pointsCount: itinerary.points.length,
   };
 }
 
 function generateIndex() {
   try {
     console.log('🔄 Generating index.json with metadata...');
-    
+
     // Get all year directories
-    const yearDirs = fs.readdirSync(itinerariesDir)
+    const yearDirs = fs
+      .readdirSync(itinerariesDir)
       .filter(item => {
         const itemPath = path.join(itinerariesDir, item);
         return fs.statSync(itemPath).isDirectory() && /^\d{4}$/.test(item);
       })
       .sort(); // Sort years
-    
+
     const itineraries = [];
-    
+
     yearDirs.forEach(year => {
       const yearDir = path.join(itinerariesDir, year);
-      const files = fs.readdirSync(yearDir).filter(file => file.endsWith('.json'));
-      
+      const files = fs
+        .readdirSync(yearDir)
+        .filter(file => file.endsWith('.json'));
+
       files.forEach(file => {
         const filePath = path.join(yearDir, file);
         const itinerary = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        
+
         // Generate metadata
         const metadata = generateMetadata(itinerary);
-        
+
         // Create index entry
         const indexEntry = {
           id: itinerary.id,
@@ -185,11 +186,11 @@ function generateIndex() {
           endDate: itinerary.endDate,
           description: itinerary.description,
           file: `${year}/${file}`,
-          metadata
+          metadata,
         };
-        
+
         itineraries.push(indexEntry);
-        
+
         console.log(`✓ Processed: ${year}/${file}`);
         console.log(`  Flags: ${metadata.flags}`);
         console.log(`  Emoji: ${metadata.emoji}`);
@@ -198,17 +199,18 @@ function generateIndex() {
         console.log('');
       });
     });
-    
+
     // Sort itineraries by start date (newest first)
     itineraries.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
-    
+
     // Write index file
     const indexData = { itineraries };
     fs.writeFileSync(indexFile, JSON.stringify(indexData, null, 2));
-    
-    console.log(`✅ Generated index.json with ${itineraries.length} itineraries!`);
+
+    console.log(
+      `✅ Generated index.json with ${itineraries.length} itineraries!`
+    );
     console.log(`📁 Index file: ${indexFile}`);
-    
   } catch (error) {
     console.error('❌ Error generating index:', error);
     process.exit(1);

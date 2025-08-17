@@ -5,7 +5,9 @@ import { loadItineraryById } from '../../utils/itineraryUtils';
 import { Itinerary } from '../../types';
 import ItinerarySidebar from '../../components/ItinerarySidebar';
 
-const ItineraryMap = dynamic(() => import('../../components/ItineraryMap'), { ssr: false });
+const ItineraryMap = dynamic(() => import('../../components/ItineraryMap'), {
+  ssr: false,
+});
 
 export default function ItineraryPage() {
   const router = useRouter();
@@ -26,7 +28,7 @@ export default function ItineraryPage() {
         }
       }
     }
-    
+
     loadItinerary();
   }, [id]);
 
@@ -34,7 +36,9 @@ export default function ItineraryPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Itinerary not found</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Itinerary not found
+          </h1>
           <button
             onClick={() => router.push('/itineraries')}
             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
@@ -49,16 +53,16 @@ export default function ItineraryPage() {
   return (
     <div className="h-screen flex">
       {/* Main Map Area */}
-      <div 
+      <div
         className={`flex-1 relative ${showSidebar ? 'mr-96' : ''}`}
         style={{
           flex: 1,
           position: 'relative',
-          marginLeft: '400px'
+          marginLeft: '400px',
         }}
       >
         <ItineraryMap itinerary={itinerary} />
-        
+
         {/* Floating Controls */}
         <div className="absolute top-4 left-4" style={{ zIndex: 10000 }}>
           <button
@@ -70,26 +74,34 @@ export default function ItineraryPage() {
               boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
               border: 'none',
               cursor: 'pointer',
-              transition: 'all 0.2s ease'
+              transition: 'all 0.2s ease',
             }}
-            onMouseEnter={(e) => {
+            onMouseEnter={e => {
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 12px 35px rgba(0, 0, 0, 0.2)';
+              e.currentTarget.style.boxShadow =
+                '0 12px 35px rgba(0, 0, 0, 0.2)';
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={e => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+              e.currentTarget.style.boxShadow =
+                '0 8px 25px rgba(0, 0, 0, 0.15)';
             }}
           >
-            <svg style={{ width: '24px', height: '24px', color: '#374151' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            <svg
+              style={{ width: '24px', height: '24px', color: '#374151' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
             </svg>
           </button>
         </div>
-
-
-
-        
       </div>
 
       {/* Sidebar */}

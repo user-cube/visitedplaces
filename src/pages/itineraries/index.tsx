@@ -101,7 +101,8 @@ export default function ItinerariesList() {
                     </div>
                   </div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-sm">
-                    {itinerary.metadata?.pointsCount || itinerary.points.length} points
+                    {itinerary.metadata?.pointsCount || itinerary.points.length}{' '}
+                    points
                   </span>
                 </div>
 
@@ -153,7 +154,9 @@ export default function ItinerariesList() {
                       />
                     </svg>
                     <span className="font-medium">
-                      {itinerary.metadata?.pointsCount || itinerary.points.length} locations
+                      {itinerary.metadata?.pointsCount ||
+                        itinerary.points.length}{' '}
+                      locations
                     </span>
                   </div>
 
