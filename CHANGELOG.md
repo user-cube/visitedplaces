@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/user-cube/visitedplaces/compare/v1.3.0...v1.3.1) (2025-08-18)
+
+
+### Bug Fixes
+
+* Itineraries missing ([#13](https://github.com/user-cube/visitedplaces/issues/13)) ([09b93ca](https://github.com/user-cube/visitedplaces/commit/09b93ca6de84d4237513172bea8579153b869e7e))
+
 # [1.3.0](https://github.com/user-cube/visitedplaces/compare/v1.2.4...v1.3.0) (2025-08-17)
 
 
