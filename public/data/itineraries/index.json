@@ -7,7 +7,7 @@
       "endDate": "2025-10-06",
       "description": "5-day trip to Krakow exploring Polish history, medieval architecture and cultural heritage",
       "image": "/images/itineraries/2025/krakow.webp",
-      "file": "2025/krakow.json",
+      "file": "2025/krakow/krakow.json",
       "metadata": {
         "flags": "🇵🇱",
         "emoji": "🏰",
@@ -24,7 +24,7 @@
       "endDate": "2025-09-14",
       "description": "5-day trip to Madeira island exploring Funchal and the beautiful landscapes",
       "image": "/images/itineraries/2025/madeira.webp",
-      "file": "2025/madeira.json",
+      "file": "2025/madeira/madeira.json",
       "metadata": {
         "flags": "🇵🇹",
         "emoji": "🍷",
@@ -41,7 +41,7 @@
       "endDate": "2025-05-31",
       "description": "5-day trip to Athens exploring ancient Greek history, Acropolis, and archaeological sites",
       "image": "/images/itineraries/2025/athens.webp",
-      "file": "2025/athens.json",
+      "file": "2025/athens/athens.json",
       "metadata": {
         "flags": "🇬🇷",
         "emoji": "🏛️",
@@ -58,7 +58,7 @@
       "endDate": "2025-04-01",
       "description": "4-day trip to Dublin exploring Irish culture, history and the famous Guinness Storehouse",
       "image": "/images/itineraries/2025/dublin.webp",
-      "file": "2025/dublin.json",
+      "file": "2025/dublin/dublin.json",
       "metadata": {
         "flags": "🇮🇪",
         "emoji": "🍺",
@@ -75,7 +75,7 @@
       "endDate": "2025-03-02",
       "description": "5-day trip from Porto to Budapest and Vienna",
       "image": "/images/itineraries/2025/budapest.webp",
-      "file": "2025/budapest-and-vienna.json",
+      "file": "2025/budapest-and-vienna/budapest-and-vienna.json",
       "metadata": {
         "flags": "🇭🇺 🇦🇹",
         "emoji": "🏛️",
@@ -93,11 +93,13 @@
       "endDate": "2024-12-15",
       "description": "4-day trip to London exploring British culture, historic landmarks, and the magical Christmas atmosphere",
       "image": "/images/itineraries/2024/london.webp",
-      "file": "2024/london.json",
+      "file": "2024/london/london.json",
       "metadata": {
-        "flags": "",
+        "flags": "🇬🇧",
         "emoji": "✈️",
-        "countries": [],
+        "countries": [
+          "United Kingdom"
+        ],
         "pointsCount": 44
       }
     },
@@ -108,7 +110,7 @@
       "endDate": "2024-12-03",
       "description": "4-day trip to Prague exploring Czech history, medieval architecture, and the magical Christmas atmosphere",
       "image": "/images/itineraries/2024/prague.webp",
-      "file": "2024/prague.json",
+      "file": "2024/prague/prague.json",
       "metadata": {
         "flags": "🇨🇿 🇦🇹",
         "emoji": "🏰",
@@ -126,7 +128,7 @@
       "endDate": "2024-10-20",
       "description": "3-day trip to Brussels exploring Belgian culture, art museums, and the heart of European politics",
       "image": "/images/itineraries/2024/brussels.webp",
-      "file": "2024/brussels.json",
+      "file": "2024/brussels/brussels.json",
       "metadata": {
         "flags": "🇧🇪",
         "emoji": "🍫",
@@ -143,7 +145,7 @@
       "endDate": "2024-10-01",
       "description": "3-day trip to Strasbourg exploring Alsatian culture, medieval architecture, and the beautiful wine route",
       "image": "/images/itineraries/2024/strasbourg.webp",
-      "file": "2024/strasbourg.json",
+      "file": "2024/strasbourg/strasbourg.json",
       "metadata": {
         "flags": "🇫🇷",
         "emoji": "🗼",
@@ -160,7 +162,7 @@
       "endDate": "2024-09-28",
       "description": "4-day trip to Amsterdam exploring Dutch culture, world-class museums, and the beautiful canals",
       "image": "/images/itineraries/2024/amsterdam.webp",
-      "file": "2024/amsterdam.json",
+      "file": "2024/amsterdam/amsterdam.json",
       "metadata": {
         "flags": "🇳🇱",
         "emoji": "🌷",
@@ -177,7 +179,7 @@
       "endDate": "2024-06-01",
       "description": "3-day trip to Madrid exploring Spanish culture, royal palaces, museums, and the vibrant city life",
       "image": "/images/itineraries/2024/madrid.webp",
-      "file": "2024/madrid.json",
+      "file": "2024/madrid/madrid.json",
       "metadata": {
         "flags": "🇪🇸",
         "emoji": "🌞",
@@ -194,7 +196,7 @@
       "endDate": "2024-03-17",
       "description": "3-day trip to Stockholm exploring Swedish history, royal palaces, and the cultural treasures of the archipelago",
       "image": "/images/itineraries/2024/stockholm.webp",
-      "file": "2024/stockholm.json",
+      "file": "2024/stockholm/stockholm.json",
       "metadata": {
         "flags": "🇸🇪",
         "emoji": "🏰",
@@ -211,7 +213,7 @@
       "endDate": "2023-12-05",
       "description": "5-day trip to Copenhagen exploring Danish culture, castles, and the magic of Tivoli Gardens",
       "image": "/images/itineraries/2023/copenhagen.webp",
-      "file": "2023/copenhagen.json",
+      "file": "2023/copenhagen/copenhagen.json",
       "metadata": {
         "flags": "🇩🇰 🇸🇪",
         "emoji": "🧜‍♀️",
@@ -229,7 +231,7 @@
       "endDate": "2023-07-19",
       "description": "5-day trip to Terceira Island exploring the Lilac Island of the Azores, volcanic landscapes, and Portuguese heritage",
       "image": "/images/itineraries/2023/terceira.webp",
-      "file": "2023/terceira.json",
+      "file": "2023/terceira/terceira.json",
       "metadata": {
         "flags": "🇵🇹",
         "emoji": "🍷",
@@ -246,7 +248,7 @@
       "endDate": "2023-05-26",
       "description": "6-day trip to Rome exploring ancient history, Vatican City, and iconic Italian landmarks",
       "image": "/images/itineraries/2023/rome.webp",
-      "file": "2023/rome.json",
+      "file": "2023/rome/rome.json",
       "metadata": {
         "flags": "🇮🇹 🇻🇦",
         "emoji": "🏛️",
@@ -264,7 +266,7 @@
       "endDate": "2022-05-16",
       "description": "5-day trip to Paris exploring iconic landmarks, museums, and the magic of Disneyland Paris",
       "image": "/images/itineraries/2022/paris.webp",
-      "file": "2022/paris.json",
+      "file": "2022/paris/paris.json",
       "metadata": {
         "flags": "🇫🇷",
         "emoji": "🗼",

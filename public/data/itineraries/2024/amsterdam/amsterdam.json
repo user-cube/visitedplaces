@@ -11,6 +11,43 @@
     "countries": ["Netherlands"],
     "pointsCount": 25
   },
+  "notes": [
+    "I amsterdam City Card: official and third-party options listed in links below.",
+    "Anne Frank House tickets: next 6 weeks released each Tuesday at 09:00 (high demand).",
+    "Many included attractions require time-slot reservations even with the City Card.",
+    "Canal boat cruise is included with the City Card – booking a time slot is required.",
+    "Heineken Experience offers 25% discount with the City Card – book a time slot.",
+    "Cashless culture: most places are card-only; carry a contactless card.",
+    "Optional extras at the end include experiences not necessarily covered by the City Card."
+  ],
+  "links": [
+    { "label": "I amsterdam City Card (Official)", "url": "https://www.iamsterdam.com/en/tickets/i-amsterdam-city-card" },
+    { "label": "I amsterdam City Card (Civitatis)", "url": "https://www.civitatis.com/pt/amesterdao/amsterdam-city-card/?aid=9661" },
+    { "label": "Anne Frank House – Tickets", "url": "https://www.annefrank.org/en/museum/tickets/choose-your-ticket/" },
+    { "label": "Boat Cruise (included) – Amsterdam Boat Cruises", "url": "https://amsterdamboatcruises.nl/" },
+    { "label": "Heineken Experience (25% off with Card)", "url": "https://www.heinekenexperience.com/en/" },
+    { "label": "Rijksmuseum (included)", "url": "https://www.rijksmuseum.nl/en/tickets/articles" },
+    { "label": "Van Gogh Museum (included)", "url": "https://tickets.vangoghmuseum.com/" },
+    { "label": "Oude Kerk (included)", "url": "https://tickets.oudekerk.nl/en/tickets" },
+    { "label": "Wereldmuseum Amsterdam (included)", "url": "https://amsterdam.wereldmuseum.nl/en/tickets" },
+    { "label": "Resistance Museum – Verzetsmuseum (included)", "url": "https://tickets.verzetsmuseum.org/en/tickets" },
+    { "label": "Moco Museum (included)", "url": "https://tickets.mocomuseum.com/en/free-entree/tickets" },
+    { "label": "NEMO Science Museum (included)", "url": "https://tickets.nemosciencemuseum.nl/en/tickets" },
+    { "label": "Stedelijk Museum (included)", "url": "https://booking.stedelijk.nl/" },
+    { "label": "Rembrandt House Museum (included)", "url": "https://tickets.rembrandthuis.nl/en/tickets" },
+    { "label": "Royal Palace (not included)", "url": "https://www.paleisamsterdam.nl/en/visit/" },
+    { "label": "National Maritime Museum (included)", "url": "https://tickets.hetscheepvaartmuseum.nl/en/tickets" },
+    { "label": "ARTIS Zoo (included)", "url": "https://dagtickets.artis.nl/" },
+    { "label": "A'DAM Lookout (included; swing +€7.5)", "url": "https://www.iamsterdam.com/en/whats-on/calendar/attractions-and-sights/attractions/adam-lookout" },
+    { "label": "Canal Cruises – GetYourGuide", "url": "https://www.getyourguide.com/s?partner_id=GUJ70QT&utm_medium=online_publisher&placement=content-middle&cmp=amsterdam&visitor-id=80715C4AEDA94CA28CCFEA9BBF6C5B59&locale_autoredirect_optout=true&q=Amsterdam&et=396132&lc=36" },
+    { "label": "Rijksmuseum – GetYourGuide", "url": "https://www.getyourguide.com/s?partner_id=GUJ70QT&utm_medium=online_publisher&utm_source=vagamundos&placement=content-middle&cmp=amsterdam&q=Amsterdam&et=7135&lc=36" },
+    { "label": "Van Gogh Museum – GetYourGuide", "url": "https://www.getyourguide.com/s?partner_id=GUJ70QT&utm_medium=online_publisher&utm_source=vagamundos&placement=content-middle&cmp=amsterdam&q=Amsterdam&et=56969&lc=36" },
+    { "label": "THIS IS HOLLAND (optional)", "url": "https://www.iamsterdam.com/en/whats-on/calendar/attractions-and-sights/attractions/this-is-holland-the-ultimate-5d-flight-experience" },
+    { "label": "Royal Coster Diamonds (optional)", "url": "https://www.iamsterdam.com/en/whats-on/calendar/attractions-and-sights/attractions/royal-coster-diamonds" },
+    { "label": "Jewish Museum (optional)", "url": "https://www.iamsterdam.com/en/whats-on/calendar/museums-and-galleries/museums/jewish-museum" },
+    { "label": "Cheese and Wine Cruise – Stromma (25% off)", "url": "https://www.iamsterdam.com/en/whats-on/calendar/attractions-and-sights/canal-cruises/cheese-and-wine-cruise-stromma" },
+    { "label": "Space cake tips", "url": "https://www.reddit.com/r/AmsterdamEnts/s/30HhjQ2Jgq" }
+  ],
   "points": [
     {
       "name": "HV6002 (Transavia)",

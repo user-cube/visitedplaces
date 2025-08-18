@@ -177,37 +177,71 @@ function generateIndex() {
 
     yearDirs.forEach(year => {
       const yearDir = path.join(itinerariesDir, year);
-      const files = fs
-        .readdirSync(yearDir)
-        .filter(file => file.endsWith('.json'));
+      const entries = fs.readdirSync(yearDir);
 
-      files.forEach(file => {
-        const filePath = path.join(yearDir, file);
-        const itinerary = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      entries.forEach(entry => {
+        const entryPath = path.join(yearDir, entry);
+        const stats = fs.statSync(entryPath);
 
-        // Generate metadata
-        const metadata = generateMetadata(itinerary);
+        // Direct JSON file in year directory
+        if (stats.isFile() && entry.endsWith('.json')) {
+          const itinerary = JSON.parse(fs.readFileSync(entryPath, 'utf8'));
+          const metadata = generateMetadata(itinerary);
+          const relativeFile = path
+            .relative(itinerariesDir, entryPath)
+            .replace(/\\/g, '/');
 
-        // Create index entry
-        const indexEntry = {
-          id: itinerary.id,
-          title: itinerary.title,
-          startDate: itinerary.startDate,
-          endDate: itinerary.endDate,
-          description: itinerary.description,
-          image: itinerary.image,
-          file: `${year}/${file}`,
-          metadata,
-        };
+          itineraries.push({
+            id: itinerary.id,
+            title: itinerary.title,
+            startDate: itinerary.startDate,
+            endDate: itinerary.endDate,
+            description: itinerary.description,
+            image: itinerary.image,
+            file: relativeFile,
+            metadata,
+          });
 
-        itineraries.push(indexEntry);
+          console.log(`✓ Processed: ${relativeFile}`);
+          console.log(`  Flags: ${metadata.flags}`);
+          console.log(`  Emoji: ${metadata.emoji}`);
+          console.log(`  Countries: ${metadata.countries.join(', ')}`);
+          console.log(`  Points: ${metadata.pointsCount}`);
+          console.log('');
+        }
 
-        console.log(`✓ Processed: ${year}/${file}`);
-        console.log(`  Flags: ${metadata.flags}`);
-        console.log(`  Emoji: ${metadata.emoji}`);
-        console.log(`  Countries: ${metadata.countries.join(', ')}`);
-        console.log(`  Points: ${metadata.pointsCount}`);
-        console.log('');
+        // Subdirectory – process any JSON files inside
+        if (stats.isDirectory()) {
+          const subFiles = fs
+            .readdirSync(entryPath)
+            .filter(f => f.endsWith('.json'));
+          subFiles.forEach(file => {
+            const filePath = path.join(entryPath, file);
+            const itinerary = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            const metadata = generateMetadata(itinerary);
+            const relativeFile = path
+              .relative(itinerariesDir, filePath)
+              .replace(/\\/g, '/');
+
+            itineraries.push({
+              id: itinerary.id,
+              title: itinerary.title,
+              startDate: itinerary.startDate,
+              endDate: itinerary.endDate,
+              description: itinerary.description,
+              image: itinerary.image,
+              file: relativeFile,
+              metadata,
+            });
+
+            console.log(`✓ Processed: ${relativeFile}`);
+            console.log(`  Flags: ${metadata.flags}`);
+            console.log(`  Emoji: ${metadata.emoji}`);
+            console.log(`  Countries: ${metadata.countries.join(', ')}`);
+            console.log(`  Points: ${metadata.pointsCount}`);
+            console.log('');
+          });
+        }
       });
     });
 
