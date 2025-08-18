@@ -1,0 +1,26 @@
+version: 2
+updates:
+  # 1. Node.js dependencies (Next.js, React, Tailwind, etc.)
+  - package-ecosystem: "npm"
+    directory: "/"                          # root of the repository
+    schedule:
+      interval: "weekly"                   # can be 'daily', 'weekly', or 'monthly'
+    open-pull-requests-limit: 5            # avoids too many open PRs at once
+    reviewers:
+      - "user-cube"                        # adjust to your GitHub username or team
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # 2. GitHub Actions (CI/CD workflows)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "ci"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
