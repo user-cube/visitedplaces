@@ -12,6 +12,9 @@ export default function ItinerariesList() {
   const [selectedCountry, setSelectedCountry] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const [isSmall, setIsSmall] = useState(false);
+  const [showMoreYears, setShowMoreYears] = useState(false);
+  const [showMoreCountries, setShowMoreCountries] = useState(false);
 
   // Load last query from localStorage
   useEffect(() => {
@@ -19,6 +22,10 @@ export default function ItinerariesList() {
       const saved = localStorage.getItem('itineraries:lastQuery');
       if (saved) setSearchTerm(saved);
     } catch {}
+    const onResize = () => setIsSmall(window.innerWidth <= 640);
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, []);
 
   // Debounce search term and persist
@@ -168,6 +175,34 @@ export default function ItinerariesList() {
     });
   }, [itineraries, debouncedTerm, selectedCountry, selectedYear]);
 
+  // Visible lists (mobile collapsible)
+  const visibleYears = useMemo(() => {
+    const list = uniqueYears;
+    if (!isSmall || showMoreYears) return list;
+    const max = 6;
+    if (!selectedYear || list.includes(selectedYear)) {
+      return list.slice(0, max);
+    }
+    // Ensure selected appears if outside window
+    return [selectedYear, ...list.filter(y => y !== selectedYear)].slice(
+      0,
+      max
+    );
+  }, [uniqueYears, isSmall, showMoreYears, selectedYear]);
+
+  const visibleCountries = useMemo(() => {
+    const list = uniqueCountries;
+    if (!isSmall || showMoreCountries) return list;
+    const max = 8;
+    if (!selectedCountry || list.includes(selectedCountry)) {
+      return list.slice(0, max);
+    }
+    return [selectedCountry, ...list.filter(c => c !== selectedCountry)].slice(
+      0,
+      max
+    );
+  }, [uniqueCountries, isSmall, showMoreCountries, selectedCountry]);
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -274,9 +309,9 @@ export default function ItinerariesList() {
 
         {/* Search and Filters Section */}
         <div className="mb-8 sm:mb-12 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="flex flex-col gap-4 sm:gap-6">
             {/* Search Input */}
-            <div className="sm:col-span-2 lg:col-span-2">
+            <div>
               <label
                 htmlFor="search"
                 className="block text-sm font-medium text-gray-700 mb-2"
@@ -331,54 +366,98 @@ export default function ItinerariesList() {
                 )}
               </div>
               <p className="mt-2 text-xs text-gray-500">
-                Press '/' to focus, Esc to clear
+                Press &apos;/&apos; to focus, Esc to clear
               </p>
             </div>
 
-            {/* Country Filter */}
+            {/* Year Filter (chips directly under search) */}
             <div>
-              <label
-                htmlFor="country"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Country
-              </label>
-              <select
-                id="country"
-                value={selectedCountry}
-                onChange={e => setSelectedCountry(e.target.value)}
-                className="block w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
-              >
-                <option value="">All countries</option>
-                {uniqueCountries.map(country => (
-                  <option key={country} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Year Filter */}
-            <div>
-              <label
-                htmlFor="year"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Year
               </label>
-              <select
-                id="year"
-                value={selectedYear}
-                onChange={e => setSelectedYear(e.target.value)}
-                className="block w-full px-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
-              >
-                <option value="">All years</option>
-                {uniqueYears.map(year => (
-                  <option key={year} value={year}>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedYear('')}
+                  className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
+                    selectedYear === ''
+                      ? 'bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-transparent'
+                      : 'bg-white text-gray-700 border-gray-300 hover:border-[#667eea]'
+                  }`}
+                  aria-pressed={selectedYear === ''}
+                >
+                  All years
+                </button>
+                {visibleYears.map(year => (
+                  <button
+                    key={year}
+                    type="button"
+                    onClick={() => setSelectedYear(year)}
+                    className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
+                      selectedYear === year
+                        ? 'bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-transparent'
+                        : 'bg-white text-gray-700 border-gray-300 hover:border-[#667eea]'
+                    }`}
+                    aria-pressed={selectedYear === year}
+                  >
                     {year}
-                  </option>
+                  </button>
                 ))}
-              </select>
+              </div>
+              {isSmall && uniqueYears.length > visibleYears.length && (
+                <button
+                  type="button"
+                  onClick={() => setShowMoreYears(true)}
+                  className="mt-2 text-xs text-[#667eea] underline"
+                >
+                  Show more years
+                </button>
+              )}
+            </div>
+
+            {/* Country Filter (chips stacked under year) */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Country
+              </label>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedCountry('')}
+                  className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
+                    selectedCountry === ''
+                      ? 'bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-transparent'
+                      : 'bg-white text-gray-700 border-gray-300 hover:border-[#667eea]'
+                  }`}
+                  aria-pressed={selectedCountry === ''}
+                >
+                  All countries
+                </button>
+                {visibleCountries.map(country => (
+                  <button
+                    key={country}
+                    type="button"
+                    onClick={() => setSelectedCountry(country)}
+                    className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
+                      selectedCountry === country
+                        ? 'bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-transparent'
+                        : 'bg-white text-gray-700 border-gray-300 hover:border-[#667eea]'
+                    }`}
+                    aria-pressed={selectedCountry === country}
+                  >
+                    {country}
+                  </button>
+                ))}
+              </div>
+              {isSmall && uniqueCountries.length > visibleCountries.length && (
+                <button
+                  type="button"
+                  onClick={() => setShowMoreCountries(true)}
+                  className="mt-2 text-xs text-[#667eea] underline"
+                >
+                  Show more countries
+                </button>
+              )}
             </div>
           </div>
 
