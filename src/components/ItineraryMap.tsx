@@ -48,9 +48,54 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       });
     }, 100);
 
+    // Build day→color mapping shared with sidebar via localStorage
+    const dates = Array.from(new Set(itinerary.points.map(p => p.date))).sort();
+    const storageKey = `itinerary-day-colors::${itinerary.id}`;
+    let dayColorMap: Record<string, string> | null = null;
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        dayColorMap = JSON.parse(stored);
+      }
+    } catch {}
+
+    if (!dayColorMap) {
+      const candidateColors = [
+        '#667eea',
+        '#764ba2',
+        '#10B981',
+        '#0EA5E9',
+        '#F59E0B',
+        '#EF4444',
+        '#14B8A6',
+        '#F472B6',
+        '#22C55E',
+        '#06B6D4',
+        '#A78BFA',
+        '#FB923C',
+      ];
+      const used = new Set<string>();
+      dayColorMap = {};
+      dates.forEach(d => {
+        const available = candidateColors.filter(c => !used.has(c));
+        const pick =
+          available.length > 0
+            ? available[Math.floor(Math.random() * available.length)]
+            : candidateColors[
+                Math.floor(Math.random() * candidateColors.length)
+              ];
+        dayColorMap![d] = pick;
+        used.add(pick);
+      });
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(dayColorMap));
+      } catch {}
+    }
+
     // Create markers and route arrays
     const markers: L.Marker[] = [];
     const routePoints: [number, number][] = [];
+    const dayRoutes: Record<string, [number, number][]> = {};
 
     // Add simple recenter control
     const RecenterControl = L.Control.extend({
@@ -88,15 +133,39 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
     // Add recenter control to bottom right
     new RecenterControl({ position: 'bottomright' }).addTo(map);
 
+    // Jitter overlapping points so they don't cover each other
+    function jitterIfClose(
+      lat: number,
+      lng: number,
+      occurrenceIndex: number
+    ): [number, number] {
+      if (occurrenceIndex === 0) return [lat, lng];
+      const meters = 12 + occurrenceIndex * 6; // outward spiral radius in meters
+      const angle = (occurrenceIndex * 137.5 * Math.PI) / 180; // golden-angle spiral
+      const dLat = (meters * Math.cos(angle)) / 111111; // ~meters per degree
+      const dLng =
+        (meters * Math.sin(angle)) / (111111 * Math.cos((lat * Math.PI) / 180));
+      return [lat + dLat, lng + dLng];
+    }
+
+    const coordCount: Record<string, number> = {};
+
     itinerary.points.forEach((point: ItineraryPoint, index: number) => {
       const [lng, lat] = point.coordinates;
-      routePoints.push([lat, lng]);
+      const key = `${lat.toFixed(5)},${lng.toFixed(5)}`;
+      coordCount[key] = (coordCount[key] || 0) + 1;
+      const occur = coordCount[key] - 1;
+      const [latAdj, lngAdj] = jitterIfClose(lat, lng, occur);
+      routePoints.push([latAdj, lngAdj]);
+      if (!dayRoutes[point.date]) dayRoutes[point.date] = [];
+      dayRoutes[point.date].push([latAdj, lngAdj]);
+      const markerColor = (dayColorMap && dayColorMap[point.date]) || '#3B82F6';
 
       // Create custom icon
       const customIcon = L.divIcon({
         className: 'custom-marker',
         html: `
-          <div class="marker-content">
+          <div class="marker-content" style="--marker-bg: ${markerColor}; background: ${markerColor};">
             <div class="marker-number">${index + 1}</div>
             <div class="marker-tooltip">${point.name}</div>
           </div>
@@ -107,7 +176,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       });
 
       // Create marker
-      const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map)
+      const marker = L.marker([latAdj, lngAdj], { icon: customIcon }).addTo(map)
         .bindPopup(`
           <div class="popup-content">
             <h3 class="font-semibold text-lg mb-2">${point.name}</h3>
@@ -120,21 +189,37 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       markers.push(marker);
     });
 
-    // Draw route line
-    if (routePoints.length > 1) {
-      L.polyline(routePoints, {
-        color: '#3B82F6',
-        weight: 4,
-        opacity: 0.8,
-        dashArray: '10, 10',
-      }).addTo(map);
+    // Draw per-day colored route segments
+    const orderedDates = dates; // already sorted above
+    let previousEnd: [number, number] | null = null;
+    orderedDates.forEach(d => {
+      const seg = dayRoutes[d] || [];
+      if (seg.length > 1) {
+        L.polyline(seg, {
+          color: dayColorMap?.[d] || '#3B82F6',
+          weight: 4,
+          opacity: 0.9,
+        }).addTo(map);
+      }
+      // draw connector from previous day end to current day start (thin, subtle)
+      if (previousEnd && seg.length > 0) {
+        L.polyline([previousEnd, seg[0]], {
+          color: '#94A3B8',
+          weight: 2,
+          opacity: 0.6,
+          dashArray: '6,8',
+        }).addTo(map);
+      }
+      if (seg.length > 0) previousEnd = seg[seg.length - 1];
+    });
 
-      // Fit map to show all markers
+    // Fit map to show all markers
+    if (markers.length > 0) {
       const group = L.featureGroup(markers);
       map.fitBounds(group.getBounds().pad(0.1));
     }
 
-    // Add custom CSS for markers
+    // Add custom CSS for markers (uses CSS variable for background)
     const style = document.createElement('style');
     style.textContent = `
       .custom-marker {
@@ -146,7 +231,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         position: relative;
         width: 30px;
         height: 30px;
-        background: #3B82F6;
+        background: var(--marker-bg, #3B82F6);
         border: 3px solid white;
         border-radius: 50%;
         display: flex;
@@ -159,7 +244,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
 
       .marker-content:hover {
         transform: scale(1.1);
-        background: #2563EB;
+        filter: brightness(0.9);
       }
 
       .marker-number {
