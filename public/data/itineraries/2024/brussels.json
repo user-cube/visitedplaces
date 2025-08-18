@@ -1,0 +1,192 @@
+{
+  "id": "brussels-2024",
+  "title": "Brussels",
+  "startDate": "2024-10-18",
+  "endDate": "2024-10-20",
+  "description": "3-day trip to Brussels exploring Belgian culture, art museums, and the heart of European politics",
+  "image": "/images/itineraries/2024/brussels.webp",
+  "metadata": {
+    "flags": "🇧🇪",
+    "emoji": "🍫",
+    "countries": ["Belgium"],
+    "pointsCount": 22
+  },
+  "points": [
+    {
+      "name": "FR2929 (Ryanair)",
+      "address": "OPO ✈ BRU",
+      "date": "2024-10-18",
+      "coordinates": [4.4840, 50.9014],
+      "category": "Flight",
+      "description": "Ryanair flight from Porto to Brussels"
+    },
+    {
+      "name": "Grand Place",
+      "address": "Grand Place, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3517, 50.8467],
+      "category": "Square",
+      "description": "Huge city square completely encircled by elegant historic buildings dating back to the 14th century."
+    },
+    {
+      "name": "Manneken Pis",
+      "address": "Rue de l'Étuve 46, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3497, 50.8447],
+      "category": "Fountain",
+      "description": "Iconic 17th-century fountain with a bronze statue of small boy, dressed in costume during festivals."
+    },
+    {
+      "name": "Church of Our Lady of Victories at the Sablon",
+      "address": "Rue de la Régence 3B, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3517, 50.8427],
+      "category": "Church",
+      "description": "This 15th-century Catholic church is known for its baroque chapels & Gothic architecture."
+    },
+    {
+      "name": "Royal Museums of Fine Arts of Belgium",
+      "address": "Rue de la Régence 3, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3517, 50.8427],
+      "category": "Museum",
+      "description": "Complex of museums with over 20,000 works tracing the history of painting, sculpture & drawing."
+    },
+    {
+      "name": "Magritte Museum",
+      "address": "Rue de la Régence 3, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3517, 50.8427],
+      "category": "Museum",
+      "description": "Chronologically organized art museum with works by René Magritte & artifacts exploring his life."
+    },
+    {
+      "name": "Royal Palace of Brussels",
+      "address": "Rue Brederode 16, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3537, 50.8427],
+      "category": "Palace",
+      "description": "Palace of the constitutional monarchy, with throne & other state rooms open for tours each summer."
+    },
+    {
+      "name": "Mount of the Arts",
+      "address": "Mont des Arts, 1000 Brussels, Belgium",
+      "date": "2024-10-18",
+      "coordinates": [4.3517, 50.8427],
+      "category": "Historic Site",
+      "description": "Small downtown area on a hill, with a landscaped garden, museums, and notable architecture."
+    },
+    {
+      "name": "Atomium",
+      "address": "Atomiumsquare, 1020 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3417, 50.8947],
+      "category": "Landmark",
+      "description": "Giant stainless steel atom, particles connected by escalators, with exhibitions & views from 92m."
+    },
+    {
+      "name": "Mini-Europe",
+      "address": "Bruparck, 1020 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3417, 50.8947],
+      "category": "Theme Park",
+      "description": "Miniature park with Europe's landmarks created on a scale of 1:25, from Big Ben to the Eiffel Tower."
+    },
+    {
+      "name": "St. Michael & St. Gudula Cathedral",
+      "address": "Place Sainte-Gudule, 1000 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3517, 50.8487],
+      "category": "Cathedral",
+      "description": "Belgium's national church, host to royal weddings & funerals, built in the Brabant Gothic style."
+    },
+    {
+      "name": "Royal Gallery of Saint Hubert",
+      "address": "Galerie du Roi 5, 1000 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3497, 50.8487],
+      "category": "Shopping Mall",
+      "description": "This ornate shopping center under an arched glass roof offers high-end shops, eateries & theaters."
+    },
+    {
+      "name": "Parlamentarium",
+      "address": "Rue Wiertz 60, 1047 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3717, 50.8407],
+      "category": "Museum",
+      "description": "European Parliament visitor center with interactive exhibits about European democracy."
+    },
+    {
+      "name": "Parc du Cinquantenaire",
+      "address": "Parc du Cinquantenaire, 1000 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3917, 50.8407],
+      "category": "Park",
+      "description": "Landscaped 19th-century city park with floral gardens & fountains, home to art & military museums."
+    },
+    {
+      "name": "Le Botanique",
+      "address": "Rue Royale 236, 1210 Brussels, Belgium",
+      "date": "2024-10-19",
+      "coordinates": [4.3617, 50.8567],
+      "category": "Cultural Center",
+      "description": "Cultural center in a former botanical glasshouse, with regular concerts, art exhibitions & theater."
+    },
+    {
+      "name": "Train World",
+      "address": "Place Princesse Élisabeth 5, 1030 Brussels, Belgium",
+      "date": "2024-10-20",
+      "coordinates": [4.3817, 50.8667],
+      "category": "Museum",
+      "description": "Museum in Schaarbeek station featuring 20+ locomotives & exhibits on Belgian railroad history."
+    },
+    {
+      "name": "Comics Art Museum",
+      "address": "Rue des Sables 20, 1000 Brussels, Belgium",
+      "date": "2024-10-20",
+      "coordinates": [4.3617, 50.8507],
+      "category": "Museum",
+      "description": "Comic-book museum with original artwork & reading room, set in Victor Horta's art nouveau warehouse."
+    },
+    {
+      "name": "Brussels Town Hall",
+      "address": "Grand Place, 1000 Brussels, Belgium",
+      "date": "2024-10-20",
+      "coordinates": [4.3517, 50.8467],
+      "category": "Town Hall",
+      "description": "1400s town hall with intricate Gothic facade & tower, plus tapestries & a mirrored concert hall."
+    },
+    {
+      "name": "Royal Belgian Institute of Natural Sciences",
+      "address": "Rue Vautier 29, 1000 Brussels, Belgium",
+      "date": "2024-10-20",
+      "coordinates": [4.3717, 50.8367],
+      "category": "Museum",
+      "description": "Museum of natural history, from minerals to dinosaurs & animal specimens, with hands-on exhibits."
+    },
+    {
+      "name": "Jeanneke Pis",
+      "address": "Impasse de la Fidélité 10-12, 1000 Brussels, Belgium",
+      "date": "2024-10-20",
+      "coordinates": [4.3497, 50.8487],
+      "category": "Fountain",
+      "description": "Statue of a young girl, considered by some to be the sister monument to the well-known Manneken Pis."
+    },
+    {
+      "name": "Zinneke Pis",
+      "address": "Rue des Chartreux 35, 1000 Brussels, Belgium",
+      "date": "2024-10-20",
+      "coordinates": [4.3477, 50.8467],
+      "category": "Landmark",
+      "description": "Part of a trio of 'urinating' statues, this one depicts a dog lifting his leg on a post."
+    },
+    {
+      "name": "FR2928 (Ryanair)",
+      "address": "BRU ✈ OPO",
+      "date": "2024-10-20",
+      "coordinates": [4.4840, 50.9014],
+      "category": "Flight",
+      "description": "Ryanair flight from Brussels back to Porto"
+    }
+  ]
+}

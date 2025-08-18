@@ -1,0 +1,368 @@
+{
+  "id": "london-2024",
+  "title": "London",
+  "startDate": "2024-12-12",
+  "endDate": "2024-12-15",
+  "description": "4-day trip to London exploring British culture, historic landmarks, and the magical Christmas atmosphere",
+  "image": "/images/itineraries/2024/london.webp",
+  "metadata": {
+    "flags": "🇬🇧",
+    "emoji": "🎡",
+    "countries": ["United Kingdom"],
+    "pointsCount": 37
+  },
+  "points": [
+    {
+      "name": "Notting Hill",
+      "address": "Notting Hill, London, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.2040, 51.5070],
+      "category": "Neighborhood",
+      "description": "Notting Hill is a vibrant, trendy area, with casual cafes lining bohemian Portobello Road, famed for its busy market selling antiques and vintage fashion."
+    },
+    {
+      "name": "Portobello Road Market",
+      "address": "Portobello Rd, London W11 1LA, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.2040, 51.5070],
+      "category": "Market",
+      "description": "Vintage goods, street eats, souvenirs & more on offer at a bustling weekly market."
+    },
+    {
+      "name": "The Churchill Arms, Kensington",
+      "address": "119 Kensington Church St, London W8 7LN, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.2020, 51.5050],
+      "category": "Pub",
+      "description": "Flower-bedecked real ale boozer, filled with Churchill memorabilia, serving Thai noodles and curry."
+    },
+    {
+      "name": "Kensington Palace",
+      "address": "Kensington Gardens, London W8 4PX, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1880, 51.5050],
+      "category": "Palace",
+      "description": "Royal palace and gardens, with exhibits on former residents like Queen Victoria and Princess Diana."
+    },
+    {
+      "name": "Natural History Museum",
+      "address": "Cromwell Rd, South Kensington, London SW7 5BD, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1760, 51.4960],
+      "category": "Museum",
+      "description": "Landmark museum of animals and natural phenomena, with hands-on exhibits and animatronic dinosaurs."
+    },
+    {
+      "name": "Harrods",
+      "address": "87-135 Brompton Rd, Knightsbridge, London SW1X 7XL, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1600, 51.4990],
+      "category": "Department Store",
+      "description": "Luxury department store known for its opulent interiors and high-end merchandise."
+    },
+    {
+      "name": "Motcomb St",
+      "address": "Motcomb St, London SW1X 8LB, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1600, 51.4990],
+      "category": "Street",
+      "description": "Elegant street in Belgravia known for its boutique shops and restaurants."
+    },
+    {
+      "name": "Wellington Arch",
+      "address": "Apsley Way, London W1J 7JZ, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1500, 51.5020],
+      "category": "Monument",
+      "description": "19th-century memorial arch topped by a bronze sculpture, with exhibition space and viewing gallery."
+    },
+    {
+      "name": "Hyde Park Winter Wonderland",
+      "address": "Hyde Park, London W2 2UH, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1500, 51.5020],
+      "category": "Theme Park",
+      "description": "Magical Christmas event with rides, markets, and festive entertainment in Hyde Park."
+    },
+    {
+      "name": "Ever After Garden - Royal Marsden Cancer Charity",
+      "address": "Hyde Park, London W2 2UH, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1500, 51.5020],
+      "category": "Garden",
+      "description": "Charity garden installation in Hyde Park supporting cancer research."
+    },
+    {
+      "name": "Bond Street",
+      "address": "Bond St, London W1S 1SR, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Shopping Street",
+      "description": "Famous shopping street known for luxury boutiques and high-end retailers."
+    },
+    {
+      "name": "Louis Vuitton London New Bond Street",
+      "address": "17-20 New Bond St, London W1S 2RB, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Luxury Store",
+      "description": "Luxury brand known for signature monogrammed handbags, luggage & more."
+    },
+    {
+      "name": "DIOR",
+      "address": "160 New Bond St, London W1S 2UE, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Luxury Store",
+      "description": "Luxury label's designer fashion store, also selling jewelry & other accessories."
+    },
+    {
+      "name": "Cartier",
+      "address": "175-177 New Bond St, London W1S 4RN, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Jewelry Store",
+      "description": "Luxury brand founded in 1847 specializing in high jewelry, jewelry, timepieces & accessories."
+    },
+    {
+      "name": "Ralph Lauren Flagship Store New Bond Street",
+      "address": "1 New Bond St, London W1S 3RB, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Luxury Store",
+      "description": "Flagship store of the American fashion brand Ralph Lauren."
+    },
+    {
+      "name": "Burlington Arcade",
+      "address": "51 Piccadilly, London W1J 0QJ, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Shopping Mall",
+      "description": "19th-century covered shopping arcade with high-end retailers for watches, jewellery, perfume & more."
+    },
+    {
+      "name": "Fortnum & Mason",
+      "address": "181 Piccadilly, St. James's, London W1A 1ER, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1420, 51.5140],
+      "category": "Department Store",
+      "description": "18th-century department store known for its gourmet groceries including tea and posh preserves."
+    },
+    {
+      "name": "Piccadilly Circus",
+      "address": "Piccadilly Circus, London W1J 9HS, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1340, 51.5100],
+      "category": "Square",
+      "description": "Famous traffic junction and tourist attraction in the heart of London."
+    },
+    {
+      "name": "Regent St.",
+      "address": "Regent St, London W1B 4HA, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1340, 51.5100],
+      "category": "Shopping Street",
+      "description": "Well-known street for shopping featuring sophisticated flagship stores & international retailers."
+    },
+    {
+      "name": "Carnaby Street Lights",
+      "address": "Carnaby St, London W1F 9PS, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1340, 51.5100],
+      "category": "Shopping Street",
+      "description": "Famous shopping street known for its Christmas lights and trendy boutiques."
+    },
+    {
+      "name": "Chinatown",
+      "address": "Chinatown, London W1D 6DH, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1340, 51.5100],
+      "category": "Neighborhood",
+      "description": "Vibrant area known for Chinese restaurants, shops, and cultural events."
+    },
+    {
+      "name": "Leicester Square",
+      "address": "Leicester Square, London WC2H 7NA, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1300, 51.5100],
+      "category": "Square",
+      "description": "Bustling square founded in 1670 featuring a small park, statues of film characters & major cinemas."
+    },
+    {
+      "name": "Trafalgar Square",
+      "address": "Trafalgar Square, London WC2N 5DN, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1280, 51.5080],
+      "category": "Square",
+      "description": "Nelson's Column rises above this iconic square's LED-lit fountains, artworks and lion statues."
+    },
+    {
+      "name": "Covent Garden",
+      "address": "Covent Garden, London WC2E 8RF, UK",
+      "date": "2024-12-12",
+      "coordinates": [-0.1220, 51.5120],
+      "category": "Market",
+      "description": "A shopping and entertainment hub in London's West End, Covent Garden centres on the elegant, car-free Piazza."
+    },
+    {
+      "name": "Warner Bros. Studio Tour London",
+      "address": "Studio Tour Dr, Leavesden, Watford WD25 7LR, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.4180, 51.6900],
+      "category": "Museum",
+      "description": "Interactive tour of the Harry Potter film sets and behind-the-scenes magic."
+    },
+    {
+      "name": "London Bridge",
+      "address": "London Bridge, London SE1 9DD, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.0880, 51.5040],
+      "category": "Bridge",
+      "description": "Concrete pedestrian and traffic bridge that gave a major railway station its name."
+    },
+    {
+      "name": "Sky Garden",
+      "address": "1 Sky Garden Walk, London EC3M 8AF, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.0840, 51.5110],
+      "category": "Observation Deck",
+      "description": "Known as the walkie talkie due to its unique shape, this skyscraper features a top-floor restaurant."
+    },
+    {
+      "name": "Monument to the Great Fire of London",
+      "address": "Fish St Hill, London EC3R 8AH, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.0860, 51.5100],
+      "category": "Monument",
+      "description": "Sir Christopher Wren-designed column commemorating London's Great Fire, with a viewing platform."
+    },
+    {
+      "name": "Borough Market",
+      "address": "8 Southwark St, London SE1 1TL, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.0920, 51.5050],
+      "category": "Market",
+      "description": "Huge market under the railway lines, for British-reared meat and artisanal baked and dairy goods."
+    },
+    {
+      "name": "Millennium Bridge",
+      "address": "Thames Embankment, London SE1 9JE, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.0980, 51.5100],
+      "category": "Bridge",
+      "description": "Elegant steel suspension footbridge crossing the Thames from the Tate Modern to St Paul's Cathedral."
+    },
+    {
+      "name": "Southbank Centre Winter Market",
+      "address": "Belvedere Rd, London SE1 8XX, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.1160, 51.5060],
+      "category": "Market",
+      "description": "Outdoor, global street food market, focused on sustainable and artisan produce; open weekends."
+    },
+    {
+      "name": "Big Ben",
+      "address": "London SW1A 0AA, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.1240, 51.5000],
+      "category": "Landmark",
+      "description": "16-storey Gothic clocktower and national symbol at the Eastern end of the Houses of Parliament."
+    },
+    {
+      "name": "London Eye",
+      "address": "Riverside Building, County Hall, London SE1 7PB, UK",
+      "date": "2024-12-13",
+      "coordinates": [-0.1200, 51.5000],
+      "category": "Ferris Wheel",
+      "description": "Giant observation wheel on the South Bank of the River Thames, offering panoramic views of London."
+    },
+    {
+      "name": "Westminster Abbey",
+      "address": "20 Deans Yd, London SW1P 3PA, UK",
+      "date": "2024-12-14",
+      "coordinates": [-0.1270, 51.4990],
+      "category": "Cathedral",
+      "description": "Protestant abbey hosting daily services and every English and British coronation since 1066."
+    },
+    {
+      "name": "St James's Park",
+      "address": "London SW1A 2BJ, UK",
+      "date": "2024-12-14",
+      "coordinates": [-0.1340, 51.5020],
+      "category": "Park",
+      "description": "Green space with a lake with daily pelican feeding, a grass-roofed cafe and ceremonial displays."
+    },
+    {
+      "name": "Buckingham Palace",
+      "address": "London SW1A 1AA, UK",
+      "date": "2024-12-14",
+      "coordinates": [-0.1440, 51.5010],
+      "category": "Palace",
+      "description": "Visitors can tour the palace's opulent private and state rooms or watch the changing of the guard."
+    },
+    {
+      "name": "The National Gallery",
+      "address": "Trafalgar Square, London WC2N 5DN, UK",
+      "date": "2024-12-14",
+      "coordinates": [-0.1280, 51.5080],
+      "category": "Museum",
+      "description": "Trafalgar Square art museum whose masterworks trace the development of Western European painting."
+    },
+    {
+      "name": "Madame Tussauds London",
+      "address": "Marylebone Rd, London NW1 5LR, UK",
+      "date": "2024-12-14",
+      "coordinates": [-0.1540, 51.5220],
+      "category": "Museum",
+      "description": "Museum chain for life-size wax replicas of famous celebrities & historic icons in themed galleries."
+    },
+    {
+      "name": "Camden Market",
+      "address": "Camden Lock Pl, London NW1 8AF, UK",
+      "date": "2024-12-14",
+      "coordinates": [-0.1440, 51.5410],
+      "category": "Market",
+      "description": "Eclectic market with youthful vibe and stalls/shops selling fashion and accessories, music and more."
+    },
+    {
+      "name": "The British Museum",
+      "address": "Great Russell St, London WC1B 3DG, UK",
+      "date": "2024-12-15",
+      "coordinates": [-0.1270, 51.5190],
+      "category": "Museum",
+      "description": "Huge showcase for global antiquities, including Egyptian mummies and ancient Greek sculptures."
+    },
+    {
+      "name": "St. Paul's Cathedral",
+      "address": "St. Paul's Churchyard, London EC4M 8AD, UK",
+      "date": "2024-12-15",
+      "coordinates": [-0.0980, 51.5130],
+      "category": "Cathedral",
+      "description": "17th-century cathedral featuring a 365ft-high dome, recitals & a churchyard, plus a crypt."
+    },
+    {
+      "name": "Tower of London",
+      "address": "London EC3N 4AB, UK",
+      "date": "2024-12-15",
+      "coordinates": [-0.0760, 51.5080],
+      "category": "Castle",
+      "description": "Centuries of bloody history around a medieval castle, home to Crown Jewels and iconic Beefeaters."
+    },
+    {
+      "name": "TP1331 (TAP)",
+      "address": "LGW ✈ OPO",
+      "date": "2024-12-12",
+      "coordinates": [-0.1903, 51.1480],
+      "category": "Flight",
+      "description": "TAP flight from London Gatwick to Porto"
+    },
+    {
+      "name": "TP1328 (TAP)",
+      "address": "OPO ✈ LGW",
+      "date": "2024-12-15",
+      "coordinates": [-0.1903, 51.1480],
+      "category": "Flight",
+      "description": "TAP flight from Porto to London Gatwick"
+    }
+  ]
+}

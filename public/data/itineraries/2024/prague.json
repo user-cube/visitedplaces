@@ -1,0 +1,424 @@
+{
+  "id": "prague-2024",
+  "title": "Prague",
+  "startDate": "2024-11-30",
+  "endDate": "2024-12-03",
+  "description": "4-day trip to Prague exploring Czech history, medieval architecture, and the magical Christmas atmosphere",
+  "image": "/images/itineraries/2024/prague.webp",
+  "metadata": {
+    "flags": "🇨🇿",
+    "emoji": "🏰",
+    "countries": ["Czech Republic"],
+    "pointsCount": 47
+  },
+  "points": [
+    {
+      "name": "U2 7787 (EasyJet)",
+      "address": "OPO ✈ PRG",
+      "date": "2024-11-30",
+      "coordinates": [14.2600, 50.1000],
+      "category": "Flight",
+      "description": "EasyJet flight from Porto to Prague"
+    },
+    {
+      "name": "Strahov Monastery",
+      "address": "Strahovské nádvoří 1/132, 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.3890, 50.0865],
+      "category": "Monastery",
+      "description": "Hilltop, medieval monastery with a stucco-panelled theological hall, vast library & Baroque church."
+    },
+    {
+      "name": "Petrin Tower",
+      "address": "Petřínské sady 633, 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.3950, 50.0835],
+      "category": "Tower",
+      "description": "Landmark cast-iron tower featuring a viewing deck with panoramic city & skyline views."
+    },
+    {
+      "name": "Mirror Maze in Petrin Park",
+      "address": "Petřínské sady, 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.3950, 50.0835],
+      "category": "Attraction",
+      "description": "Mirrored wooden labyrinth built for the 1891 Prague Exhibition, with a mural of the city in 1648."
+    },
+    {
+      "name": "St. Nicholas Church",
+      "address": "Malostranské nám., 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4030, 50.0885],
+      "category": "Church",
+      "description": "Famous high baroque church built in the 17th & 18th centuries, featuring a 20-meter-diameter dome."
+    },
+    {
+      "name": "Lennon Wall",
+      "address": "Velkopřevorské nám., 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4070, 50.0865],
+      "category": "Monument",
+      "description": "Colorful wall featuring Communist-era political slogans, peace messages & a portrait of John Lennon."
+    },
+    {
+      "name": "Charles Bridge",
+      "address": "Karlův most, 110 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4110, 50.0865],
+      "category": "Bridge",
+      "description": "Landmark stone bridge linking Prague's Old & New Towns, with street artists & entertainers."
+    },
+    {
+      "name": "Charles Bridge Museum",
+      "address": "Křížovnické nám. 3, 110 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4130, 50.0865],
+      "category": "Museum",
+      "description": "Quaint museum with a souvenir shop, cafe & exhibits on the history & construction of Charles Bridge."
+    },
+    {
+      "name": "River Cruise Prague",
+      "address": "Dvořákovo nábř., 110 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4150, 50.0865],
+      "category": "Boat Tour",
+      "description": "Scenic boat tours on the Vltava River offering unique views of Prague's landmarks."
+    },
+    {
+      "name": "Kampa Island",
+      "address": "Kampa Island, 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4070, 50.0845],
+      "category": "Island",
+      "description": "This small city-center island with a museum on the Vltava River is crossed by the Charles Bridge."
+    },
+    {
+      "name": "Perníčkův sen s. r. o.",
+      "address": "Nerudova 10, 118 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4030, 50.0885],
+      "category": "Bakery",
+      "description": "Traditional Czech bakery and souvenir store."
+    },
+    {
+      "name": "Prague Christmas Market",
+      "address": "Old Town Square, 110 00 Praha 1, Czech Republic",
+      "date": "2024-11-30",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Market",
+      "description": "Magical Christmas market with traditional Czech crafts, food, and festive atmosphere."
+    },
+    {
+      "name": "Prague Castle",
+      "address": "Hradčany, 119 08 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.3970, 50.0905],
+      "category": "Castle",
+      "description": "Vast castle complex with buildings revealing architecture from Roman-style to Gothic & 20th century."
+    },
+    {
+      "name": "St. Vitus Cathedral",
+      "address": "III. nádvoří 48/2, 119 01 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.3990, 50.0905],
+      "category": "Cathedral",
+      "description": "Gothic resting place of saints including Vitus, Wenceslas & Adalbert as well as the state treasury."
+    },
+    {
+      "name": "St. George's Basilica",
+      "address": "Jiřské nám., 119 08 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.3990, 50.0905],
+      "category": "Basilica",
+      "description": "Part of Prague Castle, a 10th-century basilica rebuilt in 1142, with baroque facade & Bohemian art."
+    },
+    {
+      "name": "Old Royal Palace",
+      "address": "III. nádvoří 48/2, 119 01 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.3990, 50.0905],
+      "category": "Palace",
+      "description": "Late Gothic palace in Prague Castle, with Renaissance elements & Vladislav Hall for royal events."
+    },
+    {
+      "name": "Prašná brána",
+      "address": "Nám. Republiky 5, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4270, 50.0875],
+      "category": "Historic Site",
+      "description": "City gate built in the 15th century and restored after being damaged in the Battle of Prague."
+    },
+    {
+      "name": "Smetana Hall",
+      "address": "Nám. Republiky 5, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4270, 50.0875],
+      "category": "Theater",
+      "description": "Historic concert hall and performing arts venue."
+    },
+    {
+      "name": "Church of Our Lady before Týn",
+      "address": "Staroměstské nám., 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Church",
+      "description": "14th-century landmark with 80m towers, ornately carved exteriors & a baroque altarpiece."
+    },
+    {
+      "name": "Old Town Square",
+      "address": "Staroměstské nám., 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Square",
+      "description": "Oldest square in the historic center with 10th-century origins, site of many Gothic buildings."
+    },
+    {
+      "name": "Jan Hus monument",
+      "address": "Staroměstské nám., 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Monument",
+      "description": "Large stone & bronze memorial sculpture depicting a famous martyr, completed in 1915."
+    },
+    {
+      "name": "The Golz-Kinsky Palace",
+      "address": "Staroměstské nám. 12, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Palace",
+      "description": "Grand, 18th-century Rococo palace with ornate sculptures & the National Gallery's diverse art."
+    },
+    {
+      "name": "Prague Astronomical Clock",
+      "address": "Staroměstské nám. 1, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Landmark",
+      "description": "Medieval timepiece on the facade of city hall displaying the twelve apostles as the clock strikes."
+    },
+    {
+      "name": "Staroměstská radnice",
+      "address": "Staroměstské nám. 1/3, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "City Hall",
+      "description": "Gothic 14th-century town hall renowned for its observation tower & intricate astronomical clock."
+    },
+    {
+      "name": "Josefov",
+      "address": "Josefov, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Neighborhood",
+      "description": "Josefov, the former Jewish ghetto, is dotted with somber reminders of its past."
+    },
+    {
+      "name": "Spanish Synagogue",
+      "address": "Vězeňská 1, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Synagogue",
+      "description": "Owned by Prague's Jewish Museum, this Moorish-style place of worship now hosts exhibits & concerts."
+    },
+    {
+      "name": "The Old-New Synagogue",
+      "address": "Maiselova 18, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Synagogue",
+      "description": "Gothic place of Jewish worship, completed in 1270 & the legendary home of the Golem of Prague."
+    },
+    {
+      "name": "Pinkas Synagogue",
+      "address": "Široká 3, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Synagogue",
+      "description": "Gothic-style synagogue from 1535 featuring a Holocaust memorial to nearly 80,000 Jewish victims."
+    },
+    {
+      "name": "Maiselova synagoga",
+      "address": "Maiselova 10, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Synagogue",
+      "description": "Small, restored synagogue first built at the end of the 16th century, now with history exhibits."
+    },
+    {
+      "name": "The Ceremonial Hall",
+      "address": "U Starého hřbitova 3a, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Museum",
+      "description": "Displays on Jewish burial rituals, spanning relics & prayers for the dead, in a Romanesque building."
+    },
+    {
+      "name": "Old Jewish Cemetery",
+      "address": "Široká 3, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4170, 50.0895],
+      "category": "Cemetery",
+      "description": "Home to 12,000 tombstones but many more burials, including scholar & teacher Judah Loew ben Bezalel."
+    },
+    {
+      "name": "Klementinum",
+      "address": "Mariánské nám. 5, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4150, 50.0875],
+      "category": "Historic Site",
+      "description": "Complex comprised of the Mirror Chapel & Baroque Library, with Atlas atop the Astronomical Tower."
+    },
+    {
+      "name": "Old Town Bridge Tower",
+      "address": "Karlův most, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4130, 50.0865],
+      "category": "Tower",
+      "description": "Striking 14th-century tower with a wide, arched gateway, Gothic ornamentation & sweeping views."
+    },
+    {
+      "name": "Prague Christmas Market",
+      "address": "Old Town Square, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-01",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Market",
+      "description": "Magical Christmas market with traditional Czech crafts, food, and festive atmosphere."
+    },
+    {
+      "name": "Hofburg",
+      "address": "Michaelerkuppel, 1010 Vienna, Austria",
+      "date": "2024-12-02",
+      "coordinates": [16.3650, 48.2060],
+      "category": "Palace",
+      "description": "Habsburg palace complex with ornate, baroque interiors, imperial apartments & a silver museum."
+    },
+    {
+      "name": "State Hall",
+      "address": "Josefsplatz 1, 1010 Vienna, Austria",
+      "date": "2024-12-02",
+      "coordinates": [16.3650, 48.2060],
+      "category": "Museum",
+      "description": "Historic hall in the Hofburg complex."
+    },
+    {
+      "name": "Stephansplatz",
+      "address": "Stephansplatz, 1010 Vienna, Austria",
+      "date": "2024-12-02",
+      "coordinates": [16.3730, 48.2080],
+      "category": "Square",
+      "description": "A prominent 12th-century cathedral faces a postmodernist building in this central city square."
+    },
+    {
+      "name": "Rathausplatz",
+      "address": "Rathausplatz, 1010 Vienna, Austria",
+      "date": "2024-12-02",
+      "coordinates": [16.3580, 48.2110],
+      "category": "Square",
+      "description": "19th-century park with statues, mature trees & fountains, plus summer cinema & winter ice rink."
+    },
+    {
+      "name": "Schönbrunn Palace",
+      "address": "Schönbrunner Schloßstraße 47, 1130 Vienna, Austria",
+      "date": "2024-12-02",
+      "coordinates": [16.3120, 48.1850],
+      "category": "Palace",
+      "description": "18th-century summer palace with tours of lavish rococo ceremonial rooms, plus gardens with a maze."
+    },
+    {
+      "name": "Vyšehrad",
+      "address": "V Pevnosti 159/5b, 128 00 Praha 2, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4170, 50.0645],
+      "category": "Fortress",
+      "description": "Fortified castle with a museum, hidden passages, large grounds & remains of a medieval basilica."
+    },
+    {
+      "name": "Václavské nám.",
+      "address": "Václavské nám., 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4270, 50.0815],
+      "category": "Square",
+      "description": "City plaza with lots of pedestrian traffic, site of monuments, public gatherings & historic events."
+    },
+    {
+      "name": "Národní Muzeum",
+      "address": "Václavské nám. 68, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4270, 50.0815],
+      "category": "Museum",
+      "description": "Grand museum established in 1818 with a range of natural science & history exhibits, plus events."
+    },
+    {
+      "name": "Výtopna Railway Restaurant",
+      "address": "Václavské nám. 56, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4270, 50.0815],
+      "category": "Restaurant",
+      "description": "Unique restaurant with model trains delivering food to tables."
+    },
+    {
+      "name": "Dancing House",
+      "address": "Jiráskovo nám. 1981/6, 120 00 Praha 2, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4140, 50.0755],
+      "category": "Landmark",
+      "description": "Curving modern office block by architect Frank Gehry, with top-floor restaurant offering city views."
+    },
+    {
+      "name": "Ss. Cyril and Methodius Church",
+      "address": "Resslova 9a, 120 00 Praha 2, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4140, 50.0755],
+      "category": "Church",
+      "description": "One of the largest church buildings of the 19th century in Bohemia, built in the neo-Romanesque style."
+    },
+    {
+      "name": "National Theatre",
+      "address": "Národní 2, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4130, 50.0815],
+      "category": "Theater",
+      "description": "Magnificent venue for nationally sponsored new & classical ballet, opera & theater performances."
+    },
+    {
+      "name": "Franz Kafka - Rotating Head",
+      "address": "Národní 1, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4130, 50.0815],
+      "category": "Monument",
+      "description": "Metallic, rotating sculpture of Franz Kafka's head, created by artist David Černý."
+    },
+    {
+      "name": "Pilsner Urquell: The Original Beer Experience",
+      "address": "Národní 1, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4130, 50.0815],
+      "category": "Brewery",
+      "description": "Experience the original Pilsner beer and Czech brewing tradition."
+    },
+    {
+      "name": "Terasa U Prince",
+      "address": "Staroměstské nám. 29, 110 00 Praha 1, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4210, 50.0875],
+      "category": "Restaurant",
+      "description": "Upscale restaurant with terrace offering stunning views of Prague's landmarks."
+    },
+    {
+      "name": "Grébovka (Havlíčkovy sady)",
+      "address": "Havlíčkovy sady, 120 00 Praha 2, Czech Republic",
+      "date": "2024-12-03",
+      "coordinates": [14.4270, 50.0755],
+      "category": "Park",
+      "description": "Peaceful Italian Renaissance–style park with a pond, fountain, statues & a charming artificial cave."
+    },
+    {
+      "name": "U2 7788 (EasyJet)",
+      "address": "PRG ✈ OPO",
+      "date": "2024-12-03",
+      "coordinates": [14.2600, 50.1000],
+      "category": "Flight",
+      "description": "EasyJet flight from Prague back to Porto"
+    }
+  ]
+}

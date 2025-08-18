@@ -1,0 +1,216 @@
+{
+  "id": "amsterdam-2024",
+  "title": "Amsterdam",
+  "startDate": "2024-09-25",
+  "endDate": "2024-09-28",
+  "description": "4-day trip to Amsterdam exploring Dutch culture, world-class museums, and the beautiful canals",
+  "image": "/images/itineraries/2024/amsterdam.webp",
+  "metadata": {
+    "flags": "🇳🇱",
+    "emoji": "🌷",
+    "countries": ["Netherlands"],
+    "pointsCount": 25
+  },
+  "points": [
+    {
+      "name": "HV6002 (Transavia)",
+      "address": "OPO ✈ AMS",
+      "date": "2024-09-25",
+      "coordinates": [4.7639, 52.3086],
+      "category": "Flight",
+      "description": "Transavia flight from Porto to Amsterdam"
+    },
+    {
+      "name": "Stedelijk Museum",
+      "address": "Museumplein 10, 1071 DJ Amsterdam, Netherlands",
+      "date": "2024-09-25",
+      "coordinates": [4.8792, 52.3579],
+      "category": "Museum",
+      "description": "Contemporary museum with appearance of large bathtub, showing international, modern art & design."
+    },
+    {
+      "name": "Museu Van Gogh",
+      "address": "Museumplein 6, 1071 DJ Amsterdam, Netherlands",
+      "date": "2024-09-25",
+      "coordinates": [4.8811, 52.3584],
+      "category": "Museum",
+      "description": "Museum housing the world's largest collection of Van Gogh paintings, alongside drawings & letters."
+    },
+    {
+      "name": "Vondelpark",
+      "address": "Vondelpark, 1071 AA Amsterdam, Netherlands",
+      "date": "2024-09-25",
+      "coordinates": [4.8686, 52.3567],
+      "category": "Park",
+      "description": "Expansive, 19th-century urban park with a playground, ponds & an open-air theater."
+    },
+    {
+      "name": "Moco Museum",
+      "address": "Honthorststraat 20, 1071 DE Amsterdam, Netherlands",
+      "date": "2024-09-25",
+      "coordinates": [4.8811, 52.3579],
+      "category": "Museum",
+      "description": "Art museum housed in an early-20th-century townhouse, featuring inventive works by Dalí & Banksy."
+    },
+    {
+      "name": "Red Light Secrets Museum",
+      "address": "Oudezijds Achterburgwal 60H, 1012 DP Amsterdam, Netherlands",
+      "date": "2024-09-25",
+      "coordinates": [4.8972, 52.3722],
+      "category": "Museum",
+      "description": "Quirky museum offering exhibits on the history of Amsterdam's sex-work industry."
+    },
+    {
+      "name": "Rijksmuseum",
+      "address": "Museumstraat 1, 1071 XX Amsterdam, Netherlands",
+      "date": "2024-09-26",
+      "coordinates": [4.8852, 52.3600],
+      "category": "Museum",
+      "description": "19th-century building housing Dutch Golden Age painting masterpieces & vast European art collection."
+    },
+    {
+      "name": "Rembrandt House Museum",
+      "address": "Jodenbreestraat 4, 1011 NK Amsterdam, Netherlands",
+      "date": "2024-09-26",
+      "coordinates": [4.9014, 52.3692],
+      "category": "Museum",
+      "description": "Restored, 17th-century house where Rembrandt lived & worked for 20 years, hung with his etchings."
+    },
+    {
+      "name": "Winkel 43",
+      "address": "Noordermarkt 43, 1015 NA Amsterdam, Netherlands",
+      "date": "2024-09-26",
+      "coordinates": [4.8847, 52.3747],
+      "category": "Restaurant",
+      "description": "Known for its apple pie, this lively cafe/bar serves hearty European snacks, lunches and dinners."
+    },
+    {
+      "name": "Oude Kerk",
+      "address": "Oudekerksplein 23, 1012 GX Amsterdam, Netherlands",
+      "date": "2024-09-26",
+      "coordinates": [4.8972, 52.3742],
+      "category": "Church",
+      "description": "14th-century church, now Calvinist, hosting religious & cultural activities including concerts."
+    },
+    {
+      "name": "Casa de Anne Frank",
+      "address": "Westermarkt 20, 1016 DK Amsterdam, Netherlands",
+      "date": "2024-09-26",
+      "coordinates": [4.8840, 52.3752],
+      "category": "Museum",
+      "description": "Museum house where Anne Frank & her family hid from the Nazis in a secret annex, during WWII."
+    },
+    {
+      "name": "NEMO",
+      "address": "Oosterdok 2, 1011 VX Amsterdam, Netherlands",
+      "date": "2024-09-27",
+      "coordinates": [4.9125, 52.3736],
+      "category": "Museum",
+      "description": "Interactive science exhibits, experiments & shows in a huge, waterfront, boat-like museum."
+    },
+    {
+      "name": "Nederlands Historisch Scheepvaartsmuseum",
+      "address": "Kattenburgerplein 1, 1018 KK Amsterdam, Netherlands",
+      "date": "2024-09-27",
+      "coordinates": [4.9125, 52.3714],
+      "category": "Museum",
+      "description": "Interactive museum in former storehouse with virtual voyages & a replica 18th-century merchant ship."
+    },
+    {
+      "name": "Museu da Resistência",
+      "address": "Plantage Kerklaan 61, 1018 CX Amsterdam, Netherlands",
+      "date": "2024-09-27",
+      "coordinates": [4.9125, 52.3672],
+      "category": "Museum",
+      "description": "Museum detailing the WWII Dutch resistance through collections of photos, films & artifacts."
+    },
+    {
+      "name": "Hermitage de Amsterdã",
+      "address": "Amstel 51, 1018 EJ Amsterdam, Netherlands",
+      "date": "2024-09-27",
+      "coordinates": [4.9014, 52.3658],
+      "category": "Museum",
+      "description": "Amsterdam branch of the Hermitage Museum, showcasing art and cultural exhibitions."
+    },
+    {
+      "name": "Heineken Experience",
+      "address": "Stadhouderskade 78, 1072 AE Amsterdam, Netherlands",
+      "date": "2024-09-27",
+      "coordinates": [4.8897, 52.3579],
+      "category": "Brewery",
+      "description": "Interactive tour through beer giant's history in former brewery, with a tasting room finale."
+    },
+    {
+      "name": "Zaandam",
+      "address": "Zaandam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.8297, 52.4389],
+      "category": "City",
+      "description": "City in the province of North Holland, known for its historic windmills and traditional Dutch architecture."
+    },
+    {
+      "name": "A'DAM Tower",
+      "address": "Overhoeksplein 1, 1031 KS Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.9125, 52.3847],
+      "category": "Observation Deck",
+      "description": "Tower with observation deck offering panoramic views of Amsterdam and Europe's highest swing."
+    },
+    {
+      "name": "Amsterdam Centraal",
+      "address": "Stationsplein, 1012 AB Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.9000, 52.3792],
+      "category": "Transport Hub",
+      "description": "The city's largest depot, built in 1889 in Gothic-Renaissance style, including shops & restaurants."
+    },
+    {
+      "name": "Houseboat Museum",
+      "address": "Prinsengracht 296K, 1016 HW Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.8840, 52.3658],
+      "category": "Museum",
+      "description": "Museum on a 1914 freighter converted to become a houseboat, exploring life on Amsterdam's canals."
+    },
+    {
+      "name": "Leidseplein",
+      "address": "Leidseplein, 1017 PT Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.8811, 52.3642],
+      "category": "Square",
+      "description": "Famous square known for its entertainment venues, restaurants, and vibrant nightlife."
+    },
+    {
+      "name": "Begijnhof",
+      "address": "Gedempte Begijnensloot, 1012 RM Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.8897, 52.3692],
+      "category": "Historic Site",
+      "description": "Historic courtyard and former beguinage, one of the oldest inner courts in Amsterdam."
+    },
+    {
+      "name": "Bloemenmarkt",
+      "address": "Singel, 1012 DH Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.8897, 52.3672],
+      "category": "Market",
+      "description": "Floating flower market on the Singel canal, famous for its colorful flower stalls."
+    },
+    {
+      "name": "Palácio Real de Amesterdão",
+      "address": "Nieuwezijds Voorburgwal 147, 1012 RJ Amsterdam, Netherlands",
+      "date": "2024-09-28",
+      "coordinates": [4.8897, 52.3736],
+      "category": "Palace",
+      "description": "Grand residence for royal receptions since 1808, open to the public & exhibitions when not in use."
+    },
+    {
+      "name": "HV6003 (Transavia)",
+      "address": "AMS ✈ OPO",
+      "date": "2024-09-28",
+      "coordinates": [4.7639, 52.3086],
+      "category": "Flight",
+      "description": "Transavia flight from Amsterdam back to Porto"
+    }
+  ]
+}
