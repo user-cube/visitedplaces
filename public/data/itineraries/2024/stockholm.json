@@ -1,0 +1,288 @@
+{
+  "id": "stockholm-2024",
+  "title": "Stockholm",
+  "startDate": "2024-03-15",
+  "endDate": "2024-03-17",
+  "description": "3-day trip to Stockholm exploring Swedish history, royal palaces, and the cultural treasures of the archipelago",
+  "image": "/images/itineraries/2024/stockholm.webp",
+  "metadata": {
+    "flags": "🇸🇪",
+    "emoji": "👑",
+    "countries": ["Sweden"],
+    "pointsCount": 32
+  },
+  "points": [
+    {
+      "name": "FR3173 (Ryanair)",
+      "address": "OPO ✈ ARN",
+      "date": "2024-03-15",
+      "coordinates": [17.9781, 59.6516],
+      "category": "Flight",
+      "description": "Ryanair flight from Porto to Stockholm"
+    },
+    {
+      "name": "Stockholm City Hall",
+      "address": "Hantverkargatan 1, 112 21 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0548, 59.3275],
+      "category": "City Hall",
+      "description": "Waterside government offices completed in 1923 & made from red brick with a lantern-topped tower."
+    },
+    {
+      "name": "Royal Swedish Opera",
+      "address": "Gustav Adolfs torg 2, 103 22 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0703, 59.3304],
+      "category": "Opera House",
+      "description": "National stage for opera & ballet productions in a 19th-century theater with a lavish interior."
+    },
+    {
+      "name": "Parliament House",
+      "address": "Riksgatan 1, 100 12 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0645, 59.3267],
+      "category": "Government Building",
+      "description": "Parliament buildings with 1 chamber, inaugurated in 1905 & connected by underground tunnels."
+    },
+    {
+      "name": "The Royal Palace",
+      "address": "Kungliga slottet, 107 70 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0717, 59.3267],
+      "category": "Palace",
+      "description": "Baroque-style royal palace with 3 museums & a vast library. Admission fee can include a guided tour."
+    },
+    {
+      "name": "Skattkammaren",
+      "address": "Kungliga slottet, 107 70 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0717, 59.3267],
+      "category": "Museum",
+      "description": "Royal Treasury displaying crown jewels and royal regalia."
+    },
+    {
+      "name": "Gamla stan",
+      "address": "Gamla stan, Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0686, 59.3251],
+      "category": "Historic Area",
+      "description": "The bustling, compact island of Gamla Stan is the city's old town, with cobbled streets and colorful 17th- and 18th-century buildings."
+    },
+    {
+      "name": "Storkyrkan",
+      "address": "Trångsund 1, 111 29 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0702, 59.3258],
+      "category": "Cathedral",
+      "description": "Brick Gothic cathedral known as the Great Church, with artifacts & an iconic statue of St. George."
+    },
+    {
+      "name": "Stortorget",
+      "address": "Stortorget, 111 29 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0717, 59.3258],
+      "category": "Square",
+      "description": "Picturesque main square in Stockholm's Gamla Stan (Old Town), lined with colorful buildings & cafes."
+    },
+    {
+      "name": "Saint Gertrude, German Church",
+      "address": "Tyska Brinken 16, 111 27 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0702, 59.3245],
+      "category": "Church",
+      "description": "Small German church dating to the Middle Ages, with striking stained glass & a baroque interior."
+    },
+    {
+      "name": "Mårten Trotzigs gränd",
+      "address": "Mårten Trotzigs gränd, 111 29 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0708, 59.3251],
+      "category": "Street",
+      "description": "Narrowing to 90 cm, this snug, lantern-studded alley is considered to be the city's narrowest road."
+    },
+    {
+      "name": "Riddarholmen Church",
+      "address": "Riddarholmen, 111 28 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0644, 59.3244],
+      "category": "Church",
+      "description": "Former church now used for burial & commemorative purposes with sections dating from 13th century."
+    },
+    {
+      "name": "Monteliusvägen",
+      "address": "Monteliusvägen, 118 38 Stockholm, Sweden",
+      "date": "2024-03-15",
+      "coordinates": [18.0489, 59.3197],
+      "category": "Viewpoint",
+      "description": "Peaceful walking path offering scenic views of Lake Mälaren & downtown Stockholm."
+    },
+    {
+      "name": "Östermalm",
+      "address": "Östermalm, Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0894, 59.3364],
+      "category": "Neighborhood",
+      "description": "Elegant Östermalm is known for its smart bars and restaurants on Stureplan square, and its cultural venues."
+    },
+    {
+      "name": "Strandvägen",
+      "address": "Strandvägen, Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0847, 59.3344],
+      "category": "Street",
+      "description": "Storied avenue featuring elegant buildings & a famed waterfront strip dotted with boats."
+    },
+    {
+      "name": "Vasa Museum",
+      "address": "Galärvarvsvägen 14, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0914, 59.3280],
+      "category": "Museum",
+      "description": "Museum for well-preserved, 17th-century warship, Vasa, that sank on her maiden voyage in 1628."
+    },
+    {
+      "name": "Vrak - Museum of Wrecks",
+      "address": "Djurgårdsvägen 17, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0917, 59.3278],
+      "category": "Museum",
+      "description": "Maritime museum showcasing shipwrecks and underwater archaeology."
+    },
+    {
+      "name": "The Viking Museum",
+      "address": "Djurgårdsbron 2, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0928, 59.3294],
+      "category": "Museum",
+      "description": "Museum displaying wooden, 9th-century Viking ships, plus artifacts recovered from burial tombs."
+    },
+    {
+      "name": "Skansen",
+      "address": "Djurgårdsslätten 49-51, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.1031, 59.3255],
+      "category": "Open Air Museum",
+      "description": "Open-air Swedish history museum, with buildings, people in costume & a zoo with Nordic animals."
+    },
+    {
+      "name": "ABBA The Museum",
+      "address": "Djurgårdsvägen 68, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0956, 59.3236],
+      "category": "Museum",
+      "description": "Collection of the pop group's memorabilia & interactive exhibits, including a studio & dance floor."
+    },
+    {
+      "name": "Drottninggatan",
+      "address": "Drottninggatan, Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0647, 59.3364],
+      "category": "Shopping Street",
+      "description": "Major pedestrian shopping street in central Stockholm."
+    },
+    {
+      "name": "Nordiska museet",
+      "address": "Djurgårdsvägen 6-16, 115 93 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0886, 59.3289],
+      "category": "Museum",
+      "description": "Displays on native traditions & trends in home decor & fashion, plus festivals & events."
+    },
+    {
+      "name": "Junibacken",
+      "address": "Galärvarvsvägen 8, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0889, 59.3272],
+      "category": "Children's Museum",
+      "description": "Fun park devoted to young children's literature with a theater, a train & a playhouse, plus parties."
+    },
+    {
+      "name": "Gröna Lund",
+      "address": "Lilla Allmänna Gränd 9, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.0958, 59.3236],
+      "category": "Amusement Park",
+      "description": "Seasonal amusement park with roller coasters & thrill rides, competitive games & live concerts."
+    },
+    {
+      "name": "Djurgården",
+      "address": "Djurgården, Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.1000, 59.3250],
+      "category": "Island",
+      "description": "Leafy island with an amusement park, landscaped gardens & parks, many museums & stately homes."
+    },
+    {
+      "name": "Prins Eugens Waldemarsudde",
+      "address": "Prins Eugens Väg 6, 115 21 Stockholm, Sweden",
+      "date": "2024-03-16",
+      "coordinates": [18.1069, 59.3178],
+      "category": "Art Museum",
+      "description": "Castlelike palace museum containing the collection of Prince Eugen & hosting temporary exhibits."
+    },
+    {
+      "name": "Drottningholm Palace",
+      "address": "178 02 Drottningholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [17.8867, 59.3217],
+      "category": "Palace",
+      "description": "Well-preserved 1600s royal residence, with a Chinese Pavilion pleasure palace, theater & gardens."
+    },
+    {
+      "name": "The Chinese Pavilion",
+      "address": "178 93 Drottningholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [17.8844, 59.3208],
+      "category": "Palace",
+      "description": "1760s-era royal Chinese-style pavilion with a Rococo interior, set in parkland, with guided tours."
+    },
+    {
+      "name": "Drottningholms Slottsteater",
+      "address": "178 02 Drottningholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [17.8844, 59.3214],
+      "category": "Theater",
+      "description": "Conserved UNESCO heritage listed opera house & theater built in 1766 & offering backstage tours."
+    },
+    {
+      "name": "Södermalm",
+      "address": "Södermalm, Stockholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [18.0647, 59.3167],
+      "category": "Island",
+      "description": "This urban island features a trendy neighborhood, plus museums & creative retail shops."
+    },
+    {
+      "name": "T-Centralen",
+      "address": "Vasagatan, 111 20 Stockholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [18.0586, 59.3311],
+      "category": "Transport Hub",
+      "description": "Central subway station and main transportation hub of Stockholm."
+    },
+    {
+      "name": "Fotografiska",
+      "address": "Stadsgårdshamnen 22, 116 45 Stockholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [18.0844, 59.3189],
+      "category": "Museum",
+      "description": "Museum in a brick-built, former customs house with a contemporary photography exhibition program."
+    },
+    {
+      "name": "Nobel Prize Museum",
+      "address": "Stortorget 2, 103 16 Stockholm, Sweden",
+      "date": "2024-03-17",
+      "coordinates": [18.0717, 59.3258],
+      "category": "Museum",
+      "description": "Exhibits about the history of the Nobel Prize & the significant contributions made by its winners."
+    },
+    {
+      "name": "FR316 (Ryanair)",
+      "address": "ARN ✈ OPO",
+      "date": "2024-03-17",
+      "coordinates": [17.9781, 59.6516],
+      "category": "Flight",
+      "description": "Ryanair flight from Stockholm to Porto"
+    }
+  ]
+}

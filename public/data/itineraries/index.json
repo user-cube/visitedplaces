@@ -87,6 +87,124 @@
       }
     },
     {
+      "id": "london-2024",
+      "title": "London",
+      "startDate": "2024-12-12",
+      "endDate": "2024-12-15",
+      "description": "4-day trip to London exploring British culture, historic landmarks, and the magical Christmas atmosphere",
+      "image": "/images/itineraries/2024/london.webp",
+      "file": "2024/london.json",
+      "metadata": {
+        "flags": "",
+        "emoji": "✈️",
+        "countries": [],
+        "pointsCount": 44
+      }
+    },
+    {
+      "id": "prague-2024",
+      "title": "Prague",
+      "startDate": "2024-11-30",
+      "endDate": "2024-12-03",
+      "description": "4-day trip to Prague exploring Czech history, medieval architecture, and the magical Christmas atmosphere",
+      "image": "/images/itineraries/2024/prague.webp",
+      "file": "2024/prague.json",
+      "metadata": {
+        "flags": "🇨🇿 🇦🇹",
+        "emoji": "🏰",
+        "countries": [
+          "Czech Republic",
+          "Austria"
+        ],
+        "pointsCount": 51
+      }
+    },
+    {
+      "id": "brussels-2024",
+      "title": "Brussels",
+      "startDate": "2024-10-18",
+      "endDate": "2024-10-20",
+      "description": "3-day trip to Brussels exploring Belgian culture, art museums, and the heart of European politics",
+      "image": "/images/itineraries/2024/brussels.webp",
+      "file": "2024/brussels.json",
+      "metadata": {
+        "flags": "🇧🇪",
+        "emoji": "🍫",
+        "countries": [
+          "Belgium"
+        ],
+        "pointsCount": 22
+      }
+    },
+    {
+      "id": "strasbourg-2024",
+      "title": "Strasbourg",
+      "startDate": "2024-09-29",
+      "endDate": "2024-10-01",
+      "description": "3-day trip to Strasbourg exploring Alsatian culture, medieval architecture, and the beautiful wine route",
+      "image": "/images/itineraries/2024/strasbourg.webp",
+      "file": "2024/strasbourg.json",
+      "metadata": {
+        "flags": "🇫🇷",
+        "emoji": "🗼",
+        "countries": [
+          "France"
+        ],
+        "pointsCount": 35
+      }
+    },
+    {
+      "id": "amsterdam-2024",
+      "title": "Amsterdam",
+      "startDate": "2024-09-25",
+      "endDate": "2024-09-28",
+      "description": "4-day trip to Amsterdam exploring Dutch culture, world-class museums, and the beautiful canals",
+      "image": "/images/itineraries/2024/amsterdam.webp",
+      "file": "2024/amsterdam.json",
+      "metadata": {
+        "flags": "🇳🇱",
+        "emoji": "🌷",
+        "countries": [
+          "Netherlands"
+        ],
+        "pointsCount": 25
+      }
+    },
+    {
+      "id": "madrid-2024",
+      "title": "Madrid",
+      "startDate": "2024-05-30",
+      "endDate": "2024-06-01",
+      "description": "3-day trip to Madrid exploring Spanish culture, royal palaces, museums, and the vibrant city life",
+      "image": "/images/itineraries/2024/madrid.webp",
+      "file": "2024/madrid.json",
+      "metadata": {
+        "flags": "🇪🇸",
+        "emoji": "🌞",
+        "countries": [
+          "Spain"
+        ],
+        "pointsCount": 25
+      }
+    },
+    {
+      "id": "stockholm-2024",
+      "title": "Stockholm",
+      "startDate": "2024-03-15",
+      "endDate": "2024-03-17",
+      "description": "3-day trip to Stockholm exploring Swedish history, royal palaces, and the cultural treasures of the archipelago",
+      "image": "/images/itineraries/2024/stockholm.webp",
+      "file": "2024/stockholm.json",
+      "metadata": {
+        "flags": "🇸🇪",
+        "emoji": "🏰",
+        "countries": [
+          "Sweden"
+        ],
+        "pointsCount": 34
+      }
+    },
+    {
       "id": "copenhagen-2023",
       "title": "Copenhagen",
       "startDate": "2023-12-01",
@@ -102,6 +220,23 @@
           "Sweden"
         ],
         "pointsCount": 24
+      }
+    },
+    {
+      "id": "terceira-2023",
+      "title": "Ilha Terceira",
+      "startDate": "2023-07-15",
+      "endDate": "2023-07-19",
+      "description": "5-day trip to Terceira Island exploring the Lilac Island of the Azores, volcanic landscapes, and Portuguese heritage",
+      "image": "/images/itineraries/2023/terceira.webp",
+      "file": "2023/terceira.json",
+      "metadata": {
+        "flags": "🇵🇹",
+        "emoji": "🍷",
+        "countries": [
+          "Portugal"
+        ],
+        "pointsCount": 29
       }
     },
     {

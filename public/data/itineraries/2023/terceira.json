@@ -1,0 +1,248 @@
+{
+  "id": "terceira-2023",
+  "title": "Ilha Terceira",
+  "startDate": "2023-07-15",
+  "endDate": "2023-07-19",
+  "description": "5-day trip to Terceira Island exploring the Lilac Island of the Azores, volcanic landscapes, and Portuguese heritage",
+  "image": "/images/itineraries/2023/terceira.webp",
+  "metadata": {
+    "flags": "🇵🇹",
+    "emoji": "🌋",
+    "countries": ["Portugal"],
+    "pointsCount": 28
+  },
+  "points": [
+    {
+      "name": "FR6037 (Ryanair)",
+      "address": "OPO ✈ TER",
+      "date": "2023-07-15",
+      "coordinates": [-27.0908, 38.7618],
+      "category": "Flight",
+      "description": "Ryanair flight from Porto to Terceira"
+    },
+    {
+      "name": "Angra do Heroísmo",
+      "address": "Angra do Heroísmo, Terceira, Açores, Portugal",
+      "date": "2023-07-15",
+      "coordinates": [-27.2167, 38.6500],
+      "category": "City",
+      "description": "Historic city center, UNESCO World Heritage site, with colorful architecture and rich Portuguese heritage"
+    },
+    {
+      "name": "Sé Catedral de Angra",
+      "address": "R. da Sé, 9700-181 Angra do Heroísmo, Portugal",
+      "date": "2023-07-15",
+      "coordinates": [-27.2167, 38.6500],
+      "category": "Cathedral",
+      "description": "Main cathedral of Angra do Heroísmo, a beautiful example of Portuguese religious architecture"
+    },
+    {
+      "name": "Jardim Duque da Terceira",
+      "address": "Jardim Duque da Terceira, Angra do Heroísmo, Portugal",
+      "date": "2023-07-15",
+      "coordinates": [-27.2167, 38.6500],
+      "category": "Garden",
+      "description": "Beautiful public garden in the heart of Angra do Heroísmo with tropical plants and peaceful atmosphere"
+    },
+    {
+      "name": "Miradouro do Pico das Cruzinhas",
+      "address": "Pico das Cruzinhas, Terceira, Portugal",
+      "date": "2023-07-15",
+      "coordinates": [-27.2000, 38.6500],
+      "category": "Viewpoint",
+      "description": "Scenic viewpoint offering panoramic views of Angra do Heroísmo and the surrounding landscape"
+    },
+    {
+      "name": "Praia da Vitória",
+      "address": "Praia da Vitória, Terceira, Açores, Portugal",
+      "date": "2023-07-16",
+      "coordinates": [-27.0667, 38.7333],
+      "category": "Beach",
+      "description": "Beautiful beach town with golden sand, perfect for swimming and water sports"
+    },
+    {
+      "name": "Miradouro da Serra do Cume",
+      "address": "Serra do Cume, Terceira, Portugal",
+      "date": "2023-07-16",
+      "coordinates": [-27.1000, 38.7000],
+      "category": "Viewpoint",
+      "description": "Breathtaking viewpoint overlooking the patchwork of green fields and volcanic landscape"
+    },
+    {
+      "name": "Algar do Carvão",
+      "address": "Algar do Carvão, Terceira, Portugal",
+      "date": "2023-07-16",
+      "coordinates": [-27.2000, 38.7167],
+      "category": "Cave",
+      "description": "Impressive volcanic cave with stalactites and stalagmites, showcasing the island's volcanic origins"
+    },
+    {
+      "name": "Gruta do Natal",
+      "address": "Gruta do Natal, Terceira, Portugal",
+      "date": "2023-07-16",
+      "coordinates": [-27.2000, 38.7167],
+      "category": "Cave",
+      "description": "Christmas Cave, a lava tube with unique geological formations and underground beauty"
+    },
+    {
+      "name": "Furnas do Enxofre",
+      "address": "Furnas do Enxofre, Terceira, Portugal",
+      "date": "2023-07-16",
+      "coordinates": [-27.2000, 38.7167],
+      "category": "Geothermal",
+      "description": "Sulfur fumaroles and geothermal activity, showcasing the island's volcanic nature"
+    },
+    {
+      "name": "Monte Brasil",
+      "address": "Monte Brasil, Angra do Heroísmo, Portugal",
+      "date": "2023-07-17",
+      "coordinates": [-27.2167, 38.6500],
+      "category": "Volcano",
+      "description": "Ancient volcano forming a peninsula, with hiking trails and historical fortifications"
+    },
+    {
+      "name": "Forte de São João Baptista",
+      "address": "Forte de São João Baptista, Monte Brasil, Portugal",
+      "date": "2023-07-17",
+      "coordinates": [-27.2167, 38.6500],
+      "category": "Fort",
+      "description": "Historic fortress on Monte Brasil, offering stunning views of the Atlantic Ocean"
+    },
+    {
+      "name": "Miradouro da Serra de Santa Bárbara",
+      "address": "Serra de Santa Bárbara, Terceira, Portugal",
+      "date": "2023-07-17",
+      "coordinates": [-27.3000, 38.7500],
+      "category": "Viewpoint",
+      "description": "Highest point on the island, offering spectacular panoramic views of Terceira"
+    },
+    {
+      "name": "Biscoitos",
+      "address": "Biscoitos, Terceira, Portugal",
+      "date": "2023-07-17",
+      "coordinates": [-27.2500, 38.8000],
+      "category": "Village",
+      "description": "Charming village known for its wine production and traditional Azorean architecture"
+    },
+    {
+      "name": "Museu do Vinho dos Biscoitos",
+      "address": "Museu do Vinho, Biscoitos, Terceira, Portugal",
+      "date": "2023-07-17",
+      "coordinates": [-27.2500, 38.8000],
+      "category": "Museum",
+      "description": "Wine museum showcasing the traditional wine-making heritage of the Azores"
+    },
+    {
+      "name": "Piscinas Naturais dos Biscoitos",
+      "address": "Piscinas Naturais, Biscoitos, Terceira, Portugal",
+      "date": "2023-07-17",
+      "coordinates": [-27.2500, 38.8000],
+      "category": "Natural Pool",
+      "description": "Natural swimming pools formed by volcanic rocks, perfect for a refreshing swim"
+    },
+    {
+      "name": "São Sebastião",
+      "address": "São Sebastião, Terceira, Portugal",
+      "date": "2023-07-18",
+      "coordinates": [-27.0833, 38.6667],
+      "category": "Village",
+      "description": "Traditional Azorean village with historic church and authentic local atmosphere"
+    },
+    {
+      "name": "Igreja de São Sebastião",
+      "address": "Igreja de São Sebastião, Terceira, Portugal",
+      "date": "2023-07-18",
+      "coordinates": [-27.0833, 38.6667],
+      "category": "Church",
+      "description": "Beautiful historic church with traditional Azorean architecture and religious art"
+    },
+    {
+      "name": "Trilho da Ribeira do Almeida",
+      "address": "Ribeira do Almeida, Terceira, Portugal",
+      "date": "2023-07-18",
+      "coordinates": [-27.1000, 38.7000],
+      "category": "Hiking Trail",
+      "description": "Scenic hiking trail along a river valley, showcasing the island's natural beauty"
+    },
+    {
+      "name": "Miradouro da Ponta do Queimado",
+      "address": "Ponta do Queimado, Terceira, Portugal",
+      "date": "2023-07-18",
+      "coordinates": [-27.1500, 38.6500],
+      "category": "Viewpoint",
+      "description": "Coastal viewpoint with dramatic cliffs and ocean views"
+    },
+    {
+      "name": "Porto Martins",
+      "address": "Porto Martins, Terceira, Portugal",
+      "date": "2023-07-18",
+      "coordinates": [-27.0667, 38.6500],
+      "category": "Village",
+      "description": "Fishing village with natural pools and traditional Azorean charm"
+    },
+    {
+      "name": "Piscinas Naturais do Porto Martins",
+      "address": "Piscinas Naturais, Porto Martins, Terceira, Portugal",
+      "date": "2023-07-18",
+      "coordinates": [-27.0667, 38.6500],
+      "category": "Natural Pool",
+      "description": "Natural swimming pools perfect for enjoying the Atlantic waters"
+    },
+    {
+      "name": "Feteira",
+      "address": "Feteira, Terceira, Portugal",
+      "date": "2023-07-19",
+      "coordinates": [-27.2000, 38.6500],
+      "category": "Village",
+      "description": "Traditional village with authentic Azorean lifestyle and local culture"
+    },
+    {
+      "name": "Trilho da Baía da Salga",
+      "address": "Baía da Salga, Terceira, Portugal",
+      "date": "2023-07-19",
+      "coordinates": [-27.1500, 38.6500],
+      "category": "Hiking Trail",
+      "description": "Coastal hiking trail with beautiful bay views and volcanic landscapes"
+    },
+    {
+      "name": "Miradouro da Serreta",
+      "address": "Serreta, Terceira, Portugal",
+      "date": "2023-07-19",
+      "coordinates": [-27.3000, 38.7000],
+      "category": "Viewpoint",
+      "description": "Western viewpoint offering sunset views and dramatic coastal scenery"
+    },
+    {
+      "name": "Restaurante O Caneta",
+      "address": "Altares, Terceira, Portugal",
+      "date": "2023-07-19",
+      "coordinates": [-27.2000, 38.7000],
+      "category": "Restaurant",
+      "description": "Traditional restaurant serving the best regional meats and local specialties"
+    },
+    {
+      "name": "Taberna Roberto",
+      "address": "Posto Santo, Terceira, Portugal",
+      "date": "2023-07-19",
+      "coordinates": [-27.2167, 38.6500],
+      "category": "Restaurant",
+      "description": "Authentic tavern with genuine flavors, fresh products, and excellent wine selection"
+    },
+    {
+      "name": "Boca Negra",
+      "address": "Porto Judeu, Terceira, Portugal",
+      "date": "2023-07-19",
+      "coordinates": [-27.1000, 38.6500],
+      "category": "Restaurant",
+      "description": "Famous for fish alcatra and traditional Azorean cuisine with modern touches"
+    },
+    {
+      "name": "FR6038 (Ryanair)",
+      "address": "TER ✈ OPO",
+      "date": "2024-07-19",
+      "coordinates": [-27.0908, 38.7618],
+      "category": "Flight",
+      "description": "Ryanair flight from Terceira back to Porto"
+    }
+  ]
+}

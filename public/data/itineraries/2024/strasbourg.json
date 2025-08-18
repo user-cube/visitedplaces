@@ -1,0 +1,296 @@
+{
+  "id": "strasbourg-2024",
+  "title": "Strasbourg",
+  "startDate": "2024-09-29",
+  "endDate": "2024-10-01",
+  "description": "3-day trip to Strasbourg exploring Alsatian culture, medieval architecture, and the beautiful wine route",
+  "image": "/images/itineraries/2024/strasbourg.webp",
+  "metadata": {
+    "flags": "🇫🇷",
+    "emoji": "🏰",
+    "countries": ["France"],
+    "pointsCount": 37
+  },
+  "points": [
+    {
+      "name": "FR7697 (Ryanair)",
+      "address": "OPO ✈ SXB",
+      "date": "2024-09-29",
+      "coordinates": [7.6283, 48.5383],
+      "category": "Flight",
+      "description": "Ryanair flight from Porto to Strasbourg"
+    },
+    {
+      "name": "Barrage Vauban",
+      "address": "Place du Quartier Blanc, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7400, 48.5800],
+      "category": "Historic Site",
+      "description": "Pink sandstone weir & bridge built in the 17th century, now housing historic sculptures."
+    },
+    {
+      "name": "Strasbourg Covered Bridges",
+      "address": "67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7420, 48.5800],
+      "category": "Bridge",
+      "description": "Set of 3 bridges & 4 towers built during the 13th century, in a charming setting with scenic views."
+    },
+    {
+      "name": "Petite-France",
+      "address": "Petite France, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7440, 48.5800],
+      "category": "Neighborhood",
+      "description": "Petite France is the city's lively tourist hub, known for cobblestone streets, canals, and well-preserved half-timbered homes."
+    },
+    {
+      "name": "St. Thomas Church",
+      "address": "Rue Martin Luther, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7460, 48.5820],
+      "category": "Church",
+      "description": "Historic Protestant church with late-Gothic design, tombs & an organ played by Mozart."
+    },
+    {
+      "name": "Place Kléber",
+      "address": "Place Kléber, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7480, 48.5840],
+      "category": "Square",
+      "description": "Strasbourg's main square, featuring an expansive pedestrian area with shops & cafes along the sides."
+    },
+    {
+      "name": "Église Saint-Pierre-le-Jeune",
+      "address": "Place Saint-Pierre-le-Jeune, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7500, 48.5860],
+      "category": "Church",
+      "description": "Protestant church featuring a vaulted Gothic interior, 14th-century frescoes & a verdant cloister."
+    },
+    {
+      "name": "Place Gutenberg",
+      "address": "Place Gutenberg, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7520, 48.5880],
+      "category": "Square",
+      "description": "Home to a huge annual Christmas market, this storied square offers sculptures, seating & a carousel."
+    },
+    {
+      "name": "Cathédrale Notre-Dame-de-Strasbourg",
+      "address": "Place de la Cathédrale, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7540, 48.5900],
+      "category": "Cathedral",
+      "description": "Gothic edifice, dating from the 1200s, with a 16th-century astronomical clock & a rose window."
+    },
+    {
+      "name": "Place du Château",
+      "address": "Place du Château, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7560, 48.5920],
+      "category": "Square",
+      "description": "Historic square near the cathedral with beautiful architecture."
+    },
+    {
+      "name": "Palais Rohan",
+      "address": "2 Place du Château, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7560, 48.5920],
+      "category": "Palace",
+      "description": "18th-century palace housing three museums: the Archaeological Museum, the Museum of Decorative Arts, and the Museum of Fine Arts."
+    },
+    {
+      "name": "Alsatian Museum",
+      "address": "23-25 Quai Saint-Nicolas, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7580, 48.5940],
+      "category": "Museum",
+      "description": "Museum set in 16th- & 17th-century mansions, with displays on Alsatian art, folklore & rural life."
+    },
+    {
+      "name": "Historical Museum of the City of Strasbourg",
+      "address": "2 Rue du Vieux-Marché-aux-Poissons, 67000 Strasbourg, France",
+      "date": "2024-09-29",
+      "coordinates": [7.7600, 48.5960],
+      "category": "Museum",
+      "description": "Museum tracing city's urban, social & political history with models, paintings & daily-life objects."
+    },
+    {
+      "name": "Place de la République",
+      "address": "Place de la République, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7620, 48.5980],
+      "category": "Square",
+      "description": "Large square surrounded by impressive buildings including the Palais du Rhin and the National and University Library."
+    },
+    {
+      "name": "Palais du Rhin",
+      "address": "Place de la République, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7620, 48.5980],
+      "category": "Palace",
+      "description": "Prussian-style Neo-Renaissance palace built during the 1880s & used by the Nazis during WWII."
+    },
+    {
+      "name": "Église réformée Saint-Paul",
+      "address": "Place du Général Eisenhower, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7640, 48.6000],
+      "category": "Church",
+      "description": "Neo-Gothic church dating from the 1890s, with 2 slender spires & ornate stained-glass windows."
+    },
+    {
+      "name": "Palais Universitaire",
+      "address": "9 Place de l'Université, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7660, 48.6020],
+      "category": "University",
+      "description": "Historic university building with beautiful architecture and gardens."
+    },
+    {
+      "name": "Jardin du Palais Universitaire",
+      "address": "9 Place de l'Université, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7660, 48.6020],
+      "category": "Garden",
+      "description": "Beautiful gardens surrounding the university palace."
+    },
+    {
+      "name": "Jardin Botanique de l'université de Strasbourg",
+      "address": "28 Rue Goethe, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7680, 48.6040],
+      "category": "Botanical Garden",
+      "description": "Historic botanical gardens, with 6000 plant species, greenhouses & an arboretum, plus exhibitions."
+    },
+    {
+      "name": "Observatoire Astronomique de Strasbourg",
+      "address": "11 Rue de l'Université, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7700, 48.6060],
+      "category": "Observatory",
+      "description": "Built in 1881, this stately planetarium offers shows & guided tours, plus training & education."
+    },
+    {
+      "name": "European Parliament",
+      "address": "Allée du Printemps, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7720, 48.6080],
+      "category": "Government Building",
+      "description": "Completed in 1999, the official seat of the European Parliament offers tours & interactive exhibits."
+    },
+    {
+      "name": "Parc de l'Orangerie",
+      "address": "Parc de l'Orangerie, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7740, 48.6100],
+      "category": "Park",
+      "description": "Flower-filled park dating to the 17th century, with boating lake, water birds & terrace restaurant."
+    },
+    {
+      "name": "Le Baeckeoffe d'Alsace",
+      "address": "6 Rue des Orfèvres, 67000 Strasbourg, France",
+      "date": "2024-09-30",
+      "coordinates": [7.7760, 48.6120],
+      "category": "Restaurant",
+      "description": "Traditional oven-baked meat dishes & cheese plates in an old-fashioned, wood-lined setting."
+    },
+    {
+      "name": "Colmar",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "City",
+      "description": "Colmar is a town in the Grand Est region of northeastern France, near the border with Germany. Its old town has cobblestone streets lined with half-timbered medieval and early Renaissance buildings."
+    },
+    {
+      "name": "Castelo de Haut-Kœnigsbourg",
+      "address": "67600 Orschwiller, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3400, 48.2500],
+      "category": "Castle",
+      "description": "Restored 12th-century mountain fortress with an artillery platform, medieval garden & royal rooms."
+    },
+    {
+      "name": "Riquewihr",
+      "address": "68340 Riquewihr, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3000, 48.1700],
+      "category": "Town",
+      "description": "Riquewihr is a town on the Alsace Wine Route in eastern France. Its cobbled streets are dotted with half-timbered winemakers' shops and tasting rooms."
+    },
+    {
+      "name": "Kaysersberg",
+      "address": "68240 Kaysersberg, France",
+      "date": "2024-10-01",
+      "coordinates": [7.2600, 48.1400],
+      "category": "Town",
+      "description": "Kaysersberg is a historical town and former commune in Alsace in northeastern France. The name is German for Emperor's Mountain."
+    },
+    {
+      "name": "The Fishmonger District",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Historic District",
+      "description": "Historic district in Colmar known for its traditional architecture."
+    },
+    {
+      "name": "Pequena Veneza",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Historic District",
+      "description": "High-end Italian eatery in a historic setting with a courtyard & seasonal entrees, plus beer & wine."
+    },
+    {
+      "name": "Quartier des Tanneurs",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Historic District",
+      "description": "Historic tanners' quarter in Colmar with traditional architecture."
+    },
+    {
+      "name": "Ancienne Douane",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Historic Building",
+      "description": "Charming former customs house at a public square, built in the 15th century & housing a restaurant."
+    },
+    {
+      "name": "Grand Rue",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Street",
+      "description": "A pedestrian-friendly cobblestone street filled with quaint cafes, shops & historic buildings."
+    },
+    {
+      "name": "Igreja de São Martinho",
+      "address": "Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Church",
+      "description": "Large Roman Catholic church built from the 1230s—1360s with Gothic architecture & medieval statues."
+    },
+    {
+      "name": "Museu de Unterlinden",
+      "address": "1 Rue d'Unterlinden, 68000 Colmar, France",
+      "date": "2024-10-01",
+      "coordinates": [7.3600, 48.0800],
+      "category": "Museum",
+      "description": "13th-century Dominican convent building converted into a religious & local history & art museum."
+    },
+    {
+      "name": "FR7698 (Ryanair)",
+      "address": "SXB ✈ OPO",
+      "date": "2024-10-01",
+      "coordinates": [7.6283, 48.5383],
+      "category": "Flight",
+      "description": "Ryanair flight from Strasbourg back to Porto"
+    }
+  ]
+}

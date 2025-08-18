@@ -1,0 +1,235 @@
+{
+  "id": "madrid-2024",
+  "title": "Madrid",
+  "startDate": "2024-05-30",
+  "endDate": "2024-06-01",
+  "description": "3-day trip to Madrid exploring Spanish culture, royal palaces, museums, and the vibrant city life",
+  "image": "/images/itineraries/2024/madrid.webp",
+  "metadata": {
+    "flags": "🇪🇸",
+    "emoji": "🏛️",
+    "countries": ["Spain"],
+    "pointsCount": 25
+  },
+  "points": [
+    {
+      "name": "UX1144 (Air Europa)",
+      "address": "OPO ✈ MAD",
+      "date": "2024-05-30",
+      "coordinates": [-3.7492, 40.4168],
+      "category": "Flight",
+      "description": "Air Europa flight from Porto to Madrid"
+    },
+    {
+      "name": "Prado Museum",
+      "address": "Calle de Ruiz de Alarcón, 23, 28014 Madrid, Spain",
+      "date": "2024-05-30",
+      "coordinates": [-3.6919, 40.4138],
+      "category": "Museum",
+      "description": "Spain's main national art museum, featuring works by Goya, Velázquez, and other Spanish masters"
+    },
+    {
+      "name": "Barrio De Las Letras",
+      "address": "Calle de las Huertas, 47 Bis, 28014 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 913 896 337",
+      "coordinates": [-3.6997, 40.4147],
+      "category": "Neighborhood",
+      "description": "Literary quarter known for its cultural heritage and vibrant atmosphere"
+    },
+    {
+      "name": "Plaza Mayor",
+      "address": "Plaza Mayor, 28012 Madrid, Spain",
+      "date": "2024-05-30",
+      "coordinates": [-3.7064, 40.4155],
+      "category": "Square",
+      "description": "Historic square in the center of Madrid, surrounded by beautiful architecture"
+    },
+    {
+      "name": "Arco de Cuchilleros",
+      "address": "Plaza Mayor, 9, 28005 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 913 652 680",
+      "coordinates": [-3.7064, 40.4155],
+      "category": "Architecture",
+      "description": "Historic arch and restaurant area in Plaza Mayor"
+    },
+    {
+      "name": "Mercado de San Miguel",
+      "address": "Plaza de San Miguel, s/n, 28005 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 915 424 936",
+      "coordinates": [-3.7089, 40.4155],
+      "category": "Food Market",
+      "description": "Historic covered market with gourmet food stalls and tapas"
+    },
+    {
+      "name": "Basílica Pontificia de San Miguel",
+      "address": "Calle de San Justo, 4, 28005 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 915 484 011",
+      "coordinates": [-3.7089, 40.4155],
+      "category": "Church",
+      "description": "Baroque church with beautiful architecture and religious significance"
+    },
+    {
+      "name": "Casa de Cisneros",
+      "address": "Plaza de la Villa, 4, 28005 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 915 881 000",
+      "coordinates": [-3.7089, 40.4155],
+      "category": "Historic Building",
+      "description": "Renaissance palace in Plaza de la Villa"
+    },
+    {
+      "name": "Teatro Real",
+      "address": "Plaza de Isabel II, s/n, 28013 Madrid, España",
+      "date": "2024-05-30",
+      "phone": "+34 915 160 600",
+      "coordinates": [-3.7089, 40.4175],
+      "category": "Theater",
+      "description": "Royal Opera House of Madrid, one of the most important opera houses in Europe"
+    },
+    {
+      "name": "Muslim Walls of Madrid",
+      "address": "Calle Mayor, 85, 28013 Madrid, Spain",
+      "date": "2024-05-30",
+      "coordinates": [-3.7089, 40.4175],
+      "category": "Historic Site",
+      "description": "Remains of the medieval Muslim walls of Madrid"
+    },
+    {
+      "name": "Almudena Cathedral",
+      "address": "Almudena Cathedral, Calle de Bailén, 10, 28013 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 915 422 200",
+      "coordinates": [-3.7144, 40.4158],
+      "category": "Cathedral",
+      "description": "Catholic cathedral in Madrid, seat of the Roman Catholic Archdiocese of Madrid"
+    },
+    {
+      "name": "Royal Palace of Madrid",
+      "address": "Calle de Bailén, 28071 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 914 548 700",
+      "coordinates": [-3.7144, 40.4178],
+      "category": "Palace",
+      "description": "Official residence of the Spanish Royal Family, though now used for state ceremonies"
+    },
+    {
+      "name": "Sabatini Garden",
+      "address": "Calle de Bailén, 2, 28013 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 915 882 900",
+      "coordinates": [-3.7144, 40.4178],
+      "category": "Garden",
+      "description": "Formal gardens adjacent to the Royal Palace"
+    },
+    {
+      "name": "Temple of Debod",
+      "address": "Calle de Ferraz, 1, 28008 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 913 667 415",
+      "coordinates": [-3.7175, 40.4244],
+      "category": "Temple",
+      "description": "Ancient Egyptian temple relocated to Madrid, offering beautiful sunset views"
+    },
+    {
+      "name": "Casa de la Villa",
+      "address": "Plaza de la Villa, 5, 28005 Madrid, Spain",
+      "date": "2024-05-30",
+      "phone": "+34 915 881 000",
+      "coordinates": [-3.7089, 40.4155],
+      "category": "Historic Building",
+      "description": "Former Madrid City Hall building with beautiful architecture"
+    },
+    {
+      "name": "Parque de Atracciones",
+      "address": "Parque de Atracciones, 28011 Madrid, Spain",
+      "date": "2024-05-31",
+      "phone": "+34 912 000 795",
+      "coordinates": [-3.7544, 40.4194],
+      "category": "Amusement Park",
+      "description": "Madrid's main amusement park with rides and entertainment"
+    },
+    {
+      "name": "Puerta del Sol",
+      "address": "Plaza Puerta Del Sol, 28013 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 915 881 636",
+      "coordinates": [-3.7038, 40.4168],
+      "category": "Square",
+      "description": "Famous square and the center of Madrid, known for the clock tower and New Year celebrations"
+    },
+    {
+      "name": "Parque de El Retiro",
+      "address": "Plaza Independencia, 7, 28009 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 914 008 740",
+      "coordinates": [-3.6883, 40.4168],
+      "category": "Park",
+      "description": "Large park in the center of Madrid, perfect for walking and enjoying nature"
+    },
+    {
+      "name": "Puerta de Alcalá",
+      "address": "Plazade la Independencia, s/n, 28001 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 915 787 810",
+      "coordinates": [-3.6883, 40.4200],
+      "category": "Monument",
+      "description": "Neoclassical monument in Plaza de la Independencia, one of Madrid's most recognizable landmarks"
+    },
+    {
+      "name": "Cibeles Palace",
+      "address": "Plazade la Cibeles, 1, 28014 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 914 800 008",
+      "coordinates": [-3.6883, 40.4194],
+      "category": "Palace",
+      "description": "Historic building housing the Madrid City Council, with beautiful architecture"
+    },
+    {
+      "name": "Plaza de Cibeles",
+      "address": "Plaza Cibeles, 28014 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 915 954 800",
+      "coordinates": [-3.6883, 40.4194],
+      "category": "Square",
+      "description": "Famous square with the Cibeles fountain, one of Madrid's most iconic landmarks"
+    },
+    {
+      "name": "Banco de España",
+      "address": "Calle de Alcalá, 48, 28014 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 913 385 000",
+      "coordinates": [-3.6883, 40.4194],
+      "category": "Bank",
+      "description": "Spanish central bank building with impressive architecture"
+    },
+    {
+      "name": "Museo Nacional Centro de Arte Reina Sofia",
+      "address": "Calle de Santa Isabel, 52, 28012 Madrid, Spain",
+      "date": "2024-06-01",
+      "phone": "+34 917 741 000",
+      "coordinates": [-3.6944, 40.4083],
+      "category": "Museum",
+      "description": "Modern art museum featuring Picasso's Guernica and other contemporary works"
+    },
+    {
+      "name": "Plaza del Callao",
+      "address": "Plaza del Callao, 28013 Madrid Madrid, Spain",
+      "date": "2024-06-01",
+      "coordinates": [-3.7038, 40.4194],
+      "category": "Square",
+      "description": "Busy square in the center of Madrid, known for shopping and entertainment"
+    },
+    {
+      "name": "UX1141 (Air Europa)",
+      "address": "MAD ✈ OPO",
+      "date": "2024-06-01",
+      "coordinates": [-3.7492, 40.4168],
+      "category": "Flight",
+      "description": "Air Europa flight from Madrid back to Porto"
+    }
+  ]
+}
