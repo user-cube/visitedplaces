@@ -44,8 +44,8 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
   // Calculate unique countries visited
   const uniqueCountries = new Set(cities.map(city => city.country)).size;
 
-  // Get last 5 itineraries
-  const last5Itineraries = itineraries.slice(-5).reverse();
+  // Get last 5 itineraries (most recent first)
+  const last5Itineraries = itineraries.slice(0, 5);
 
   return (
     <>
