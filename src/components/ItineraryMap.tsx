@@ -48,6 +48,50 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       });
     }, 100);
 
+    // Build day→color mapping shared with sidebar via localStorage
+    const dates = Array.from(new Set(itinerary.points.map(p => p.date))).sort();
+    const storageKey = `itinerary-day-colors::${itinerary.id}`;
+    let dayColorMap: Record<string, string> | null = null;
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) {
+        dayColorMap = JSON.parse(stored);
+      }
+    } catch {}
+
+    if (!dayColorMap) {
+      const candidateColors = [
+        '#667eea',
+        '#764ba2',
+        '#10B981',
+        '#0EA5E9',
+        '#F59E0B',
+        '#EF4444',
+        '#14B8A6',
+        '#F472B6',
+        '#22C55E',
+        '#06B6D4',
+        '#A78BFA',
+        '#FB923C',
+      ];
+      const used = new Set<string>();
+      dayColorMap = {};
+      dates.forEach(d => {
+        const available = candidateColors.filter(c => !used.has(c));
+        const pick =
+          available.length > 0
+            ? available[Math.floor(Math.random() * available.length)]
+            : candidateColors[
+                Math.floor(Math.random() * candidateColors.length)
+              ];
+        dayColorMap![d] = pick;
+        used.add(pick);
+      });
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(dayColorMap));
+      } catch {}
+    }
+
     // Create markers and route arrays
     const markers: L.Marker[] = [];
     const routePoints: [number, number][] = [];
@@ -91,12 +135,13 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
     itinerary.points.forEach((point: ItineraryPoint, index: number) => {
       const [lng, lat] = point.coordinates;
       routePoints.push([lat, lng]);
+      const markerColor = (dayColorMap && dayColorMap[point.date]) || '#3B82F6';
 
       // Create custom icon
       const customIcon = L.divIcon({
         className: 'custom-marker',
         html: `
-          <div class="marker-content">
+          <div class="marker-content" style="--marker-bg: ${markerColor}; background: ${markerColor};">
             <div class="marker-number">${index + 1}</div>
             <div class="marker-tooltip">${point.name}</div>
           </div>
@@ -134,7 +179,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
       map.fitBounds(group.getBounds().pad(0.1));
     }
 
-    // Add custom CSS for markers
+    // Add custom CSS for markers (uses CSS variable for background)
     const style = document.createElement('style');
     style.textContent = `
       .custom-marker {
@@ -146,7 +191,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
         position: relative;
         width: 30px;
         height: 30px;
-        background: #3B82F6;
+        background: var(--marker-bg, #3B82F6);
         border: 3px solid white;
         border-radius: 50%;
         display: flex;
@@ -159,7 +204,7 @@ export default function ItineraryMap({ itinerary }: ItineraryMapProps) {
 
       .marker-content:hover {
         transform: scale(1.1);
-        background: #2563EB;
+        filter: brightness(0.9);
       }
 
       .marker-number {

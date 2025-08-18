@@ -87,6 +87,7 @@ export interface ItineraryPoint {
   website?: string;
   coordinates: [number, number];
   category?: string;
+  description?: string;
 }
 
 export interface ItineraryMetadata {
@@ -105,6 +106,11 @@ export interface Itinerary {
   description?: string;
   image?: string;
   metadata?: ItineraryMetadata;
+  notes?: string[];
+  links?: Array<{
+    label: string;
+    url: string;
+  }>;
 }
 
 export interface ItineraryListProps {
