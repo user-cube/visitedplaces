@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import { useItineraries } from '../../hooks/useItineraries';
 import { Itinerary } from '../../types';
 import styles from './Itineraries.module.css';
@@ -8,8 +8,44 @@ export default function ItinerariesList() {
   const router = useRouter();
   const { itineraries, loading, error } = useItineraries();
   const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedTerm, setDebouncedTerm] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('');
   const [selectedYear, setSelectedYear] = useState('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Load last query from localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('itineraries:lastQuery');
+      if (saved) setSearchTerm(saved);
+    } catch {}
+  }, []);
+
+  // Debounce search term and persist
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setDebouncedTerm(searchTerm.trim());
+      try {
+        localStorage.setItem('itineraries:lastQuery', searchTerm.trim());
+      } catch {}
+    }, 200);
+    return () => clearTimeout(id);
+  }, [searchTerm]);
+
+  // Keyboard shortcuts: '/' to focus, Esc to clear
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      } else if (e.key === 'Escape') {
+        setSearchTerm('');
+        searchInputRef.current?.blur();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   // Add class to body to enable scrolling
   useEffect(() => {
@@ -62,16 +98,60 @@ export default function ItinerariesList() {
 
   // Filter itineraries based on search term and filters
   const filteredItineraries = useMemo(() => {
+    function normalize(str: string): string {
+      return (str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '');
+    }
+
+    function levenshtein(a: string, b: string): number {
+      const m = a.length;
+      const n = b.length;
+      if (m === 0) return n;
+      if (n === 0) return m;
+      const dp = new Array(n + 1);
+      for (let j = 0; j <= n; j++) dp[j] = j;
+      for (let i = 1; i <= m; i++) {
+        let prev = i - 1;
+        dp[0] = i;
+        for (let j = 1; j <= n; j++) {
+          const temp = dp[j];
+          const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+          dp[j] = Math.min(dp[j] + 1, dp[j - 1] + 1, prev + cost);
+          prev = temp;
+        }
+      }
+      return dp[n];
+    }
+
+    function fuzzyContains(text: string, query: string): boolean {
+      const t = normalize(text);
+      const q = normalize(query);
+      if (!q) return true;
+      if (t.includes(q)) return true;
+      const qTokens = q.split(/\s+/).filter(Boolean);
+      const tTokens = t.split(/[^a-z0-9]+/).filter(Boolean);
+      // Every query token should approximately match some token in text
+      return qTokens.every(qt => {
+        const threshold = Math.max(1, Math.floor(qt.length * 0.34));
+        return tTokens.some(tt => {
+          if (tt.includes(qt)) return true;
+          const d = levenshtein(tt, qt);
+          return d <= threshold;
+        });
+      });
+    }
+
     return itineraries.filter(itinerary => {
       // Search term filter
+      const query = debouncedTerm.toLowerCase();
       const matchesSearch =
-        searchTerm === '' ||
-        itinerary.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        itinerary.description
-          ?.toLowerCase()
-          .includes(searchTerm.toLowerCase()) ||
+        query === '' ||
+        fuzzyContains(itinerary.title, query) ||
+        fuzzyContains(itinerary.description || '', query) ||
         itinerary.metadata?.countries?.some(country =>
-          country.toLowerCase().includes(searchTerm.toLowerCase())
+          fuzzyContains(country, query)
         );
 
       // Country filter
@@ -86,7 +166,7 @@ export default function ItinerariesList() {
 
       return matchesSearch && matchesCountry && matchesYear;
     });
-  }, [itineraries, searchTerm, selectedCountry, selectedYear]);
+  }, [itineraries, debouncedTerm, selectedCountry, selectedYear]);
 
   if (loading) {
     return (
@@ -225,9 +305,34 @@ export default function ItinerariesList() {
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
                   placeholder="Search by title, description, or country..."
-                  className="block w-full pl-10 pr-3 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
+                  ref={searchInputRef}
+                  className="block w-full pl-10 pr-10 py-2 sm:py-3 border border-gray-300 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-[#667eea] focus:border-[#667eea] transition-colors duration-150"
                 />
+                {searchTerm && (
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    aria-label="Clear search"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                )}
               </div>
+              <p className="mt-2 text-xs text-gray-500">
+                Press '/' to focus, Esc to clear
+              </p>
             </div>
 
             {/* Country Filter */}
