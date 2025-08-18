@@ -704,28 +704,47 @@ export default function ItinerarySidebar({
           (Array.isArray(itinerary.notes) && itinerary.notes.length > 0 ? (
             <div
               style={{
+                position: 'relative',
                 marginBottom: '24px',
-                padding: '16px',
-                backgroundColor: '#FFFBEB',
+                padding: '16px 16px 16px 20px',
+                backgroundColor: '#FFFFFF',
                 borderRadius: '12px',
-                border: '1px solid #FDE68A',
+                border: '1px solid #E5E7EB',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.04)',
               }}
             >
+              <div
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: 0,
+                  bottom: 0,
+                  width: '4px',
+                  borderTopLeftRadius: '12px',
+                  borderBottomLeftRadius: '12px',
+                  background:
+                    'linear-gradient(180deg, #667eea 0%, #764ba2 100%)',
+                }}
+              />
               <h3
                 style={{
-                  fontSize: '16px',
-                  fontWeight: 600,
-                  color: '#92400E',
-                  margin: '0 0 8px 0',
+                  fontSize: '15px',
+                  fontWeight: 700,
+                  color: '#111827',
+                  margin: '0 0 10px 0',
                 }}
               >
                 Notes
               </h3>
-              <ul style={{ paddingLeft: '18px', margin: 0, color: '#92400E' }}>
+              <ul style={{ paddingLeft: '18px', margin: 0, color: '#374151' }}>
                 {itinerary.notes.map((note, idx) => (
                   <li
                     key={idx}
-                    style={{ fontSize: '13px', marginBottom: '6px' }}
+                    style={{
+                      fontSize: '13px',
+                      marginBottom: '10px',
+                      lineHeight: 1.6,
+                    }}
                   >
                     {note}
                   </li>
@@ -748,37 +767,103 @@ export default function ItinerarySidebar({
           (Array.isArray(itinerary.links) && itinerary.links.length > 0 ? (
             <div
               style={{
+                position: 'relative',
                 marginBottom: '24px',
-                padding: '16px',
-                backgroundColor: '#ECFDF5',
+                padding: '16px 16px 16px 20px',
+                backgroundColor: '#FFFFFF',
                 borderRadius: '12px',
-                border: '1px solid #A7F3D0',
+                border: '1px solid #E5E7EB',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.04)',
               }}
             >
+              <div
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: 0,
+                  bottom: 0,
+                  width: '4px',
+                  borderTopLeftRadius: '12px',
+                  borderBottomLeftRadius: '12px',
+                  background:
+                    'linear-gradient(180deg, #667eea 0%, #764ba2 100%)',
+                }}
+              />
               <h3
                 style={{
-                  fontSize: '16px',
-                  fontWeight: 600,
-                  color: '#065F46',
-                  margin: '0 0 8px 0',
+                  fontSize: '15px',
+                  fontWeight: 700,
+                  color: '#111827',
+                  margin: '0 0 10px 0',
                 }}
               >
                 Links
               </h3>
-              <ul style={{ paddingLeft: '18px', margin: 0 }}>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 {itinerary.links.map((link, idx) => (
                   <li
                     key={idx}
-                    style={{ fontSize: '13px', marginBottom: '6px' }}
+                    style={{
+                      fontSize: '13px',
+                      padding: '8px 0',
+                      borderTop: idx === 0 ? 'none' : '1px solid #F3F4F6',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: '8px',
+                    }}
                   >
                     <a
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ color: '#059669', textDecoration: 'underline' }}
+                      style={{
+                        color: '#667EEA',
+                        textDecoration: 'none',
+                        flex: 1,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                      }}
+                      onMouseEnter={e => {
+                        (
+                          e.currentTarget as HTMLAnchorElement
+                        ).style.textDecoration = 'underline';
+                      }}
+                      onMouseLeave={e => {
+                        (
+                          e.currentTarget as HTMLAnchorElement
+                        ).style.textDecoration = 'none';
+                      }}
                     >
-                      {link.label}
+                      <span
+                        style={{
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {link.label}
+                      </span>
                     </a>
+                    <svg
+                      style={{
+                        width: '14px',
+                        height: '14px',
+                        color: '#9CA3AF',
+                        flexShrink: 0,
+                      }}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
                   </li>
                 ))}
               </ul>
