@@ -13,6 +13,7 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [edgeToEdge, setEdgeToEdge] = useState(false);
   const viewerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
 
@@ -20,6 +21,25 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
     document.body.classList.add('itinerary-page');
     return () => document.body.classList.remove('itinerary-page');
   }, []);
+
+  // Load persisted preference for edge-to-edge; default to true on wide screens if unset
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('galleries:edgeToEdge');
+      if (saved === 'true' || saved === 'false') {
+        setEdgeToEdge(saved === 'true');
+      } else if (typeof window !== 'undefined' && window.innerWidth >= 1440) {
+        setEdgeToEdge(true);
+      }
+    } catch {}
+  }, []);
+
+  // Persist preference when toggled
+  useEffect(() => {
+    try {
+      localStorage.setItem('galleries:edgeToEdge', String(edgeToEdge));
+    } catch {}
+  }, [edgeToEdge]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -125,7 +145,7 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
         </button>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             {gallery.title}
@@ -152,7 +172,16 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
         {photos.length > 0 && (
           <div
             ref={viewerRef}
-            className="relative bg-black/95 rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/20 border border-white/10 backdrop-blur-sm mx-auto"
+            className={`relative ${edgeToEdge ? 'lg:rounded-none rounded-none' : 'rounded-2xl lg:rounded-3xl'} w-full bg-black/95 shadow-2xl overflow-hidden ring-1 ring-black/20 border border-white/10 backdrop-blur-sm`}
+            style={
+              edgeToEdge
+                ? {
+                    width: '100vw',
+                    marginLeft: 'calc(50% - 50vw)',
+                    marginRight: 'calc(50% - 50vw)',
+                  }
+                : undefined
+            }
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
           >
@@ -274,6 +303,13 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
                   title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
                 >
                   {isFullscreen ? 'Exit' : 'Full'}
+                </button>
+                <button
+                  onClick={() => setEdgeToEdge(v => !v)}
+                  className="px-2.5 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-white text-xs backdrop-blur border border-white/20"
+                  title={edgeToEdge ? 'Default width' : 'Edge-to-edge'}
+                >
+                  ↔︎
                 </button>
                 <a
                   href={photos[currentIndex].src}
