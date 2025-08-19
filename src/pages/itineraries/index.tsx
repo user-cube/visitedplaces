@@ -508,69 +508,114 @@ export default function ItinerariesList() {
                 setSelectedCountry('');
                 setSelectedYear('');
               }}
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-[#667eea] hover:bg-[#5a67d8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-colors duration-150"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white rounded-xl hover:from-[#5a67d8] hover:to-[#6b46c1] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
               Clear all filters
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 pb-20">
             {filteredItineraries.map((itinerary, index) => (
               <div
                 key={itinerary.id}
-                className={`${styles.itineraryCard} group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer transform hover:-translate-y-2 hover:scale-105 border border-white/20 w-full`}
+                className={`${styles.itineraryCard} group relative bg-white/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-[1.02] border border-white/20 hover:border-[#667eea]/30 overflow-hidden`}
                 onClick={() => handleItinerarySelect(itinerary)}
                 style={{
                   animationDelay: `${index * 100}ms`,
+                  animation: 'fadeInUp 0.8s ease-out forwards',
                 }}
               >
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#667eea]/5 to-[#764ba2]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-150"></div>
+                {/* Cover Image Section */}
+                <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#667eea]/20 to-[#764ba2]/20 group-hover:opacity-0 transition-opacity duration-500"></div>
 
-                {/* Card content */}
-                <div className="relative p-5 sm:p-6 lg:p-8">
-                  {/* Header with flags and emoji */}
-                  <div className="flex items-start mb-4 sm:mb-6">
-                    <div className="flex items-start space-x-3 sm:space-x-4 md:space-x-5">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 overflow-hidden relative">
-                          {itinerary.image ? (
-                            <img
-                              src={itinerary.image}
-                              alt={`${itinerary.title} destination`}
-                              className="absolute inset-0 w-full h-full object-cover rounded-lg sm:rounded-xl"
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span className="text-2xl sm:text-3xl lg:text-4xl">
-                              {getTravelEmoji(itinerary)}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 group-hover:text-[#667eea] transition-colors duration-200">
-                          {itinerary.title}
-                        </h2>
-                        <div className="flex items-center space-x-2 mt-1 sm:mt-2">
-                          <span className="text-lg sm:text-xl md:text-2xl">
-                            {getCountryFlags(itinerary)}
-                          </span>
-                          <span className="text-xs sm:text-sm md:text-base text-gray-500 font-medium">
-                            {itinerary.metadata?.countries?.join(' & ')}
-                          </span>
-                        </div>
-                      </div>
+                  {itinerary.image ? (
+                    <img
+                      src={itinerary.image}
+                      alt={`${itinerary.title} destination`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 flex items-center justify-center">
+                      <span className="text-6xl sm:text-7xl lg:text-8xl opacity-50">
+                        {getTravelEmoji(itinerary)}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Overlay with info */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  {/* Top right badge */}
+                  <div className="absolute top-4 right-4">
+                    <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-bold bg-white/90 backdrop-blur-sm text-gray-800 shadow-lg border border-white/20">
+                      📍{' '}
+                      {itinerary.metadata?.pointsCount ||
+                        itinerary.points.length}{' '}
+                      places
+                    </span>
+                  </div>
+
+                  {/* Bottom left info */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-800">
+                        📅 {new Date(itinerary.startDate).getFullYear()}
+                      </span>
+                      {itinerary.metadata?.countries && (
+                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-800">
+                          🌍 {itinerary.metadata.countries[0]}
+                          {itinerary.metadata.countries.length > 1
+                            ? ' +' + (itinerary.metadata.countries.length - 1)
+                            : ''}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="relative p-6 sm:p-8">
+                  {/* Title and metadata */}
+                  <div className="mb-4">
+                    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#667eea] transition-colors duration-300 leading-tight mb-2">
+                      {itinerary.title}
+                    </h2>
+
+                    {/* Country flags */}
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="text-lg sm:text-xl md:text-2xl">
+                        {getCountryFlags(itinerary)}
+                      </span>
+                      <span className="text-sm text-gray-500 font-medium">
+                        {itinerary.metadata?.countries?.join(' & ')}
+                      </span>
                     </div>
                   </div>
 
+                  {/* Description */}
                   {itinerary.description && (
-                    <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
+                    <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed line-clamp-3">
                       {itinerary.description}
                     </p>
                   )}
 
-                  <div className="flex items-center text-sm text-gray-600 mb-4 sm:mb-6 bg-gradient-to-r from-[#667eea]/5 to-[#764ba2]/5 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-[#667eea]/20">
+                  {/* Travel dates */}
+                  <div className="flex items-center text-sm text-gray-600 mb-6 bg-gradient-to-r from-[#667eea]/5 to-[#764ba2]/5 rounded-xl p-4 border border-[#667eea]/20">
                     <div className="flex-shrink-0">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-[#667eea] to-[#764ba2] rounded-lg flex items-center justify-center">
                         <svg
@@ -588,7 +633,7 @@ export default function ItinerariesList() {
                         </svg>
                       </div>
                     </div>
-                    <div className="ml-2 sm:ml-3">
+                    <div className="ml-3">
                       <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">
                         Travel Dates
                       </p>
@@ -599,67 +644,50 @@ export default function ItinerariesList() {
                     </div>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <div className="flex-shrink-0">
-                        <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                          <svg
-                            className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                            />
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="ml-2 sm:ml-3">
-                        <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">
-                          Locations
-                        </p>
-                        <p className="text-xs sm:text-sm font-semibold text-gray-900">
-                          {itinerary.metadata?.pointsCount ||
-                            itinerary.points.length}{' '}
-                          places
-                        </p>
-                      </div>
-                    </div>
-
-                    <button className="group/btn w-full inline-flex items-center justify-center px-3 py-2 sm:px-5 sm:py-3 lg:px-6 lg:py-3 border border-transparent text-sm sm:text-base font-semibold rounded-lg text-white bg-gradient-to-r from-[#667eea] to-[#764ba2] hover:from-[#5a67d8] hover:to-[#6b46c1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
-                      <span className="hidden sm:inline">View itinerary</span>
-                      <span className="sm:hidden">View</span>
-                      <svg
-                        className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </button>
-                  </div>
+                  {/* Action button */}
+                  <button className="group/btn w-full inline-flex items-center justify-center px-6 py-3 border-2 border-transparent text-sm sm:text-base font-semibold rounded-xl text-white bg-gradient-to-br from-[#667eea] to-[#764ba2] hover:from-[#5a67d8] hover:to-[#6b46c1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <span className="hidden sm:inline">View itinerary</span>
+                    <span className="sm:hidden">View</span>
+                    <svg
+                      className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
                 </div>
+
+                {/* Decorative elements */}
+                <div className="absolute top-6 right-6 w-2 h-2 bg-[#667eea]/30 rounded-full group-hover:bg-[#667eea] transition-colors duration-500"></div>
+                <div className="absolute bottom-6 left-6 w-1 h-1 bg-[#764ba2]/30 rounded-full group-hover:bg-[#764ba2] transition-colors duration-500"></div>
+
+                {/* Shine effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </div>
             ))}
           </div>
         )}
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }
