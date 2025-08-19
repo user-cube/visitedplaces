@@ -265,21 +265,23 @@ export default function GalleriesList() {
                 >
                   All countries
                 </button>
-                {uniqueCountries.map(country => (
-                  <button
-                    key={country}
-                    type="button"
-                    onClick={() => setSelectedCountry(country)}
-                    className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
-                      selectedCountry === country
-                        ? 'bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-transparent'
-                        : 'bg-white text-gray-700 border-gray-300 hover:border-[#667eea]'
-                    }`}
-                    aria-pressed={selectedCountry === country}
-                  >
-                    {country}
-                  </button>
-                ))}
+                {uniqueCountries.map(country => {
+                  return (
+                    <button
+                      key={country}
+                      type="button"
+                      onClick={() => setSelectedCountry(country)}
+                      className={`px-3 py-1.5 rounded-full text-sm border transition-colors ${
+                        selectedCountry === country
+                          ? 'bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-transparent'
+                          : 'bg-white text-gray-700 border-gray-300 hover:border-[#667eea]'
+                      }`}
+                      aria-pressed={selectedCountry === country}
+                    >
+                      {country}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -398,7 +400,7 @@ export default function GalleriesList() {
                       )}
                       {g.location?.country && (
                         <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-800">
-                          🌍 {g.location.country}
+                          {g.location.flag || '🌍'} {g.location.country}
                         </span>
                       )}
                     </div>
@@ -445,7 +447,12 @@ export default function GalleriesList() {
                     <div className="flex flex-wrap gap-2">
                       {g.location?.city && (
                         <span className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-[#667eea]/10 to-[#764ba2]/10 text-[#4f46e5] border border-[#667eea]/20">
-                          📍 {g.location.city}
+                          {g.location.city}
+                          {g.location?.country && (
+                            <span className="ml-1">
+                              {g.location.flag || '🌍'}
+                            </span>
+                          )}
                         </span>
                       )}
                     </div>

@@ -133,6 +133,7 @@ export interface ItinerarySidebarProps {
 export interface GalleryLocation {
   city?: string;
   country?: string;
+  flag?: string;
 }
 
 export interface GalleryPhoto {

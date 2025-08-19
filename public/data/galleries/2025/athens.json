@@ -17,7 +17,7 @@
       "caption": "Ancient Agora"
     }
   ],
-  "location": { "city": "Athens", "country": "Greece" },
+  "location": { "city": "Athens", "country": "Greece", "flag": "🇬🇷" },
   "tags": ["greece", "europe"],
   "year": 2025
 }
