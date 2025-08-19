@@ -21,6 +21,7 @@ export function useItineraries() {
           image: index.image,
           points: [], // We don't load points for the list view
           metadata: index.metadata,
+          galleries: index.galleries,
         }));
         setItineraries(itinerariesFromIndex);
       } catch (err) {

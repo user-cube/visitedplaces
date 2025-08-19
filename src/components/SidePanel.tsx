@@ -1,15 +1,20 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { Itinerary } from '../types';
+import { Gallery, Itinerary } from '../types';
 
 import { City } from '../types';
 
 interface SidePanelProps {
   cities: City[];
   itineraries: Itinerary[];
+  galleries?: Gallery[];
 }
 
-export function SidePanel({ cities, itineraries }: SidePanelProps) {
+export function SidePanel({
+  cities,
+  itineraries,
+  galleries = [],
+}: SidePanelProps) {
   const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(() => {
     // Start open on desktop, closed on mobile
@@ -46,6 +51,7 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
 
   // Get last 5 itineraries (most recent first)
   const last5Itineraries = itineraries.slice(0, 5);
+  const last5Galleries = galleries.slice(0, 5);
 
   return (
     <>
@@ -94,6 +100,24 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
         </div>
 
         <div className="side-panel-content">
+          {/* Quick actions */}
+          <div className="quick-actions">
+            <button
+              className="quick-button"
+              onClick={() => router.push('/itineraries')}
+              title="Browse all itineraries"
+            >
+              View Itineraries
+            </button>
+            <button
+              className="quick-button"
+              onClick={() => router.push('/galleries')}
+              title="Browse all galleries"
+            >
+              View Galleries
+            </button>
+          </div>
+
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">{cities.length}</div>
@@ -115,13 +139,6 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
             <div className="section-header">
               <h3>Itineraries</h3>
             </div>
-
-            <button
-              className="view-all-button"
-              onClick={() => router.push('/itineraries')}
-            >
-              View All Itineraries
-            </button>
 
             <div className="itineraries-list">
               {last5Itineraries.length > 0 ? (
@@ -162,6 +179,55 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
                 <div className="empty-state">
                   <div className="empty-icon">🗺️</div>
                   <div className="empty-text">No itineraries yet</div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="itineraries-section" style={{ marginTop: '16px' }}>
+            <div className="section-header">
+              <h3>Galleries</h3>
+            </div>
+            <div className="itineraries-list">
+              {last5Galleries.length > 0 ? (
+                last5Galleries.map(g => (
+                  <div
+                    key={g.id}
+                    className="itinerary-card"
+                    onClick={() => router.push(`/galleries/${g.id}`)}
+                  >
+                    <div className="itinerary-header">
+                      {g.image && (
+                        <div className="itinerary-image">
+                          <img
+                            src={g.image}
+                            alt={`${g.title} cover`}
+                            className="w-full h-full object-cover rounded-lg"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className="itinerary-content">
+                        <div className="itinerary-title">{g.title}</div>
+                        <div className="itinerary-meta">
+                          <span className="itinerary-dates">
+                            {g.year || ''}{' '}
+                            {g.location?.country
+                              ? `• ${g.location.country}`
+                              : ''}
+                          </span>
+                          <span className="itinerary-points">
+                            {g.photosCount ?? '—'} photos
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="empty-state">
+                  <div className="empty-icon">📸</div>
+                  <div className="empty-text">No galleries yet</div>
                 </div>
               )}
             </div>
