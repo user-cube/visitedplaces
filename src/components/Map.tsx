@@ -11,7 +11,7 @@ import {
   SimpleGallery,
   SidePanel,
 } from './';
-import { useMapState, useItineraries } from '../hooks';
+import { useMapState, useItineraries, useGalleries } from '../hooks';
 import {
   MAP_CENTER,
   DEFAULT_ZOOM,
@@ -35,12 +35,17 @@ export default function Map({ cities }: MapProps) {
   } = useMapState(cities);
 
   const { itineraries } = useItineraries();
+  const { galleries } = useGalleries();
   const currentColorScheme = COLOR_SCHEMES[selectedColorScheme];
 
   return (
     <div style={CONTAINER_STYLES}>
       {/* Side Panel */}
-      <SidePanel cities={cities} itineraries={itineraries} />
+      <SidePanel
+        cities={cities}
+        itineraries={itineraries}
+        galleries={galleries}
+      />
 
       {/* Map Controls Panel */}
       <MapControls

@@ -164,6 +164,39 @@
   padding: 28px 28px 32px 28px;
 }
 
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.quick-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 22px rgba(102, 126, 234, 0.25);
+}
+
+.quick-button:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.35);
+}
+
+@media (max-width: 768px) {
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Stats Grid */
 .stats-grid {
   display: grid;
