@@ -320,9 +320,9 @@ export default function ItinerarySidebar({
               label: isMobile ? 'Timeline' : `Timeline (${dates.length})`,
             },
           ]
-            .filter(Boolean)
+            .filter((tab): tab is NonNullable<typeof tab> => tab !== null)
             .map(tab => {
-              const isActive = activeTab === (tab.key as typeof activeTab);
+              const isActive = activeTab === tab.key;
               return (
                 <button
                   key={tab.key}
