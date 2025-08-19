@@ -22,7 +22,6 @@ export function useGalleries() {
           location: item.location,
           // carry count into runtime object for list display
           // optional: used only on the list page; detail page loads full file
-          // @ts-expect-error allow extra property for convenience
           photosCount: item.photosCount,
         }));
         setGalleries(mapped);

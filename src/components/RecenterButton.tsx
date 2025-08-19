@@ -7,8 +7,7 @@ interface RecenterButtonProps {
   onRecenter: () => void;
 }
 
-// Global variable to store the recenter function
-let globalRecenterFunction: (() => void) | null = null;
+// No module-scoped state; use bridge instead
 
 // Component to handle map recentering (inside MapContainer)
 export function RecenterButton() {
@@ -22,7 +21,6 @@ export function RecenterButton() {
   }, [map]);
 
   useEffect(() => {
-    globalRecenterFunction = handleRecenter;
     setGlobalRecenter(handleRecenter);
     return () => setGlobalRecenter(null);
   }, [handleRecenter]);

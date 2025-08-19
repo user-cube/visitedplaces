@@ -203,7 +203,7 @@ export default function GalleriesList() {
                 )}
               </div>
               <p className="mt-2 text-xs text-gray-500">
-                Press '/' to focus, Esc to clear
+                Press &apos;/&apos; to focus, Esc to clear
               </p>
             </div>
 
@@ -357,7 +357,7 @@ export default function GalleriesList() {
                           </div>
 
                           <span className="inline-flex items-center px-2 py-1 rounded-md text-[11px] font-extrabold bg-gradient-to-r from-[#667eea]/10 to-[#764ba2]/10 text-[#4f46e5] border border-[#667eea]/20">
-                            {(g as any).photosCount ?? '—'} photos
+                            {g.photosCount ?? '—'} photos
                           </span>
                         </div>
                       </div>

@@ -59,6 +59,11 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFullscreen]);
 
+  // Reset fade state when the index changes
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [currentIndex]);
+
   if (!gallery) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -83,10 +88,6 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
   const next = () => setCurrentIndex(prev => (prev + 1) % photos.length);
   const prev = () =>
     setCurrentIndex(prev => (prev - 1 + photos.length) % photos.length);
-
-  useEffect(() => {
-    setImageLoaded(false);
-  }, [currentIndex]);
 
   const toggleFullscreen = async () => {
     try {
@@ -378,7 +379,7 @@ export async function getStaticPaths() {
       params: { id: g.id },
     }));
     return { paths, fallback: false };
-  } catch (e) {
+  } catch {
     return { paths: [], fallback: false };
   }
 }
@@ -401,7 +402,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
     if (!fs.default.existsSync(filePath)) return { notFound: true };
     const gallery = JSON.parse(fs.default.readFileSync(filePath, 'utf8'));
     return { props: { gallery } };
-  } catch (e) {
+  } catch {
     return { notFound: true };
   }
 }

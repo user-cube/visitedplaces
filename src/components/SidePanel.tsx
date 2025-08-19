@@ -217,7 +217,7 @@ export function SidePanel({
                               : ''}
                           </span>
                           <span className="itinerary-points">
-                            {(g as any).photosCount ?? '—'} photos
+                            {g.photosCount ?? '—'} photos
                           </span>
                         </div>
                       </div>

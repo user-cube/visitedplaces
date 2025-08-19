@@ -149,6 +149,8 @@ export interface Gallery {
   location?: GalleryLocation;
   tags?: string[];
   year?: number;
+  /** Optional, available on list views when provided by the index */
+  photosCount?: number;
 }
 
 // Map styles configuration
