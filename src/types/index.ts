@@ -135,12 +135,17 @@ export interface GalleryLocation {
   country?: string;
 }
 
+export interface GalleryPhoto {
+  src: string;
+  caption?: string;
+}
+
 export interface Gallery {
   id: string;
   title: string;
   description?: string;
   image?: string; // cover image
-  photos: string[];
+  photos: Array<string | GalleryPhoto>;
   location?: GalleryLocation;
   tags?: string[];
   year?: number;

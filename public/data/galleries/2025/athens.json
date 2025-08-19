@@ -4,9 +4,18 @@
   "description": "A small gallery from Athens",
   "image": "/images/places/europe/greece/athens/athens-1.webp",
   "photos": [
-    "/images/places/europe/greece/athens/athens-1.webp",
-    "/images/places/europe/greece/athens/athens-2.webp",
-    "/images/places/europe/greece/athens/athens-3.webp"
+    {
+      "src": "/images/places/europe/greece/athens/athens-1.webp",
+      "caption": "Hadrian's Library"
+    },
+    {
+      "src": "/images/places/europe/greece/athens/athens-2.webp",
+      "caption": "Acropolis view"
+    },
+    {
+      "src": "/images/places/europe/greece/athens/athens-3.webp",
+      "caption": "Ancient Agora"
+    }
   ],
   "location": { "city": "Athens", "country": "Greece" },
   "tags": ["greece", "europe"],

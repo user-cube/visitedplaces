@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { Gallery } from '../../types/index';
+import { useEffect, useRef, useState } from 'react';
+import { Gallery, GalleryPhoto } from '../../types/index';
 
 interface GalleryPageProps {
   gallery?: Gallery;
@@ -10,11 +10,34 @@ interface GalleryPageProps {
 export default function GalleryPage({ gallery }: GalleryPageProps) {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const viewerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     document.body.classList.add('itinerary-page');
     return () => document.body.classList.remove('itinerary-page');
   }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        setCurrentIndex(prev => (prev + 1) % photos.length);
+      } else if (e.key === 'ArrowLeft') {
+        setCurrentIndex(prev => (prev - 1 + photos.length) % photos.length);
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      } else if (e.key === 'Escape' && isFullscreen) {
+        exitFullscreen();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFullscreen]);
 
   if (!gallery) {
     return (
@@ -34,10 +57,49 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
     );
   }
 
-  const photos = gallery.photos || [];
+  const photos: GalleryPhoto[] = (gallery.photos || []).map(p =>
+    typeof p === 'string' ? { src: p } : (p as GalleryPhoto)
+  );
   const next = () => setCurrentIndex(prev => (prev + 1) % photos.length);
   const prev = () =>
     setCurrentIndex(prev => (prev - 1 + photos.length) % photos.length);
+
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [currentIndex]);
+
+  const toggleFullscreen = async () => {
+    try {
+      if (!document.fullscreenElement && viewerRef.current) {
+        await viewerRef.current.requestFullscreen();
+        setIsFullscreen(true);
+      } else if (document.fullscreenElement) {
+        await document.exitFullscreen();
+        setIsFullscreen(false);
+      }
+    } catch {}
+  };
+
+  const exitFullscreen = async () => {
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      }
+      setIsFullscreen(false);
+    } catch {}
+  };
+
+  const onTouchStart: React.TouchEventHandler = e => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const onTouchEnd: React.TouchEventHandler = e => {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const threshold = 30;
+    if (dx > threshold) prev();
+    else if (dx < -threshold) next();
+    touchStartX.current = null;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -88,44 +150,158 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
         </div>
 
         {photos.length > 0 && (
-          <div className="relative bg-white rounded-xl shadow-lg overflow-hidden">
-            <Image
-              src={photos[currentIndex]}
-              alt={`${gallery.title} - ${currentIndex + 1}`}
-              width={1200}
-              height={800}
-              className="w-full h-auto max-h-[70vh] object-contain bg-black"
-              unoptimized
-            />
-            {photos.length > 1 && (
-              <>
+          <div
+            ref={viewerRef}
+            className="relative bg-black/95 rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/20 border border-white/10 backdrop-blur-sm mx-auto"
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+          >
+            {/* Main image area with click-to-navigate */}
+            <div
+              className="relative w-full"
+              onClick={e => {
+                const rect = (
+                  e.currentTarget as HTMLDivElement
+                ).getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                if (x < rect.width / 2) prev();
+                else next();
+              }}
+            >
+              <Image
+                src={photos[currentIndex].src}
+                alt={`${gallery.title} - ${currentIndex + 1}`}
+                width={1600}
+                height={1066}
+                className={`w-full h-auto max-h-[72vh] transition-opacity duration-300 ${
+                  isZoomed ? 'object-cover' : 'object-contain'
+                } ${imageLoaded ? 'opacity-100' : 'opacity-0'} select-none`}
+                unoptimized
+                onLoadingComplete={() => setImageLoaded(true)}
+              />
+
+              {/* Top-left info pill */}
+              <div className="absolute top-3 left-3 hidden sm:flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-white/10 text-white text-xs border border-white/20 backdrop-blur">
+                {gallery.year && <span>{gallery.year}</span>}
+                {gallery.location?.city && (
+                  <span className="opacity-90">
+                    • {gallery.location.city}
+                    {gallery.location?.country
+                      ? `, ${gallery.location.country}`
+                      : ''}
+                  </span>
+                )}
+              </div>
+
+              {/* Caption + counter overlay */}
+              <div className="absolute bottom-0 left-0 right-0 text-white">
+                <div className="px-3 sm:px-4 pb-3 sm:pb-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+                  <div className="flex items-center justify-between text-[11px] sm:text-sm">
+                    <div className="truncate pr-3 opacity-95">
+                      {photos[currentIndex].caption || gallery.title}
+                    </div>
+                    <div className="opacity-90">
+                      {currentIndex + 1} / {photos.length}
+                    </div>
+                  </div>
+                </div>
+                <div className="h-1 w-full bg-white/10">
+                  <div
+                    className="h-full bg-gradient-to-r from-[#667eea] to-[#764ba2]"
+                    style={{
+                      width: `${((currentIndex + 1) / photos.length) * 100}%`,
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Left/Right hover gradients with chevrons */}
+              {photos.length > 1 && (
+                <>
+                  <button
+                    aria-label="Previous photo"
+                    onClick={prev}
+                    className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-center justify-start pl-3"
+                  >
+                    <svg
+                      className="w-8 h-8 text-white/90"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    aria-label="Next photo"
+                    onClick={next}
+                    className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-center justify-end pr-3"
+                  >
+                    <svg
+                      className="w-8 h-8 text-white/90"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </>
+              )}
+
+              {/* Top-right controls */}
+              <div className="absolute top-3 right-3 flex gap-2">
                 <button
-                  onClick={prev}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-2 rounded-full hover:bg-black/80"
+                  onClick={() => setIsZoomed(z => !z)}
+                  className="px-2.5 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-white text-xs backdrop-blur border border-white/20"
+                  title={isZoomed ? 'Fit' : 'Fill'}
                 >
-                  ‹
+                  {isZoomed ? 'Fit' : 'Fill'}
                 </button>
                 <button
-                  onClick={next}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-2 rounded-full hover:bg-black/80"
+                  onClick={toggleFullscreen}
+                  className="px-2.5 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-white text-xs backdrop-blur border border-white/20"
+                  title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
                 >
-                  ›
+                  {isFullscreen ? 'Exit' : 'Full'}
                 </button>
-              </>
-            )}
+                <a
+                  href={photos[currentIndex].src}
+                  download
+                  className="px-2.5 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-white text-xs backdrop-blur border border-white/20"
+                  title="Download"
+                >
+                  ⬇︎
+                </a>
+              </div>
+            </div>
           </div>
         )}
 
         {photos.length > 1 && (
-          <div className="mt-4 flex gap-2 overflow-x-auto">
+          <div className="mt-4 flex gap-2 overflow-x-auto p-2 bg-white/70 rounded-xl shadow">
             {photos.map((p, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`flex-shrink-0 w-20 h-14 rounded overflow-hidden border ${i === currentIndex ? 'ring-2 ring-[#667eea]' : 'border-gray-200'}`}
+                className={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border transition-transform hover:scale-[1.02] ${
+                  i === currentIndex
+                    ? 'ring-2 ring-[#667eea]'
+                    : 'border-gray-200'
+                }`}
               >
                 <Image
-                  src={p}
+                  src={p.src}
                   alt={`Thumb ${i + 1}`}
                   width={160}
                   height={112}
@@ -135,6 +311,15 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
               </button>
             ))}
           </div>
+        )}
+
+        {/* Preload next image for smoother nav */}
+        {photos.length > 1 && (
+          <link
+            rel="preload"
+            as="image"
+            href={photos[(currentIndex + 1) % photos.length].src}
+          />
         )}
       </div>
     </div>
