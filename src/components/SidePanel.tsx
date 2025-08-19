@@ -94,6 +94,24 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
         </div>
 
         <div className="side-panel-content">
+          {/* Quick actions */}
+          <div className="quick-actions">
+            <button
+              className="quick-button"
+              onClick={() => router.push('/itineraries')}
+              title="Browse all itineraries"
+            >
+              View Itineraries
+            </button>
+            <button
+              className="quick-button"
+              onClick={() => router.push('/galleries')}
+              title="Browse all galleries"
+            >
+              View Galleries
+            </button>
+          </div>
+
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">{cities.length}</div>
