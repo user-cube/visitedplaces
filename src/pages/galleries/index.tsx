@@ -283,6 +283,35 @@ export default function GalleriesList() {
               </div>
             </div>
           </div>
+
+          {/* Clear Filters Button */}
+          {(searchTerm || selectedCountry || selectedYear) && (
+            <div className="mt-4 sm:mt-6 flex justify-center">
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCountry('');
+                  setSelectedYear('');
+                }}
+                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#667eea] transition-colors duration-150"
+              >
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+                Clear filters
+              </button>
+            </div>
+          )}
         </div>
 
         {filtered.length === 0 ? (
