@@ -134,13 +134,6 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
               <h3>Itineraries</h3>
             </div>
 
-            <button
-              className="view-all-button"
-              onClick={() => router.push('/itineraries')}
-            >
-              View All Itineraries
-            </button>
-
             <div className="itineraries-list">
               {last5Itineraries.length > 0 ? (
                 last5Itineraries.map(itinerary => (

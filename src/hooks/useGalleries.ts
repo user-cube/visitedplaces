@@ -20,6 +20,10 @@ export function useGalleries() {
           tags: item.tags,
           year: item.year,
           location: item.location,
+          // carry count into runtime object for list display
+          // optional: used only on the list page; detail page loads full file
+          // @ts-expect-error allow extra property for convenience
+          photosCount: item.photosCount,
         }));
         setGalleries(mapped);
       } catch (err) {

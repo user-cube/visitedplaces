@@ -304,7 +304,7 @@ export default function GalleriesList() {
             {filtered.map((g, index) => (
               <div
                 key={g.id}
-                className={`group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer transform hover:-translate-y-2 hover:scale-105 border border-white/20 w-full`}
+                className={`group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer transform hover:-translate-y-2 hover:scale-[1.02] border border-white/20 hover:border-[#667eea]/30 w-full`}
                 onClick={() => router.push(`/galleries/${g.id}`)}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -313,7 +313,7 @@ export default function GalleriesList() {
                   <div className="flex items-start mb-4 sm:mb-6">
                     <div className="flex items-start space-x-3 sm:space-x-4 md:space-x-5">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 overflow-hidden relative">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-18 lg:h-18 bg-gradient-to-br from-[#667eea]/10 to-[#764ba2]/10 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 overflow-hidden relative ring-1 ring-black/5">
                           {g.image ? (
                             <img
                               src={g.image}
@@ -341,11 +341,30 @@ export default function GalleriesList() {
                             </span>
                           )}
                         </div>
+
+                        <div className="flex items-center justify-between mt-3">
+                          <div className="flex flex-wrap gap-2">
+                            {g.location?.country && (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-gradient-to-r from-[#667eea]/10 to-[#764ba2]/10 text-[#4f46e5] border border-[#667eea]/20">
+                                {g.location.country}
+                              </span>
+                            )}
+                            {g.location?.city && (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-semibold bg-white text-gray-600 border border-gray-200">
+                                📍 {g.location.city}
+                              </span>
+                            )}
+                          </div>
+
+                          <span className="inline-flex items-center px-2 py-1 rounded-md text-[11px] font-extrabold bg-gradient-to-r from-[#667eea]/10 to-[#764ba2]/10 text-[#4f46e5] border border-[#667eea]/20">
+                            {(g as any).photosCount ?? '—'} photos
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                   {g.description && (
-                    <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
+                    <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed line-clamp-2">
                       {g.description}
                     </p>
                   )}

@@ -206,6 +206,8 @@ export default function GalleryPage({ gallery }: GalleryPageProps) {
                   isZoomed ? 'object-cover' : 'object-contain'
                 } ${imageLoaded ? 'opacity-100' : 'opacity-0'} select-none`}
                 unoptimized
+                priority={currentIndex === 0}
+                onLoad={() => setImageLoaded(true)}
                 onLoadingComplete={() => setImageLoaded(true)}
               />
 

@@ -9,6 +9,7 @@ export interface GalleryIndexItem {
   tags?: string[];
   year?: number;
   location?: GalleryLocation;
+  photosCount?: number;
 }
 
 export interface GalleryIndexData {
