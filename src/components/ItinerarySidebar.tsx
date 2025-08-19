@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { Itinerary, ItineraryPoint } from '../types';
 
 interface ItinerarySidebarProps {
@@ -14,8 +15,38 @@ export default function ItinerarySidebar({
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<
-    'overview' | 'notes' | 'links' | 'timeline'
+    'overview' | 'notes' | 'links' | 'timeline' | 'galleries'
   >('timeline');
+  const router = useRouter();
+  const [relatedGalleries, setRelatedGalleries] = useState<
+    Array<{ id: string; title: string; image?: string }>
+  >([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        if (
+          !Array.isArray(itinerary.galleries) ||
+          itinerary.galleries.length === 0
+        ) {
+          setRelatedGalleries([]);
+          return;
+        }
+        const resp = await fetch('/data/galleries/index.json');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const items = (
+          data.galleries as Array<{ id: string; title: string; image?: string }>
+        ).filter(g => itinerary.galleries?.includes(g.id));
+        if (!cancelled) setRelatedGalleries(items);
+      } catch {}
+    }
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, [itinerary.galleries]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -269,6 +300,9 @@ export default function ItinerarySidebar({
         >
           {[
             { key: 'overview', label: isMobile ? 'Overview' : 'Overview' },
+            relatedGalleries.length > 0
+              ? { key: 'galleries', label: 'Galleries' }
+              : null,
             {
               key: 'notes',
               label: isMobile
@@ -285,35 +319,37 @@ export default function ItinerarySidebar({
               key: 'timeline',
               label: isMobile ? 'Timeline' : `Timeline (${dates.length})`,
             },
-          ].map(tab => {
-            const isActive = activeTab === (tab.key as typeof activeTab);
-            return (
-              <button
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key as typeof activeTab)}
-                style={{
-                  padding: isMobile ? '6px 10px' : '8px 12px',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  borderRadius: '9999px',
-                  border: '1px solid',
-                  borderColor: isActive ? 'transparent' : '#E5E7EB',
-                  background: isActive
-                    ? 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)'
-                    : '#F9FAFB',
-                  color: isActive ? '#FFFFFF' : '#374151',
-                  boxShadow: isActive
-                    ? '0 6px 16px rgba(102, 126, 234, 0.35)'
-                    : 'none',
-                  cursor: 'pointer',
-                  flexShrink: 0,
-                  transition: 'all 0.2s ease',
-                }}
-              >
-                {tab.label}
-              </button>
-            );
-          })}
+          ]
+            .filter((tab): tab is NonNullable<typeof tab> => tab !== null)
+            .map(tab => {
+              const isActive = activeTab === tab.key;
+              return (
+                <button
+                  key={tab.key}
+                  onClick={() => setActiveTab(tab.key as typeof activeTab)}
+                  style={{
+                    padding: isMobile ? '6px 10px' : '8px 12px',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    borderRadius: '9999px',
+                    border: '1px solid',
+                    borderColor: isActive ? 'transparent' : '#E5E7EB',
+                    background: isActive
+                      ? 'linear-gradient(90deg, #667eea 0%, #764ba2 100%)'
+                      : '#F9FAFB',
+                    color: isActive ? '#FFFFFF' : '#374151',
+                    boxShadow: isActive
+                      ? '0 6px 16px rgba(102, 126, 234, 0.35)'
+                      : 'none',
+                    cursor: 'pointer',
+                    flexShrink: 0,
+                    transition: 'all 0.2s ease',
+                  }}
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
         </div>
 
         {/* Overview */}
@@ -678,7 +714,7 @@ export default function ItinerarySidebar({
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                         strokeWidth={2}
-                                        d="M10 6H6a2 2 0 002 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                                       />
                                     </svg>
                                     Website
@@ -695,6 +731,88 @@ export default function ItinerarySidebar({
               })}
             </div>
           </>
+        )}
+
+        {activeTab === 'galleries' && relatedGalleries.length > 0 && (
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gap: '12px',
+              marginBottom: '16px',
+            }}
+          >
+            {relatedGalleries.map(g => (
+              <div
+                key={g.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  backgroundColor: '#FFFFFF',
+                  border: '1px solid #F1F5F9',
+                  borderRadius: '12px',
+                  padding: '10px',
+                  cursor: 'pointer',
+                }}
+                onClick={() => router.push(`/galleries/${g.id}`)}
+              >
+                <div
+                  style={{
+                    width: '64px',
+                    height: '48px',
+                    borderRadius: '8px',
+                    backgroundColor: '#F3F4F6',
+                    overflow: 'hidden',
+                    flexShrink: 0,
+                  }}
+                >
+                  {g.image ? (
+                    <img
+                      src={g.image}
+                      alt={`${g.title} cover`}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#9CA3AF',
+                      }}
+                    >
+                      🖼️
+                    </div>
+                  )}
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div
+                    style={{
+                      fontSize: '14px',
+                      fontWeight: 600,
+                      color: '#111827',
+                      overflow: 'hidden',
+                      whiteSpace: 'nowrap',
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    {g.title}
+                  </div>
+                  <div style={{ fontSize: '12px', color: '#6B7280' }}>
+                    View gallery
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         )}
 
         {activeTab === 'notes' &&

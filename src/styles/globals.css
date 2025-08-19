@@ -18,6 +18,12 @@ body.itinerary-page {
   height: auto;
 }
 
+/* Allow scrolling on gallery pages */
+body.gallery-page {
+  overflow: auto;
+  height: auto;
+}
+
 /* Itinerary detail page specific styles */
 .itinerary-detail-page {
   overflow: hidden;

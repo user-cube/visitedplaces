@@ -42,6 +42,7 @@
       "description": "5-day trip to Athens exploring ancient Greek history, Acropolis, and archaeological sites",
       "image": "/images/itineraries/2025/athens.webp",
       "file": "2025/athens/athens.json",
+      "galleries": ["athens"],
       "metadata": {
         "flags": "🇬🇷",
         "emoji": "🏛️",

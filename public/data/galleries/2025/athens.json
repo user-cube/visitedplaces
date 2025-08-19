@@ -1,0 +1,25 @@
+{
+  "id": "athens",
+  "title": "Athens",
+  "description": "A small gallery from Athens",
+  "image": "/images/places/europe/greece/athens/athens-1.webp",
+  "photos": [
+    {
+      "src": "/images/places/europe/greece/athens/athens-1.webp",
+      "caption": "Hadrian's Library"
+    },
+    {
+      "src": "/images/places/europe/greece/athens/athens-2.webp",
+      "caption": "Acropolis view"
+    },
+    {
+      "src": "/images/places/europe/greece/athens/athens-3.webp",
+      "caption": "Ancient Agora"
+    }
+  ],
+  "location": { "city": "Athens", "country": "Greece", "flag": "🇬🇷" },
+  "tags": ["greece", "europe"],
+  "year": 2025
+}
+
+

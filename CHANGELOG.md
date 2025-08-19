@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/user-cube/visitedplaces/compare/v1.4.0...v1.5.0) (2025-08-19)
+
+
+### Features
+
+* Gallery ([#19](https://github.com/user-cube/visitedplaces/issues/19)) ([943ebb9](https://github.com/user-cube/visitedplaces/commit/943ebb9b6c7304048bfb3c1c538c3cf25c605e75))
+
 # [1.4.0](https://github.com/user-cube/visitedplaces/compare/v1.3.1...v1.4.0) (2025-08-18)
 
 
