@@ -9,6 +9,7 @@ export interface ItineraryIndex {
   image?: string;
   file: string;
   metadata?: ItineraryMetadata;
+  galleries?: string[];
 }
 
 export interface ItineraryIndexData {
