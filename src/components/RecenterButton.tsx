@@ -1,6 +1,7 @@
 import { useMap } from 'react-leaflet';
 import { useCallback, useEffect } from 'react';
 import { MAP_CENTER, DEFAULT_ZOOM } from '../constants';
+import { setGlobalRecenter } from './RecenterBridge';
 
 interface RecenterButtonProps {
   onRecenter: () => void;
@@ -22,6 +23,8 @@ export function RecenterButton() {
 
   useEffect(() => {
     globalRecenterFunction = handleRecenter;
+    setGlobalRecenter(handleRecenter);
+    return () => setGlobalRecenter(null);
   }, [handleRecenter]);
 
   return null; // This component doesn't render anything, it just provides the function
@@ -41,6 +44,4 @@ export function RecenterButtonUI({ onRecenter }: RecenterButtonProps) {
 }
 
 // Function to trigger recenter from outside
-export function triggerRecenter() {
-  globalRecenterFunction?.();
-}
+export { triggerRecenter } from './RecenterBridge';

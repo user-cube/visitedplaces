@@ -111,6 +111,8 @@ export interface Itinerary {
     label: string;
     url: string;
   }>;
+  /** Optional list of related gallery IDs */
+  galleries?: string[];
 }
 
 export interface ItineraryListProps {
@@ -125,6 +127,23 @@ export interface ItineraryMapProps {
 export interface ItinerarySidebarProps {
   itinerary: Itinerary;
   onClose: () => void;
+}
+
+// Gallery types
+export interface GalleryLocation {
+  city?: string;
+  country?: string;
+}
+
+export interface Gallery {
+  id: string;
+  title: string;
+  description?: string;
+  image?: string; // cover image
+  photos: string[];
+  location?: GalleryLocation;
+  tags?: string[];
+  year?: number;
 }
 
 // Map styles configuration

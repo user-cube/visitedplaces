@@ -1,0 +1,16 @@
+{
+  "galleries": [
+    {
+      "id": "athens",
+      "title": "Athens",
+      "description": "Highlights from Athens",
+      "image": "/images/places/europe/greece/athens/athens-1.webp",
+      "file": "2025/athens.json",
+      "tags": ["greece", "europe", "city"],
+      "year": 2025,
+      "location": { "city": "Athens", "country": "Greece" }
+    }
+  ]
+}
+
+

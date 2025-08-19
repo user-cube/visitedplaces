@@ -166,6 +166,18 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
               )}
             </div>
           </div>
+
+          <div className="itineraries-section" style={{ marginTop: '16px' }}>
+            <div className="section-header">
+              <h3>Galleries</h3>
+            </div>
+            <button
+              className="view-all-button"
+              onClick={() => router.push('/galleries')}
+            >
+              View All Galleries
+            </button>
+          </div>
         </div>
       </div>
     </>

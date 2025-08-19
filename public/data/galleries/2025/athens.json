@@ -1,0 +1,16 @@
+{
+  "id": "athens",
+  "title": "Athens",
+  "description": "A small gallery from Athens",
+  "image": "/images/places/europe/greece/athens/athens-1.webp",
+  "photos": [
+    "/images/places/europe/greece/athens/athens-1.webp",
+    "/images/places/europe/greece/athens/athens-2.webp",
+    "/images/places/europe/greece/athens/athens-3.webp"
+  ],
+  "location": { "city": "Athens", "country": "Greece" },
+  "tags": ["greece", "europe"],
+  "year": 2025
+}
+
+
