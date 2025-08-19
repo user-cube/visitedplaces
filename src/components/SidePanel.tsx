@@ -1,15 +1,20 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { Itinerary } from '../types';
+import { Gallery, Itinerary } from '../types';
 
 import { City } from '../types';
 
 interface SidePanelProps {
   cities: City[];
   itineraries: Itinerary[];
+  galleries?: Gallery[];
 }
 
-export function SidePanel({ cities, itineraries }: SidePanelProps) {
+export function SidePanel({
+  cities,
+  itineraries,
+  galleries = [],
+}: SidePanelProps) {
   const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(() => {
     // Start open on desktop, closed on mobile
@@ -46,6 +51,7 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
 
   // Get last 5 itineraries (most recent first)
   const last5Itineraries = itineraries.slice(0, 5);
+  const last5Galleries = galleries.slice(0, 5);
 
   return (
     <>
@@ -182,12 +188,49 @@ export function SidePanel({ cities, itineraries }: SidePanelProps) {
             <div className="section-header">
               <h3>Galleries</h3>
             </div>
-            <button
-              className="view-all-button"
-              onClick={() => router.push('/galleries')}
-            >
-              View All Galleries
-            </button>
+            <div className="itineraries-list">
+              {last5Galleries.length > 0 ? (
+                last5Galleries.map(g => (
+                  <div
+                    key={g.id}
+                    className="itinerary-card"
+                    onClick={() => router.push(`/galleries/${g.id}`)}
+                  >
+                    <div className="itinerary-header">
+                      {g.image && (
+                        <div className="itinerary-image">
+                          <img
+                            src={g.image}
+                            alt={`${g.title} cover`}
+                            className="w-full h-full object-cover rounded-lg"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className="itinerary-content">
+                        <div className="itinerary-title">{g.title}</div>
+                        <div className="itinerary-meta">
+                          <span className="itinerary-dates">
+                            {g.year || ''}{' '}
+                            {g.location?.country
+                              ? `• ${g.location.country}`
+                              : ''}
+                          </span>
+                          <span className="itinerary-points">
+                            {(g as any).photosCount ?? '—'} photos
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="empty-state">
+                  <div className="empty-icon">📸</div>
+                  <div className="empty-text">No galleries yet</div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
