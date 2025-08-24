@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://visitedplaces.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /scripts/
+
+# Allow all public content
+Allow: /itineraries/
+Allow: /galleries/
+Allow: /images/
+Allow: /data/

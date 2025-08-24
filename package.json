@@ -21,7 +21,8 @@
     "update-metadata": "node scripts/update-itinerary-metadata.js",
     "generate-index": "node scripts/generate-index.js",
     "convert-images": "node scripts/convert-images.js",
-    "cleanup-images": "node scripts/cleanup-images.js"
+    "cleanup-images": "node scripts/cleanup-images.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.20",
