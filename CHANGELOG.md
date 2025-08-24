@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/user-cube/visitedplaces/compare/v1.5.0...v1.5.1) (2025-08-24)
+
+
+### Bug Fixes
+
+* sitemap ([#25](https://github.com/user-cube/visitedplaces/issues/25)) ([405245d](https://github.com/user-cube/visitedplaces/commit/405245daa31f6cb4bfa1fa38f27b08559d23e768))
+
 # [1.5.0](https://github.com/user-cube/visitedplaces/compare/v1.4.0...v1.5.0) (2025-08-19)
 
 
